@@ -1,4 +1,17 @@
-// Vendor
-// ---------------------------------
+// Vendor ---------------------------------
 
-@import "vendor/normalize";
+@import "./vendor/normalize";
+
+// Base ---------------------------------
+
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/fonts";
+@import "./base/fonts-styles";
+@import "./base/page";
+@import "./base/visually-hidden";
+@import "./base/container";
+
+// Blocks ---------------------------------
+
+// @import "./blocks/button";
