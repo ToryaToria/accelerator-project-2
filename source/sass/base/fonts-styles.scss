@@ -14,7 +14,8 @@
 
 .text-big {
   // текст в hero
-  @include font ($size: 15px, $line-height: 20px);
+  @include font ($size: 15px, $line-height: 20px, $color: $color-white);
+
 
   @include media-tablet {
     font-size: 17px;
@@ -68,7 +69,7 @@
 }
 
 .text-tel {
-  @include font ($size: 14px, $weight: 600);
+  @include font ($size: 14px, $weight: 600, $color: $color-white);
   text-decoration: none;
 
   @include media-tablet {
@@ -81,10 +82,12 @@
 }
 
 .text-medium {
-  @include font ($size: 12px, $weight: 500);
+  @include font ($size: 12px, $weight: 500, $color: $color-white);
 }
 
 .text-light {
+    // background-color: red;
+
   @include font ($size: 12px, $weight: 300);
   text-decoration: none;
 }
@@ -121,7 +124,7 @@
 
 .title-hero {
   // h3-hero
-  @include font ($size: 26px, $weight: 800);
+  @include font ($size: 26px, $weight: 800, $color: $color-white);
 
   @include media-tablet {
     font-size: 56px;
@@ -133,7 +136,7 @@
 }
 
 .title-tour {
-  @include font ($size: 24px, $line-height: 28px, $weight: 700);
+  @include font ($size: 24px, $line-height: 28px, $weight: 700, $color: $color-white);
 }
 
 .title-name {
@@ -145,7 +148,7 @@
 }
 
 .text-btn {
-  @include font ($size: 16px, $weight: 500);
+  @include font ($size: 16px, $weight: 500, $color: $color-white);
 }
 
 .text-btn-big {

@@ -16,13 +16,13 @@
     </svg> -->
 
 
-  <header class="container" data-test="header">
-    <div class="visually-hidden">
-      burger
+  <header class="header container" data-test="header">
+    <div class="header__burger">
+      <span class="visually-hidden">burger-menu</span>
     </div>
 
-    <nav>
-      <ul>
+    <nav class="header__nav">
+      <ul class="header__list">
         <li>
           <a class="text-nav" href="">Туры</a>
         </li>
@@ -49,50 +49,56 @@
       </ul>
     </nav>
 
-    <img src="" alt="logo">
-    <a class="text-tel" href="tel:88000000000">8 800 000-00-00</a>
+    <div class="header__wrapper">
+      <img src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
+      <a class="text-tel" href="tel:88000000000">8 800 000-00-00</a>
+    </div>
   </header>
 
   <main class="page__main">
-    <section class="container" data-test="hero">
-      <h1 class="visually-hidden-">Путешествия с Lifetour</h1>
-      <h2 class="visually-hidden-">Варианты туров</h2>
-      <ul>
-        <li>
-          <h3 class="title-hero">Захватывающие вершины Кавказа</h3>
-          <p class="text-big">
+    <section class="hero" data-test="hero">
+      <h1 class="visually-hidden">Путешествия с Lifetour</h1>
+      <h2 class="visually-hidden">Варианты туров</h2>
+      <ul class="hero__list">
+        <li class="hero__item hero__item--1 container">
+          <h3 class="hero__title title-hero">Захватывающие вершины Кавказа</h3>
+          <p class="hero__text text-big">
             В сопровождении опытных гидов вы пройдёте через потрясающие
             ландшафты и совершите восход на вершину горы Чегет.
           </p>
-          <button class="text-btn" type="button">Смотреть тур</button>
+          <button class="hero__btn button text-btn" type="button">Смотреть тур</button>
         </li>
 
-        <li>
-          <h3 class="title-hero">Невероятная природа Камчатки</h3>
-          <p class="text-big">
+        <li class="hero__item hero__item--2 container">
+          <h3 class="hero__title title-hero">Невероятная природа Камчатки</h3>
+          <p class="hero__text text-big">
             Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых
             уголков дикой природы в мире.
           </p>
-          <button class="text-btn" type="button">Смотреть тур</button>
+          <button class="hero__btn button text-btn" type="button">Смотреть тур</button>
         </li>
 
-        <li>
-          <h3 class="title-hero">Магические пейзажи Алтайского Края</h3>
-          <p class="text-big">
+        <li class="hero__item hero__item--3 container">
+          <h3 class="hero__title title-hero">Магические пейзажи Алтайского Края</h3>
+          <p class="hero__text text-big">
             Магические пейзажи Алтайского Края Алтайский трекинг-тур — это захватывающее приключение с посещением
             магических и захватывающих дух ландшафтов Алтайских гор.</p>
-          <button class="text-btn" type="button">Смотреть тур</button>
+          <button class="hero__btn button text-btn" type="button">Смотреть тур</button>
         </li>
       </ul>
 
-      <div> boolit</div>
+      <div class="hero_bullit-wrapp"> 
+        <button class="bullit bullit--current " type="button"></button>
+        <button class="bullit" type="button"></button>
+        <button class="bullit" type="button"></button>
+      </div>
     </section>
 
-    <section class="container" data-test="tours">
-      <h2 class="title-section">Ближайшие туры</h2>
-      <ul>
-        <li>
-          <ul>
+    <section class="tours container" data-test="tours">
+      <h2 class="tours__title title-section">Ближайшие туры</h2>
+      <ul class="tours__list">
+        <li class="tours__item tour-card tour-card--1">
+          <ul class="tour-card__list">
             <li>
               <p class="text-medium">Кавказ</p>
             </li>
@@ -103,7 +109,7 @@
               <p class="text-medium">3 ночи</p>
             </li>
           </ul>
-          <h3 class="title-tour">Путешествие вокруг Эльбруса</h3>
+          <h3 class="tour-card__title title-tour">Путешествие вокруг Эльбруса</h3>
           <ul>
             <li>
               <p class="text-light">Сложность:</p>
@@ -120,7 +126,7 @@
           </ul>
         </li>
 
-        <li>
+        <li class="tours__item tour-card tour-card--2">
           <ul>
             <li>
               <p class="text-medium">Алтай</p>
@@ -149,7 +155,7 @@
           </ul>
         </li>
 
-        <li>
+        <li class="tours__item tour-card tour-card--3">
           <ul>
             <li>
               <p class="text-medium">Адыгея</p>
@@ -178,7 +184,7 @@
           </ul>
         </li>
 
-        <li>
+        <li class="tours__item tour-card tour-card--4">
           <ul>
             <li>
               <p class="text-medium">Урал</p>
@@ -208,7 +214,7 @@
         </li>
       </ul>
 
-      <button class="text-btn-big" type="button">Показать все туры</button>
+      <button class="tours__button text-btn-big" type="button">Показать все туры</button>
     </section>
 
     <section class="container" data-test="training">
@@ -239,7 +245,8 @@
             <a href="">VK</a>
           </div>
           <p class="text-small">
-            Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.
+            Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много
+            путешествует по Европе.
           </p>
         </li>
 

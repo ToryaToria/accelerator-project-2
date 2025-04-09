@@ -1,0 +1,41 @@
+.header {
+  background-color: $color-bg-primary;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header__burger {
+  @include btn-reset;
+  box-sizing: border-box;
+  display: block;
+  width: 26px;
+  height: 26px;
+
+  background-image: url("../__spritemap#sprite-menu-view");
+  background-repeat: no-repeat;
+  background-size: 26px 20px;
+  background-position: center;
+}
+
+.header__nav {
+  display: none;
+
+  @include media-desktop {
+  display: block;
+  }
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: right;
+}

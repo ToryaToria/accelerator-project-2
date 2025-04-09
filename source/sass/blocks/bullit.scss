@@ -1,0 +1,11 @@
+.bullit {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $color-white;
+  border-radius: 50%;
+  background-color: transparent;
+  &--current {
+    background-color: $color-white;
+  }
+}

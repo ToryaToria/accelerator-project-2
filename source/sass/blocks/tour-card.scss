@@ -1,0 +1,52 @@
+.tour-card {
+// @include list-reset;
+color: $color-white;
+
+background-color: $color-bg-img;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--1 {
+        background-image:
+      image-set(url("../../img/elbrus_1x.webp") 1x type("image/webp"),
+        url("../..img/elbrus_1x.jpg") 1x,
+        url("../../img/elbrus_2x.webp") 2x type("image/webp"),
+        url("../../img/elbrus_2x.jpg") 2x);
+  }
+
+  &--2 {
+    background-image:
+  image-set(url("../../img/belyha_1x.webp") 1x type("image/webp"),
+    url("../..img/belyha_1x.jpg") 1x,
+    url("../../img/belyha_2x.webp") 2x type("image/webp"),
+    url("../../img/belyha_2x.jpg") 2x);
+}
+
+&--3 {
+  background-image:
+image-set(url("../../img/fisht_1x.webp") 1x type("image/webp"),
+  url("../..img/fisht_1x.jpg") 1x,
+  url("../../img/fisht_2x.webp") 2x type("image/webp"),
+  url("../../img/fisht_2x.jpg") 2x);
+}
+
+&--4 {
+  background-image:
+image-set(url("../../img/manarag_1x.webp") 1x type("image/webp"),
+  url("../..img/manarag_1x.jpeg") 1x,
+  url("../../img/manarag_2x.webp") 2x type("image/webp"),
+  url("../../img/manarag_2x.jpeg") 2x);
+}
+}
+
+.tour-card__list {
+  @include list-reset;
+
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.tour-card__title {
+margin-bottom: 30px;
+}
