@@ -87,7 +87,7 @@
         </li>
       </ul>
 
-      <div class="hero_bullit-wrapp"> 
+      <div class="hero_bullit-wrapp">
         <button class="bullit bullit--current " type="button"></button>
         <button class="bullit" type="button"></button>
         <button class="bullit" type="button"></button>
@@ -217,19 +217,32 @@
       <button class="tours__button text-btn-big" type="button">Показать все туры</button>
     </section>
 
-    <section class="container" data-test="training">
-      <h2 class="title-section">Обучение</h2>
-      <p class="text-middle">
+    <section class="training container" data-test="training">
+      <h2 class="training__title title-section">Обучение</h2>
+      <p class="training__text  text-middle">
         Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа,
         Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.
       </p>
 
-      <h3 class="title-section">Наши инструкторы</h3>
-      <ul>
-        <li>
-          <img src="" alt="Надежда Колесниченко">
-          <div>
-            <h4 class="title-name">Надежда Колесниченко</h4>
+      <h3 class="training__instructors title-section">Наши инструкторы</h3>
+      <ul class="training__list">
+        <li class="training__item">
+
+          <picture>
+            <source type="image/webp" srcset="./img/nadejda_1x.webp 1x,
+            ./img/nadejda_2x.webp 2x" width="260" height="200">
+
+            <img class="training__img" src="./img/nadejda_1x.jpg" 
+            srcset="./img/nadejda_2x.jpg"
+              alt="Надежда Колесниченко" width="260" height="200">
+          </picture>
+
+          <div class="training__name-wrapp">
+            <h4 class="training__name title-name">
+              Надежда
+              <br>
+              Колесниченко
+            </h4>
             <a href="">VK</a>
           </div>
           <p class="text-small">
@@ -238,10 +251,22 @@
           </p>
         </li>
 
-        <li>
-          <img src="" alt="Федор Кайгородов">
+        <li class="training__item">
+          
+          <picture>
+            <source type="image/webp" srcset="./img/fedor_1x.webp 1x,
+            ./img/fedor_2x.webp 2x" width="260" height="200">
+
+            <img class="training__img" src="./img/fedor_1x.jpg" 
+            srcset="./img/fedor_2x.jpg"
+            alt="Федор Кайгородов" width="260" height="200">
+          </picture>
           <div>
-            <h4 class="title-name">Федор Кайгородов</h4>
+            <h4 class="title-name">
+              Федор
+              <br>
+              Кайгородов
+            </h4>
             <a href="">VK</a>
           </div>
           <p class="text-small">
@@ -250,10 +275,22 @@
           </p>
         </li>
 
-        <li>
-          <img src="" alt="Даниэль Васнецов">
-          <div>
-            <h4 class="title-name">Даниэль Васнецов</h4>
+        <li class="training__item">
+          <picture>
+            <source type="image/webp" srcset="./img/daniel_1x.webp 1x,
+            ./img/daniel_2x.webp 2x" width="260" height="200">
+
+            <img class="training__img" src="./img/daniel_1x.jpeg" 
+            srcset="./img/daniel_2x.jpeg"
+            alt="Даниэль Васнецов" width="260" height="200">
+          </picture>
+
+          <div class="training__name-wrapp">
+            <h4 class="training__name title-name">
+              Даниэль
+              <br>
+              Васнецов
+            </h4>
             <a href="">VK</a>
           </div>
           <p class="text-small">
@@ -261,10 +298,22 @@
           </p>
         </li>
 
-        <li>
-          <img src="" alt="Александр Прокофьев">
-          <div>
-            <h4 class="title-name">Александр Прокофьев</h4>
+        <li class="training__item">
+          <picture>
+            <source type="image/webp" srcset="./img/alex_1x.webp 1x,
+            ./img/alex_2x.webp 2x" width="260" height="200">
+
+            <img class="training__img" src="./img/alex_1x.jpg" 
+            srcset="./img/alex_2x.jpg"
+            alt="Александр Прокофьев" width="260" height="200">
+          </picture>
+
+          <div class="training__name-wrapp">
+            <h4 class="training__name title-name">
+              Александр
+              <br>
+              Прокофьев
+            </h4>
             <a href="">VK</a>
           </div>
           <p class="text-small">
@@ -272,10 +321,22 @@
           </p>
         </li>
 
-        <li>
-          <img src="" alt="Светлана Афиногенова">
-          <div>
-            <h4 class="title-name">Светлана Афиногенова</h4>
+        <li class="training__item">
+          <picture>
+            <source type="image/webp" srcset="./img/svetlana_2x.webp 1x,
+            ./img/svetlana_2x.webp 2x" width="260" height="200">
+
+            <img class="training__img" src="./img/svetlana_1x.jpg" 
+            srcset="./img/svetlana_2x.jpg"
+            alt="Светлана Афиногенова" width="260" height="200">
+          </picture>
+
+          <div class="training__name-wrapp">
+            <h4 class="training__name title-name">
+              Светлана 
+              <br>
+              Афиногенова
+            </h4>
             <a href="">VK</a>
           </div>
           <p class="text-small">
@@ -285,9 +346,9 @@
         </li>
       </ul>
 
-      <h4 class="subtitle">Процесс обучения</h4>
-      <ul>
-        <li>
+      <h4 class="training__subtitle subtitle">Процесс обучения</h4>
+      <ul class="training__process-list">
+        <li class="training__process-item">
           <p class="text-mini">Изучение спортивного туристского движения</p>
         </li>
 

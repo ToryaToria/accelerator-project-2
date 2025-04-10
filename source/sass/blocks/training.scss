@@ -1,0 +1,68 @@
+.training {
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.training__title  {
+  margin-bottom: 18px;
+}
+
+.training__text {
+  margin-bottom: 25px;
+}
+
+.training__instructors  {
+  margin-bottom: 25px;
+}
+
+.training__list {
+  @include list-reset;
+  display: flex;
+  // flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.training__item {
+  box-sizing: border-box;
+  min-width: 290px;
+  padding: 15px;
+
+  border: 1px solid $color-line-light;
+ }
+ .training__img {
+  width: 260px;
+  height: 200px;
+  object-fit: cover;
+
+  margin-bottom: 15px;
+
+  @include media-tablet {
+    width: 183px;
+   }
+
+  @include media-desktop {
+    width: 255px;
+    }
+ }
+
+ .training__name-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .training__name {
+margin-bottom: 15px; 
+}
+
+.training__subtitle {
+margin-bottom: 25px;
+}
+
+.training__process-list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

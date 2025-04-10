@@ -165,7 +165,7 @@
 }
 
 .subtitle {
-  @include font ($size: 16px, $weight: 600);
+  @include font ($size: 16px, $weight: 700);
 
   @include media-tablet {
     font-size: 18px;
