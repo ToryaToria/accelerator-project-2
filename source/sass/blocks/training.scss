@@ -1,9 +1,9 @@
 .training {
-padding-top: 20px;
-padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.training__title  {
+.training__title {
   margin-bottom: 18px;
 }
 
@@ -11,7 +11,7 @@ padding-bottom: 20px;
   margin-bottom: 25px;
 }
 
-.training__instructors  {
+.training__instructors {
   margin-bottom: 25px;
 }
 
@@ -29,8 +29,9 @@ padding-bottom: 20px;
   padding: 15px;
 
   border: 1px solid $color-line-light;
- }
- .training__img {
+}
+
+.training__img {
   width: 260px;
   height: 200px;
   object-fit: cover;
@@ -39,25 +40,25 @@ padding-bottom: 20px;
 
   @include media-tablet {
     width: 183px;
-   }
+  }
 
   @include media-desktop {
     width: 255px;
-    }
- }
+  }
+}
 
- .training__name-wrapp {
+.training__name-wrapp {
   display: flex;
   justify-content: space-between;
-  align-items: center;
- }
+  align-items: flex-start;
+}
 
- .training__name {
-margin-bottom: 15px; 
+.training__name {
+  margin-bottom: 15px;
 }
 
 .training__subtitle {
-margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .training__process-list {
@@ -65,4 +66,19 @@ margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+.training__name-link {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  border: 1px solid $color-line;
+
+  background-repeat: no-repeat;
+  background-size: 14px 8px;
+  background-position: center;
+  background-image: url("../__spritemap#sprite-vk-view");
+
 }

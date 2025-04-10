@@ -22,9 +22,46 @@ text-align: center;
   border: 1px solid $color-line-light;
 
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 42px;
+    height: 42px;
+    border: 1px solid $color-bg-primary;
+    margin-bottom: 20px;
+
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+
+    
+  }
+
+  &--level:before {
+    background-image: url("../__spritemap#sprite-level-view");
+    }
+
+    &--crown:before {
+      background-image: url("../__spritemap#sprite-crown-view");
+      }
+
+      &--boots:before {
+        background-image: url("../__spritemap#sprite-boots2-view");
+        }
+
+        &--path:before {
+          background-image: url("../__spritemap#sprite-path-view");
+          }
+
+          &--leaf:before {
+            background-image: url("../__spritemap#sprite-leaf-view");
+            }
 }
 
 .adv__title {
-  padding-top: 62px;
   margin-bottom: 15px;
 }
