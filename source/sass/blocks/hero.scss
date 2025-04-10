@@ -20,10 +20,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  &--1 {
-    // background-image: url('../../img/kavkaz_1x.jpg');
 
+  &--1 {
     background-image:
+    linear-gradient(133deg,rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/kavkaz_1x.webp") 1x type("image/webp"),
         url("../..img/kavkaz_1x.jpg") 1x,
         url("../../img/kavkaz_2x.webp") 2x type("image/webp"),
@@ -31,9 +31,8 @@
   }
 
   &--2 {
-    // background-image: url('../../img/kamchatka_1x.jpeg');
-
-    background-image:
+   background-image:
+    linear-gradient(133deg,rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/kamchatka_1x.webp") 1x type("image/webp"),
         url("../..img/kamchatka_1x.jpg") 1x,
         url("../../img/kamchatka_2x.webp") 2x type("image/webp"),
@@ -41,9 +40,8 @@
   }
 
   &--3 {
-    background-image: url('../../img/altay_1x.jpg');
-
     background-image:
+    linear-gradient(133deg,rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/altay_1x.webp") 1x type("image/webp"),
         url("../..img/altay_1x.jpg") 1x,
         url("../../img/altay_2x.webp") 2x type("image/webp"),

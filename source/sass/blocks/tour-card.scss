@@ -1,14 +1,18 @@
 .tour-card {
-// @include list-reset;
-color: $color-white;
+  // @include list-reset;
+  color: $color-white;
 
-background-color: $color-bg-img;
+  background-color: $color-bg-img;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+
+
   &--1 {
-        background-image:
+    background-image:
+      linear-gradient(transparent, rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.3)),
+
       image-set(url("../../img/elbrus_1x.webp") 1x type("image/webp"),
         url("../..img/elbrus_1x.jpg") 1x,
         url("../../img/elbrus_2x.webp") 2x type("image/webp"),
@@ -17,27 +21,33 @@ background-color: $color-bg-img;
 
   &--2 {
     background-image:
-  image-set(url("../../img/belyha_1x.webp") 1x type("image/webp"),
-    url("../..img/belyha_1x.jpg") 1x,
-    url("../../img/belyha_2x.webp") 2x type("image/webp"),
-    url("../../img/belyha_2x.jpg") 2x);
-}
+    linear-gradient(transparent, rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.3)),
 
-&--3 {
-  background-image:
-image-set(url("../../img/fisht_1x.webp") 1x type("image/webp"),
-  url("../..img/fisht_1x.jpg") 1x,
-  url("../../img/fisht_2x.webp") 2x type("image/webp"),
-  url("../../img/fisht_2x.jpg") 2x);
-}
+      image-set(url("../../img/belyha_1x.webp") 1x type("image/webp"),
+        url("../..img/belyha_1x.jpg") 1x,
+        url("../../img/belyha_2x.webp") 2x type("image/webp"),
+        url("../../img/belyha_2x.jpg") 2x);
+  }
 
-&--4 {
-  background-image:
-image-set(url("../../img/manarag_1x.webp") 1x type("image/webp"),
-  url("../..img/manarag_1x.jpeg") 1x,
-  url("../../img/manarag_2x.webp") 2x type("image/webp"),
-  url("../../img/manarag_2x.jpeg") 2x);
-}
+  &--3 {
+    background-image:
+    linear-gradient(transparent, rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.3)),
+
+      image-set(url("../../img/fisht_1x.webp") 1x type("image/webp"),
+        url("../..img/fisht_1x.jpg") 1x,
+        url("../../img/fisht_2x.webp") 2x type("image/webp"),
+        url("../../img/fisht_2x.jpg") 2x);
+  }
+
+  &--4 {
+    background-image:
+    linear-gradient(transparent, rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.3)),
+
+      image-set(url("../../img/manarag_1x.webp") 1x type("image/webp"),
+        url("../..img/manarag_1x.jpeg") 1x,
+        url("../../img/manarag_2x.webp") 2x type("image/webp"),
+        url("../../img/manarag_2x.jpeg") 2x);
+  }
 }
 
 .tour-card__list {
@@ -48,5 +58,5 @@ image-set(url("../../img/manarag_1x.webp") 1x type("image/webp"),
 }
 
 .tour-card__title {
-margin-bottom: 30px;
+  margin-bottom: 30px;
 }

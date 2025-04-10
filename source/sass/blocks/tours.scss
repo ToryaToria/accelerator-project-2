@@ -4,32 +4,33 @@
 
   background-repeat: no-repeat;
   background-position: top;
-        background-image:
-      image-set(url("../../img/bg1_1x.webp") 1x type("image/webp"),
-        url("../..img/bg1_1x.png") 1x,
-        url("../../img/bg1_2x.webp") 2x type("image/webp"),
-        url("../../img/bg1_2x.png") 2x);
-  }
+  // background-image:
+  //   image-set(url("../../img/bg1_1x.webp") 1x type("image/webp"),
+  //     url("../..img/bg1_1x.png") 1x,
+  //     url("../../img/bg1_2x.webp") 2x type("image/webp"),
+  //     url("../../img/bg1_2x.png") 2x);
+}
+
 .tours__title {
   margin-bottom: 25px;
 }
 
 .tours__list {
-@include list-reset;
+  @include list-reset;
 
-display: flex;
-// flex-direction: column;
-gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
-margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .tours__item {
   box-sizing: border-box;
-min-width: 290px;
-height: 416px;
-padding: 10px 20px 30px;
-// background-color: $color-bg-img;
+  min-width: 290px;
+  height: 416px;
+  padding: 10px 20px 30px;
+  // background-color: $color-bg-img;
 }
 
 .tours__button {

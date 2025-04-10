@@ -14,6 +14,8 @@ height: 638px;
   background-size: cover;
 
   background-image:
+  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+
     image-set(url("../../img/form-bg_1x.webp") 1x type("image/webp"),
       url("../..img/form-bg_1x.jpg") 1x,
       url("../../img/form-bg_2x.webp") 2x type("image/webp"),
