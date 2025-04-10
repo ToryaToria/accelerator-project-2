@@ -185,7 +185,7 @@
 }
 
 .text-cont1 {
-  @include font ($size: 14px);
+  @include font ($size: 14px, $weight: 600);
 
   @include media-tablet {
     font-size: 16px;

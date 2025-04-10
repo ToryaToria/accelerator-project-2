@@ -1,0 +1,38 @@
+.contacts {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contacts__title {
+  margin-bottom: 12px;
+}
+
+.contacts__text {
+  margin-bottom: 30px;
+}
+
+.contacts__wrapp {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contacts__img {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: block;
+  width: 320px;
+  height: 343px;
+  object-fit: cover;
+
+  @include media-tablet {
+    width: 768px;
+    height: 340px;
+  }
+
+  @include media-desktop {
+    width: 600px;
+    height: 324px;
+  }
+}

@@ -50,7 +50,7 @@
     </nav>
 
     <div class="header__wrapper">
-      <img src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
+      <img class="header__logo" src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
       <a class="text-tel" href="tel:88000000000">8 800 000-00-00</a>
     </div>
   </header>
@@ -396,7 +396,7 @@
           <picture>
             <source type="image/webp" srcset="./img/frolov_1x.webp 1x,
             ./img/frolov_2x.webp 2x" width="250" height="169">
-    
+
             <img class="reviews__img" src="./img/frolov_1x.jpeg" srcset="./img/frolov_2x.jpeg" alt="Фролов Александр"
               width="250" height="169">
           </picture>
@@ -417,9 +417,9 @@
           <picture>
             <source type="image/webp" srcset="./img/ivan_1x.webp 1x,
             ./img/ivan_2x.webp 2x" width="250" height="169">
-    
-            <img class="reviews__img" src="./img/ivan_1x.jpg" srcset="./img/ivan_2x.jpg" alt="Иван Соловьёв"
-              width="250" height="169">
+
+            <img class="reviews__img" src="./img/ivan_1x.jpg" srcset="./img/ivan_2x.jpg" alt="Иван Соловьёв" width="250"
+              height="169">
           </picture>
 
           <p class="reviews__text text-base">
@@ -437,7 +437,7 @@
           <picture>
             <source type="image/webp" srcset="./img/evgenia_1x.webp 1x,
             ./img/evgenia_2x.webp 2x" width="250" height="169">
-    
+
             <img class="reviews__img" src="./img/evgenia_1x.jpeg" srcset="./img/evgenia_2x.jpeg" alt="Евгения Баженова"
               width="250" height="169">
           </picture>
@@ -458,7 +458,7 @@
           <picture>
             <source type="image/webp" srcset="./img/elena_1x.webp 1x,
             ./img/elena_2x.webp 2x" width="250" height="169">
-    
+
             <img class="reviews__img" src="./img/elena_1x.jpg" srcset="./img/elena_2x.jpg" alt="Елена Пирогова"
               width="250" height="169">
           </picture>
@@ -523,101 +523,163 @@
       </ul>
     </section>
 
-    <section class="container" data-test="gallery">
-      <h2 class="title-section">Фотогалерея</h2>
-      <p class="text-mini">
+    <section class="gallery" data-test="gallery">
+      <h2 class="gallery__title title-section container">Фотогалерея</h2>
+      <p class="gallery__text text-mini container">
         Добавляйте фото с хэштегом #лайфтур, а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего
         сайта.
       </p>
 
-      <div>
-        <p>??? что является одним слайдом???</p>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+      <div class="gallery__container">
+        <!-- <p>??? что является одним слайдом???</p> -->
+
+        <picture>
+          <source type="image/webp" srcset="./img/gallery1_1x.webp 1x,
+          ./img/gallery1_2x.webp 2x" width="158" height="266">
+
+          <img class="gallery__img1" src="./img/gallery1_1x.jpg" srcset="./img/gallery1_2x.jpg" alt="gallery1"
+            width="158" height="266">
+        </picture>
+
+        <div class="gallery__img-wrapp">
+          <picture>
+            <source type="image/webp" srcset="./img/gallery2_1x.webp 1x,
+            ./img/gallery2_2x.webp 2x" width="157" height="130">
+
+            <img class="gallery__img2" src="./img/gallery2_1x.jpg" srcset="./img/gallery2_2x.jpg" alt="gallery2"
+              width="157" height="130">
+          </picture>
+
+          <picture>
+            <source type="image/webp" srcset="./img/gallery3_1x.webp 1x,
+            ./img/gallery3_2x.webp 2x" width="157" height="130">
+
+            <img class="gallery__img2" src="./img/gallery3_1x.jpg" srcset="./img/gallery3_2x.jpg" alt="gallery3"
+              width="157" height="130">
+          </picture>
+        </div>
+
+        <picture>
+          <source type="image/webp" srcset="./img/gallery4_1x.webp 1x,
+          ./img/gallery4_2x.webp 2x" width="158" height="266">
+
+          <img class="gallery__img1" src="./img/gallery4_1x.jpg" srcset="./img/gallery4_2x.jpg" alt="gallery4"
+            width="158" height="266">
+        </picture>
+
+        <div class="gallery__img-wrapp">
+          <picture>
+            <source type="image/webp" srcset="./img/gallery5_1x.webp 1x,
+            ./img/gallery5_2x.webp 2x" width="157" height="130">
+
+            <img class="gallery__img2" src="./img/gallery5_1x.jpg" srcset="./img/gallery5_2x.jpg" alt="gallery5"
+              width="157" height="130">
+          </picture>
+
+
+          <picture>
+            <source type="image/webp" srcset="./img/gallery6_1x.webp 1x,
+                ./img/gallery6_2x.webp 2x" width="157" height="130">
+
+            <img class="gallery__img2" src="./img/gallery6_1x.jpg" srcset="./img/gallery6_2x.jpg" alt="gallery6"
+              width="157" height="130">
+          </picture>
+        </div>
+
+        <picture>
+          <source type="image/webp" srcset="./img/gallery7_1x.webp 1x,
+          ./img/gallery7_2x.webp 2x" width="158" height="266">
+
+          <img class="gallery__img1" src="./img/gallery7_1x.jpg" srcset="./img/gallery7_2x.jpg" alt="gallery7"
+            width="158" height="266">
+        </picture>
       </div>
 
-      <div>
+      <div class="navigation">
         <button type="button">туда</button>
         <button type="button">сюда</button>
       </div>
     </section>
 
-    <section class="container" data-test="form">
-      <h2 class="title-section">Остались вопросы?</h2>
-      <p class="text-mini">
-        Заполните форму и наш оператор свяжется с вами для консультации.
-      </p>
-      <form action="https://echo.htmlacademy.ru">
+    <section class="form container" data-test="form">
+      <div class="form__wrapp">
+        <h2 class="form__title title-section">Остались вопросы?</h2>
+        <p class="form__text text-mini">
+          Заполните форму и наш оператор свяжется с вами для консультации.
+        </p>
+        <form action="https://echo.htmlacademy.ru">
 
-        <label>
-          <input class="text-field" type="tel" placeholder="Телефон">
-        </label>
+          <label>
+            <input class="form__field text-field" type="tel" placeholder="Телефон" name="phone">
+          </label>
 
-        <label>
-          <input class="text-field" type="email" placeholder="Email">
-        </label>
+          <label>
+            <input class="form__field text-field" type="email" placeholder="Email" name="email">
+          </label>
 
-        <button class="text-btn" type="submit">Отправить</button>
-      </form>
-    </section>
-
-    <section class="container" data-test="contacts">
-      <h2 class="title-section">Контакты</h2>
-      <p class="text-middle">
-        Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться
-        увлекательными историями и подобрать для вас тур.
-      </p>
-
-      <div>
-        <p class="text-cont1">Телефон</p>
-        <a class="text-cont2" href="tel:+79837454545">+7 983 745-45-45</a>
+          <button class="form__button button text-btn" type="submit">Отправить</button>
+        </form>
       </div>
-
-      <div>
-        <p class="text-cont1">Email</p>
-        <a class="text-cont2" href="mailto:info@lifetour.com">info@lifetour.com</a>
-      </div>
-
-      <div>
-        <p class="text-cont1">Адрес</p>
-        <p class="text-cont2">г. Москва, пр-т Мира, д. 14, офис 101</p>
-      </div>
-
-      <div>MAP</div>
     </section>
   </main>
 
   <footer class="container" data-test="footer">
-    <img src="" alt="logo">
+    <section class="contacts">
+      <h2 class="contacts__title title-section">Контакты</h2>
+      <p class="contacts__text text-middle">
+        Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться
+        увлекательными историями и подобрать для вас тур.
+      </p>
 
-    <ul>
-      <li>
+      <div class="contacts__wrapp">
+        <p class="text-cont1">Телефон</p>
+        <a class="text-cont2" href="tel:+79837454545">+7 983 745-45-45</a>
+      </div>
+
+      <div class="contacts__wrapp">
+        <p class="text-cont1">Email</p>
+        <a class="text-cont2" href="mailto:info@lifetour.com">info@lifetour.com</a>
+      </div>
+
+      <div class="contacts__wrapp">
+        <p class="text-cont1">Адрес</p>
+        <p class="text-cont2">г. Москва, пр-т Мира, д. 14, офис 101</p>
+      </div>
+
+      <picture>
+        <source type="image/webp" srcset="./img/map_1x.webp 1x,
+        ./img/map_2x.webp 2x" width="158" height="266">
+
+        <img class="contacts__img" src="./img/map_1x.jpg" srcset="./img/map_2x.jpg" alt="карта сокровищ" width="320"
+          height="343">
+      </picture>
+    </section>
+
+    <section class="footer">
+    <img class="footer__logo" src="/__spritemap#sprite-logotype_footer-view" alt="logo" width="142" height="42">
+    <ul class="footer__list">
+      <li class="footer__item">
         <a class="text-nav" href="">Туры</a>
       </li>
 
-      <li>
+      <li class="footer__item">
         <a class="text-nav" href="">Отзывы</a>
       </li>
 
-      <li>
+      <li class="footer__item">
         <a class="text-nav" href="">Обучение</a>
       </li>
 
-      <li>
+      <li class="footer__item">
         <a class="text-nav" href="">Фотографии</a>
       </li>
 
-      <li>
+      <li class="footer__item">
         <a class="text-nav" href="">О нас</a>
       </li>
     </ul>
 
-    <ul>
+    <ul class="footer__social-list">
       <li>
         <a href="">VK</a>
       </li>
@@ -631,6 +693,7 @@
     </ul>
 
     <a class="text-light" href="">Политика конфиденциальности</a>
+    </section>
   </footer>
 
   <!-- <script type="module" src="js/main.js"></script> -->
