@@ -144,7 +144,15 @@
 }
 
 .title-adv {
-  @include font ($size: 18px, $weight: 700);
+  @include font ($size: 14px, $weight: 600);
+
+  @include media-tablet {
+    font-size: 16px;
+  }
+
+  @include media-desktop {
+    font-size: 18px;
+  }
 }
 
 .text-btn {

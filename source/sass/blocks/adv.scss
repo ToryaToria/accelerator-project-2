@@ -1,0 +1,30 @@
+.adv {
+  padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.adv__title {
+margin-bottom: 20px;
+text-align: center;
+}
+
+.adv__list{
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.adv__item {
+  box-sizing: border-box;
+  min-width: 290px;
+  padding: 20px 10px;
+  border: 1px solid $color-line-light;
+
+  text-align: center;
+}
+
+.adv__title {
+  padding-top: 62px;
+  margin-bottom: 15px;
+}
