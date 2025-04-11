@@ -86,7 +86,7 @@
 }
 
 .text-light {
-    // background-color: red;
+  // background-color: red;
 
   @include font ($size: 12px, $weight: 300);
   text-decoration: none;
@@ -99,6 +99,27 @@
 .title-section {
   // h2
   @include font ($size: 22px, $weight: 800);
+  padding-top: 16px;
+
+  position: relative;
+
+  &::after {
+    content: attr(data-tip);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include font ($size: 26px, $weight: 800, $color: $color-text-shadow);
+
+    @include media-tablet {
+      font-size: 40px;
+    }
+
+    @include media-desktop {
+      font-size: 55px;
+    }
+
+  }
 
   @include media-tablet {
     font-size: 25px;
@@ -109,18 +130,10 @@
   }
 }
 
-.title-shadow {
-  // тень у  заголовка
-  @include font ($size: 26px, $weight: 800);
+// .title-shadow {
+//   // тень у  заголовка
 
-  @include media-tablet {
-    font-size: 40px;
-  }
-
-  @include media-desktop {
-    font-size: 55px;
-  }
-}
+// }
 
 .title-hero {
   // h3-hero
@@ -198,7 +211,7 @@
 
 .text-cont2 {
   @include font ($size: 14px, $line-height: 20px);
-text-decoration: none;
+  text-decoration: none;
 
   @include media-tablet {
     $line-height: 22px;

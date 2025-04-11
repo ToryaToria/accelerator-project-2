@@ -62,4 +62,9 @@
 
 .adv__title {
   margin-bottom: 15px;
+
+  &::after {
+    text-align: center;
+    width: 100%;
+  }
 }
