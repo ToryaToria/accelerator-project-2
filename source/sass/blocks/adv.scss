@@ -1,14 +1,14 @@
 .adv {
   padding-top: 20px;
-padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .adv__title {
-margin-bottom: 20px;
-text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.adv__list{
+.adv__list {
   @include list-reset;
   display: flex;
   flex-direction: column;
@@ -35,31 +35,29 @@ text-align: center;
     margin-bottom: 20px;
 
     background-repeat: no-repeat;
-  background-position: center;
-  background-size: 24px 24px;
-
-    
+    background-position: center;
+    background-size: 24px 24px;
   }
 
   &--level:before {
     background-image: url("../__spritemap#sprite-level-view");
-    }
+  }
 
-    &--crown:before {
-      background-image: url("../__spritemap#sprite-crown-view");
-      }
+  &--crown:before {
+    background-image: url("../__spritemap#sprite-crown-view");
+  }
 
-      &--boots:before {
-        background-image: url("../__spritemap#sprite-boots2-view");
-        }
+  &--boots:before {
+    background-image: url("../__spritemap#sprite-boots2-view");
+  }
 
-        &--path:before {
-          background-image: url("../__spritemap#sprite-path-view");
-          }
+  &--path:before {
+    background-image: url("../__spritemap#sprite-path-view");
+  }
 
-          &--leaf:before {
-            background-image: url("../__spritemap#sprite-leaf-view");
-            }
+  &--leaf:before {
+    background-image: url("../__spritemap#sprite-leaf-view");
+  }
 }
 
 .adv__title {

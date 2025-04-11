@@ -11,11 +11,50 @@
   margin-bottom: 30px;
 }
 
+.contacts__list {
+  @include list-reset;
+
+}
+
 .contacts__wrapp {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.contacts__item {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    // margin: auto;
+    width: 22px;
+    height: 22px;
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+  }
+
+  &--phone:before {
+    background-image: url("../__spritemap#sprite-phone-view");
+  }
+
+  &--mail:before {
+    background-image: url("../__spritemap#sprite-mail-view");
+  }
+
+  &--address {
+  margin-right: 20px;
+  }
+
+  &--address:before {
+    background-image: url("../__spritemap#sprite-address-view");
+  }
 }
 
 .contacts__img {
