@@ -1,13 +1,41 @@
 .about {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .about__img {
+  display: block;
   width: 343px;
   height: 400px;
   object-fit: cover;
+
+  @include media-tablet {
+    // width: 343px;
+  height: 280px;
+  }
 }
+
+.about__container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include media-tablet {
+    padding-left: 0;
+    padding-right: 48px;
+  }
+}
+
 
 .about__title {
   margin-bottom: 25px;

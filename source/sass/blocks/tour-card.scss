@@ -64,6 +64,10 @@
   flex-wrap: wrap;
   margin-top: auto;
   margin-bottom: 15px;
+
+  @include media-tablet {
+  justify-content: space-between;
+  }
 }
 
 .tour-card__bullit {
@@ -131,6 +135,11 @@
   display: flex;
   gap: 8px;
   align-items: center;
+
+  @include media-tablet {
+    gap: 28px;
+
+  }
 }
 
 .tour-card__setting {
@@ -151,13 +160,9 @@
   height: 16px;
 
   background-repeat: repeat;
-  // background-position: center;
-  // background-size:15px 13px;
- background-image: url("../__spritemap#sprite-star1-view");
+   background-image: url("../__spritemap#sprite-star1-view");
   
  &--not {
-    // background-size:16px 14px;
-
   background-image: url("../__spritemap#sprite-star2-view");
  }
 }

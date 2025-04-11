@@ -3,12 +3,12 @@
 
   @include media-tablet {
     font-size: 16px;
-    font-size: 24px;
+    line-height: 24px;
   }
 
   @include media-desktop {
     font-size: 14px;
-    font-size: 22px;
+    line-height: 22px;
   }
 }
 
@@ -19,7 +19,7 @@
 
   @include media-tablet {
     font-size: 17px;
-    font-size: 24px;
+    line-height: 24px;
   }
 }
 
@@ -32,12 +32,12 @@
 
   @include media-tablet {
     font-size: 14px;
-    font-size: 22px;
+    line-height: 22px;
   }
 
   @include media-desktop {
     font-size: 16px;
-    font-size: 24px;
+    line-height: 24px;
   }
 }
 
@@ -46,7 +46,7 @@
 
   @include media-tablet {
     font-size: 14px;
-    font-size: 22px;
+    line-height: 22px;
   }
 }
 
@@ -55,7 +55,7 @@
 
   @include media-tablet {
     font-size: 16px;
-    font-size: 24px;
+    line-height: 24px;
   }
 }
 
@@ -102,7 +102,6 @@
   // h2
   @include font ($size: 22px, $weight: 800);
   padding-top: 16px;
-
   position: relative;
 
   &::after {
@@ -120,7 +119,6 @@
     @include media-desktop {
       font-size: 55px;
     }
-
   }
 
   @include media-tablet {

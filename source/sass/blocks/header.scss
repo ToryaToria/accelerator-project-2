@@ -6,6 +6,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include media-tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
 }
 
 .header__burger {
