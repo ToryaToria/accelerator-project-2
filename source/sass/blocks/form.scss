@@ -1,7 +1,7 @@
 .form {
   padding-top: 10px;
   padding-bottom: 10px;
-   display: flex;
+  display: flex;
   flex-direction: column;
   min-height: 638px;
 
@@ -21,15 +21,23 @@
       url("../../img/form-bg_2x.webp") 2x type("image/webp"),
       url("../../img/form-bg_2x.jpg") 2x);
 
-      @include media-tablet {
-        min-height: 680px;
-      }
+  @include media-tablet {
+    min-height: 680px;
+  }
 
 }
 
-.form__wrapp {
+.form__container {
   width: 258px;
   margin: auto;
+
+  @include media-tablet {
+    width: 360px;
+  }
+
+  @include media-desktop {
+    width: 960px;
+  }
 }
 
 .form__title {
@@ -50,6 +58,21 @@
   }
 }
 
+.form__wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include media-tablet {
+    gap: 11px;
+  }
+
+  @include media-desktop {
+  flex-direction: row;
+  gap: 30px;
+  }
+}
+
 .form__field {
   box-sizing: border-box;
   display: block;
@@ -58,10 +81,9 @@
   padding: 17px 15px;
   border: none;
   border-radius: 2px;
-  margin-bottom: 8px;
 
-  @include media-tablet {
-    margin-bottom: 11px;
+  @include media-desktop {
+  width: 360px;
   }
 }
 

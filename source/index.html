@@ -27,27 +27,27 @@
       <nav class="header__nav">
         <ul class="header__list">
           <li>
-            <a class="text-nav" href="">Туры</a>
+            <a class="text-nav text-invert" href="">Туры</a>
           </li>
   
           <li>
-            <a class="text-nav" href="">Обучение</a>
+            <a class="text-nav text-invert" href="">Обучение</a>
           </li>
   
           <li>
-            <a class="text-nav" href="">О нас</a>
+            <a class="text-nav text-invert" href="">О нас</a>
           </li>
   
           <li>
-            <a class="text-nav" href="">Отзывы</a>
+            <a class="text-nav text-invert" href="">Отзывы</a>
           </li>
   
           <li>
-            <a class="text-nav" href="">Фотографии</a>
+            <a class="text-nav text-invert" href="">Фотографии</a>
           </li>
   
           <li>
-            <a class="text-nav" href="">Контакты</a>
+            <a class="text-nav text-invert" href="">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -486,7 +486,7 @@
         </li>
 
         <li class="training__process-item training__process-item--end">
-          <p class="training__process training__process--tree text-mini">Лекции по окружающей среде, экологии и гигиене
+          <p class="training__process training__process--tree text-mini">Лекции по&nbsp;окружающей среде, экологии и гигиене
           </p>
         </li>
 
@@ -685,6 +685,16 @@
           </p>
         </li>
       </ul>
+
+      <div class="adv__navigation navigation">
+        <button class="navigation__btn navigation__btn--back" type="button">
+          <span class="visually-hidden">назад</span>
+        </button>
+
+        <button class="navigation__btn navigation__btn--next" type="button">
+          <span class="visually-hidden">вперед</span>
+        </button>
+      </div>
     </section>
 
     <section class="gallery " data-test="gallery">
@@ -777,12 +787,12 @@
     </section>
 
     <section class="form container" data-test="form">
-      <div class="form__wrapp">
+      <div class="form__container">
         <h2 class="form__title title-section" data-tip="Остались вопросы?">Остались вопросы?</h2>
         <p class="form__text text-mini">
           Заполните форму и наш оператор свяжется с вами для консультации.
         </p>
-        <form action="https://echo.htmlacademy.ru">
+        <form class="form__wrapp" action="https://echo.htmlacademy.ru">
 
           <label>
             <input class="form__field text-field" type="tel" placeholder="Телефон" name="phone">
@@ -799,7 +809,8 @@
   </main>
 
   <footer data-test="footer">
-    <section class="contacts container">
+    <section class="contacts">
+     <div class="contacts__container">
       <h2 class="contacts__title title-section" data-tip="Контакты">Контакты</h2>
       <p class="contacts__text text-middle">
         Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться
@@ -827,6 +838,7 @@
           </div>
         </li>
       </ul>
+     </div>
 
       <picture>
         <source type="image/webp" srcset="./img/map_1x.webp 1x,
@@ -865,6 +877,8 @@
             <a class="text-nav" href="">Контакты</a>
           </li>
         </ul>
+
+        <p class="footer__tel">8 800 725-32-32</p>
       </div>
 
         <ul class="footer__social-list">

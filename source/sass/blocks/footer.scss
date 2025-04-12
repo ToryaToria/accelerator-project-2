@@ -16,17 +16,26 @@
   margin-bottom: 23px;
   margin-left: auto;
   margin-right: auto;
+
+  @include media-desktop {
+  margin: 0;
+  }
 }
 
 .footer__wrapp {
   display: flex;
   flex-direction: column;
+  margin-bottom: 23px;
 
   @include media-tablet {
     flex-direction: row;
     align-items: center;
-
     margin-bottom: 34px;
+  }
+
+  @include media-desktop {
+  justify-content: space-between;
+  margin-bottom: 22px;
   }
 }
 
@@ -36,11 +45,16 @@
   flex-wrap: wrap;
   gap: 15px 50px;
   justify-content: center;
-  margin-bottom: 23px;
 
   @include media-tablet {
     flex-wrap: nowrap;
     gap: 20px;
+  } 
+
+
+  @include media-desktop {
+  margin-bottom: 0;
+  gap: 30px;
   }
 }
 
@@ -62,6 +76,10 @@
 
   @include media-tablet {
     margin-bottom: 34px;
+  }
+
+  @include media-desktop {
+  margin-bottom: 22px;
   }
 }
 
@@ -95,5 +113,13 @@
   &--reddit {
     background-size: 14px 15px;
     background-image: url("../__spritemap#sprite-reddit-view");
+  }
+}
+
+.footer__tel {
+  display: none;
+
+  @include media-desktop {
+  display: block;
   }
 }

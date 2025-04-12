@@ -5,6 +5,9 @@
   @include media-tablet {
     padding-top: 40px;
   }
+  @include media-desktop {
+    padding-top: 100px;
+  }
 }
 
 .gallery__navigation-wrapp {
@@ -17,6 +20,16 @@
   @include media-tablet {
     margin-bottom: 21px;
   }
+
+  @include media-desktop {
+  margin-bottom: 46px;
+  }
+}
+
+.gallery__navigation {
+  @include media-desktop {
+  display: none;
+  }
 }
 
 .gallery__title {
@@ -26,6 +39,10 @@
 .gallery__text {
   @include media-tablet {
     margin-right: 180px;
+  }
+
+  @include media-desktop {
+    margin-right: 608px;
   }
 }
 

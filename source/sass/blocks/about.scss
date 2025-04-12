@@ -8,9 +8,13 @@
   @include media-tablet {
     padding-top: 40px;
     padding-bottom: 40px;
-
     align-items: center;
     flex-direction: row;
+  }
+
+  @include media-desktop {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -24,6 +28,11 @@
     // width: 343px;
   height: 280px;
   }
+
+  @include media-desktop {
+    width: 660px;
+    height: 498px;
+  }
 }
 
 .about__container {
@@ -34,15 +43,27 @@
     padding-left: 0;
     padding-right: 48px;
   }
+
+  @include media-desktop {
+  padding-right: 195px;
+  }
 }
 
 
 .about__title {
   margin-bottom: 25px;
+
+  @include media-desktop {
+    margin-bottom: 57px;
+  }
 }
 
 .about__subtitle {
 margin-bottom: 15px;
+
+@include media-desktop {
+  margin-bottom: 20px;
+}
 }
 
 .about__text {

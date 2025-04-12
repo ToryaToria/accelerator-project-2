@@ -1,11 +1,25 @@
 .adv {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @include media-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include media-desktop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .adv__title {
   margin-bottom: 20px;
   text-align: center;
+
+  @include media-tablet {
+    margin-bottom: 50px;
+  }
 }
 
 .adv__list {
@@ -18,6 +32,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 50px;
+    flex-wrap: nowrap;
   }
 }
 
@@ -68,9 +88,19 @@
   @include media-tablet {
     width: 324px;
     padding: 30px 20px;
+    flex-shrink: 0;
 
     &::before {
       margin-bottom: 25px;
+    }
+  }
+
+  @include media-desktop {
+    width: 380px;
+    padding: 40px 20px;
+
+    &::before {
+      margin-bottom: 30px;
     }
   }
 }
@@ -81,5 +111,14 @@
   &::after {
     text-align: center;
     width: 100%;
+  }
+}
+
+.adv__navigation {
+  display: none;
+
+  @include media-desktop {
+  display: flex;
+  justify-content: center;
   }
 }

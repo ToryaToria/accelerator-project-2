@@ -133,13 +133,14 @@
 .tour-card__setting-list {
   @include list-reset;
   display: flex;
-  gap: 8px;
+  // gap: 8px;
   align-items: center;
+  justify-content: space-between;
 
-  @include media-tablet {
-    gap: 28px;
+  // @include media-tablet {
+  //   gap: 28px;
 
-  }
+  // }
 }
 
 .tour-card__setting {
