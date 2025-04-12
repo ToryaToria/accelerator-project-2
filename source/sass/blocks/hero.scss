@@ -28,7 +28,7 @@
 
   &--1 {
     background-image:
-    linear-gradient(133deg,rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
+      linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/kavkaz_1x.webp") 1x type("image/webp"),
         url("../..img/kavkaz_1x.jpg") 1x,
         url("../../img/kavkaz_2x.webp") 2x type("image/webp"),
@@ -36,8 +36,8 @@
   }
 
   &--2 {
-   background-image:
-    linear-gradient(133deg,rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
+    background-image:
+      linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/kamchatka_1x.webp") 1x type("image/webp"),
         url("../..img/kamchatka_1x.jpg") 1x,
         url("../../img/kamchatka_2x.webp") 2x type("image/webp"),
@@ -46,7 +46,7 @@
 
   &--3 {
     background-image:
-    linear-gradient(133deg,rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
+      linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/altay_1x.webp") 1x type("image/webp"),
         url("../..img/altay_1x.jpg") 1x,
         url("../../img/altay_2x.webp") 2x type("image/webp"),
@@ -61,24 +61,48 @@
 
     &--2 {
       padding-top: 137px;
-
       padding-bottom: 197px;
     }
+  }
+
+  @include media-desktop {
+    position: relative;
+    min-width: 1440px;
+    min-height: 800px;
+    padding-top: 200px;
+    padding-bottom: 80px;
+    text-align: left;
+
+    align-items: flex-start;
   }
 }
 
 .hero__title {
   margin-top: auto;
   margin-bottom: 15px;
+
+  @include media-desktop {
+    margin-top: 0;
+    // text-align: left;
+    margin-bottom: 25px;
+    padding-right: 256px;
+
+  }
 }
 
 .hero__text {
   margin-bottom: 60px;
 
   @include media-tablet {
-  margin-bottom: 35px;
-  padding-left: 89px;
-  padding-right: 89px;
+    margin-bottom: 35px;
+    padding-left: 89px;
+    padding-right: 89px;
+  }
+
+  @include media-desktop {
+    // text-align: left;
+    padding-left: 0;
+    padding-right: 780px;
   }
 }
 
@@ -89,6 +113,10 @@
 
   @include media-tablet {
     margin-bottom: 45px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 134px;
 
   }
 }
@@ -96,24 +124,77 @@
 .hero_bullit-wrapp {
   position: absolute;
   bottom: 40px;
-  left: 50%;
-  transform: translate(-50%);
+  right: 50%;
+  transform: translate(50%);
   display: flex;
   gap: 20px;
+
+  @include media-desktop {
+    bottom: 92px;
+    right: 120px;
+    transform: none;
+  }
 }
 
 .hero__img {
-display: none;
+  display: none;
 
-@include media-tablet {
-display: block;
-width: 442px;
-height: 365px;
+  @include media-tablet {
+    display: block;
+    width: 442px;
+    height: 365px;
+  }
+
+  @include media-desktop {
+    position: absolute;
+    width: 410px;
+    height: 459px;
+    top: 187px;
+    right: 120px;
+  }
 }
 
+.hero__features-list {
+  display: none;
 
-@include media-desktop {
-  width: 410px;
-  height: 459px;
+  @include media-desktop {
+    @include list-reset;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 }
+
+.hero__features-item {
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border: 1px solid $color-white-50;
+
+  display: flex;
+  gap: 3px;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+  }
+
+  &--day::before {
+    background-image: url("../__spritemap#sprite-night-view");
+  }
+
+  &--level::before {
+    background-image: url("../__spritemap#sprite-level1-view");
+  }
+
+}
+
+.hero__features-text {
+  color: $color-white;
 }

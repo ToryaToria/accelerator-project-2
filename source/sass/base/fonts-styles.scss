@@ -69,7 +69,7 @@
 }
 
 .text-nav {
-  @include font ($size: 14px);
+  @include font ($size: 14px, $color: $color-white);
   text-decoration: none;
 
   @include media-desktop {

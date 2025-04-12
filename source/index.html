@@ -21,36 +21,37 @@
       <span class="visually-hidden">burger-menu</span>
     </div>
 
-    <nav class="header__nav">
-      <ul class="header__list">
-        <li>
-          <a class="text-nav" href="">Туры</a>
-        </li>
-
-        <li>
-          <a class="text-nav" href="">Обучение</a>
-        </li>
-
-        <li>
-          <a class="text-nav" href="">О нас</a>
-        </li>
-
-        <li>
-          <a class="text-nav" href="">Отзывы</a>
-        </li>
-
-        <li>
-          <a class="text-nav" href="">Фотографии</a>
-        </li>
-
-        <li>
-          <a class="text-nav" href="">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="header__wrapper">
+       <div class="header__wrapper">
       <img class="header__logo" src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li>
+            <a class="text-nav" href="">Туры</a>
+          </li>
+  
+          <li>
+            <a class="text-nav" href="">Обучение</a>
+          </li>
+  
+          <li>
+            <a class="text-nav" href="">О нас</a>
+          </li>
+  
+          <li>
+            <a class="text-nav" href="">Отзывы</a>
+          </li>
+  
+          <li>
+            <a class="text-nav" href="">Фотографии</a>
+          </li>
+  
+          <li>
+            <a class="text-nav" href="">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
       <a class="header__tel text-tel" href="tel:88000000000">8 800 000-00-00</a>
     </div>
   </header>
@@ -68,6 +69,16 @@
             Чегет.
           </p>
           <button class="hero__btn button text-btn" type="button">Смотреть тур</button>
+
+          <ul class="hero__features-list">
+            <li class="hero__features-item hero__features-item--day">
+              <p class="hero__features-text text-small">6 дней/5 ночей</p>
+            </li>
+
+            <li class="hero__features-item hero__features-item--level">
+              <p class="hero__features-text text-small">Высокая сложность</p>
+            </li>
+          </ul>
         </li>
 
         <li class="hero__item hero__item--2 container">
@@ -82,13 +93,14 @@
             <source type="image/webp" media="(min-width: 1366px)" srcset="./img/cards-deskt_1x.webp 1x,
             ./img/cards-deskt_2x.webp 2x" width="410" height="459">
 
-            <source type="image/webp" srcset="./img/cards-deskt_1x.webp 1x,
-            ./img/cards-deskt_2x.webp 2x" width="410" height="459">
+            <source type="image/webp" srcset="./img/cards-tablet_1x.webp 1x,
+            ./img/cards-tablet_2x.webp 2x" width="410" height="459">
 
-            <source type="image/png" media="(min-width: 1366px)" srcset="./img/cards-tabl_1x.png 1x,
-            ./img/cards-tabl__2x.png 2x" width="442" height="365">
+            <source type="image/png" media="(min-width: 1366px)" srcset="./img/cards-desct_1x.png 1x,
+            ./img/cards-desct_2x.png 2x" width="442" height="365">
 
-            <img class="hero__img" src="./img/cards-tabl_1x.png" srcset="./img/cards-tabl_2x.png" alt="фотки-карточки"
+            <img class="hero__img" src="./img/cards-tablet_2x.png"
+             srcset="./img/cards-tablet_2x.png" alt="фотки-карточки"
               width="442" height="365">
           </picture>
         </li>
