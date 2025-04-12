@@ -10,7 +10,14 @@
   @include media-tablet {
     padding-top: 20px;
     padding-bottom: 20px;
+    align-items: center;
+    justify-content: left;
+
     }
+
+    // * {
+    //   outline: auto;
+    // }
 }
 
 .header__burger {
@@ -23,7 +30,11 @@
   background-image: url("../__spritemap#sprite-menu-view");
   background-repeat: no-repeat;
   background-size: 26px 20px;
-  background-position: center;
+  background-position: left;
+
+  @include media-tablet {
+  padding-right: 200px;
+  }
 }
 
 .header__nav {
@@ -43,10 +54,27 @@
   flex-direction: column;
   gap: 14px;
   text-align: right;
+
+  @include media-tablet {
+    flex-direction: row;
+    align-items: center;
+
+  }
 }
 
 .header__logo {
   display: block;
   width: 142px;
   height: 42px;
+
+  @include media-tablet {
+    padding-left: 42px;
+    padding-right: 42px;
+    }
+}
+
+.header__tel  {
+  @include media-tablet {
+    padding-left: 86px;
+    }
 }

@@ -8,6 +8,21 @@
   }
 }
 
+.training__navigation-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+
+  @include media-tablet {
+    margin-bottom: 30px;
+  }
+}
+
+// .training__navigation {
+// margin-top: 20px;
+// }
+
 .training__title {
   margin-bottom: 18px;
 
@@ -21,11 +36,9 @@
 }
 
 .training__instructors {
-  margin-bottom: 25px;
+  padding-top: 0;
 
-  @include media-tablet {
-    margin-bottom: 30px;
-  }
+
 }
 
 .training__list {
@@ -113,11 +126,11 @@
   @include media-tablet {
     // height: 192px;
     flex-direction: row;
-gap: 104px 198px; 
-flex-wrap: wrap;
-margin-right: 0;
+    gap: 104px 198px;
+    flex-wrap: wrap;
+    margin-right: 0;
 
-}
+  }
 }
 
 .training__process-item {
@@ -166,14 +179,15 @@ margin-right: 0;
 
   @include media-tablet {
     padding-bottom: 0;
-  width: 232px;
-  &--two {
-    order: 1;
-  }
+    width: 232px;
 
-  &--end {
-    order: 2;
-  }
+    &--two {
+      order: 1;
+    }
+
+    &--end {
+      order: 2;
+    }
   }
 }
 

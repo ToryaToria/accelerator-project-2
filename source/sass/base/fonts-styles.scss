@@ -50,6 +50,15 @@
   }
 }
 
+.text-reviews {
+  @include font ($size: 12px, $line-height: 18px);
+
+  @include media-desktop {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 .text-middle {
   @include font ($size: 14px, $line-height: 20px);
 

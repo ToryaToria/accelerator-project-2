@@ -1,9 +1,9 @@
 .form {
-  // padding-top: 174px;
-  // padding-bottom: 174px;
-  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+   display: flex;
   flex-direction: column;
-height: 638px;
+  min-height: 638px;
 
   text-align: center;
   color: $color-white;
@@ -14,12 +14,17 @@ height: 638px;
   background-size: cover;
 
   background-image:
-  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
 
     image-set(url("../../img/form-bg_1x.webp") 1x type("image/webp"),
       url("../..img/form-bg_1x.jpg") 1x,
       url("../../img/form-bg_2x.webp") 2x type("image/webp"),
       url("../../img/form-bg_2x.jpg") 2x);
+
+      @include media-tablet {
+        min-height: 680px;
+      }
+
 }
 
 .form__wrapp {
@@ -31,11 +36,18 @@ height: 638px;
   margin-bottom: 20px;
   color: $color-white;
 
+  @include media-tablet {
+    margin-bottom: 25px;
+  }
 }
 
 .form__text {
   margin-bottom: 20px;
   color: $color-white;
+
+  @include media-tablet {
+    margin-bottom: 25px;
+  }
 }
 
 .form__field {
@@ -47,8 +59,12 @@ height: 638px;
   border: none;
   border-radius: 2px;
   margin-bottom: 8px;
+
+  @include media-tablet {
+    margin-bottom: 11px;
+  }
 }
 
 .form__button {
-width: 100%;  
+  width: 100%;
 }

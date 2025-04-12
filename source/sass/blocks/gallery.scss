@@ -1,6 +1,22 @@
 .gallery {
   padding-top: 20px;
   padding-bottom: 3px;
+
+  @include media-tablet {
+    padding-top: 40px;
+  }
+}
+
+.gallery__navigation-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 31px;
+
+  @include media-tablet {
+    margin-bottom: 21px;
+  }
 }
 
 .gallery__title {
@@ -8,7 +24,9 @@
 }
 
 .gallery__text {
-  margin-bottom: 31px;
+  @include media-tablet {
+    margin-right: 180px;
+  }
 }
 
 .gallery__img1 {
@@ -46,11 +64,8 @@
 }
 
 .gallery__container {
-display: flex;
-gap: 5px;
-
-margin-left: -15px;
-margin-right: 15px;
+  display: flex;
+  gap: 5px;
 }
 
 .gallery__img-wrapp {
