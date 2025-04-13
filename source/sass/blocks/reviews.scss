@@ -1,5 +1,8 @@
 .reviews {
-  padding-top: 20px;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  padding-top: 21px;
   padding-bottom: 20px;
 
   @include media-tablet {
@@ -8,6 +11,7 @@
   }
 
   @include media-desktop {
+    width: 1440px;
     padding-top: 100px;
     padding-bottom: 77px;
   }
@@ -22,14 +26,14 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 
   @include media-tablet {
     margin-bottom: 25px;
   }
 
   @include media-desktop {
-  margin-bottom: 28px;
+    margin-bottom: 28px;
   }
 }
 
@@ -37,9 +41,10 @@
   margin-top: 6px;
 }
 
-// .reviews__title {
-//   margin-bottom: 15px;
-// }
+.reviews__title {
+  padding-top: 16px;
+  padding-bottom: 14px;
+}
 
 .reviews__list {
   @include list-reset;
@@ -48,7 +53,7 @@
   // flex-direction: column;
 
   @include media-desktop {
-  gap: 120px;
+    gap: 120px;
   }
 }
 
@@ -66,7 +71,7 @@
   @include media-tablet {
     width: 565px;
     padding: 20px 30px;
-    flex-direction: row;  
+    flex-direction: row;
     gap: 30px;
   }
 
@@ -82,7 +87,7 @@
   height: 169px;
   object-fit: cover;
 
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @include media-tablet {
     width: 186px;
@@ -98,32 +103,33 @@
 }
 
 .reviews__text {
-  margin-bottom: 15px;
+  padding-bottom: 10px;
 
-  @include media-tablet {
-    margin-bottom: 25px;
-  }
+  &--last {
+    margin-bottom: 15px;
+    padding-bottom: 0;
 
-  @include media-desktop {
-  margin-bottom: 2px;
+
+    @include media-tablet {
+      margin-bottom: 25px;
+    }
+
+    @include media-desktop {
+      margin-bottom: 2px;
+    }
   }
 }
 
 .reviews__name {
+  @include font ($size: 12px, $weight: 600);
   margin-bottom: 8px;
 
   @include media-tablet {
+    @include font ($size: 13px, $weight: 600);
     margin-bottom: 6px;
   }
 
   @include media-desktop {
     margin-bottom: 8px;
-    }
-}
-
-.reviews__br {
-  display: block;
-  width: 320px;
-  height: 10px;
-  // margin-bottom: 10px;
+  }
 }

@@ -1,5 +1,5 @@
 .training {
-  padding-top: 20px;
+  padding-top: 17px;
   padding-bottom: 20px;
 
   @include media-tablet {
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 
   @include media-tablet {
     margin-bottom: 30px;
@@ -28,8 +28,11 @@
 // }
 
 .training__title {
-  margin-bottom: 18px;
+  padding-top: 19px;
+  padding-bottom: 14px;
 
+  margin-bottom: 20px;
+  
   @include media-tablet {
     margin-bottom: 26px;
   }
@@ -40,7 +43,7 @@
 }
 
 .training__text {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 
   @include media-desktop {
     margin-bottom: 56px;
@@ -91,7 +94,7 @@
   height: 200px;
   object-fit: cover;
 
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 
   @include media-tablet {
     width: 183px;
@@ -106,7 +109,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 
@@ -168,7 +171,7 @@
 
   &::before {
     box-sizing: border-box;
-    padding-top: 11px;
+    margin-top: 11px;
     content: '';
     display: block;
     width: 14px;

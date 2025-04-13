@@ -1,5 +1,11 @@
 .hero {
+  margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
+
+  @include media-desktop {
+  width: 1440px;
+  }
 }
 
 .hero__list {

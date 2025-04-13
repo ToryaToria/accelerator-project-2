@@ -2,6 +2,8 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
+  overflow-x: hidden;
+
   @include media-tablet {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -14,8 +16,14 @@
 }
 
 .adv__title {
-  margin-bottom: 20px;
+  padding-top: 17px;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
   text-align: center;
+
+  &::after {
+    top: 4px;
+  }
 
   @include media-tablet {
     margin-bottom: 50px;
@@ -44,7 +52,7 @@
 .adv__item {
   box-sizing: border-box;
   width: 290px;
-  padding: 20px 10px;
+  padding: 20px 9px 20px 10px;
   border: 1px solid $color-line-light;
 
   text-align: center;
@@ -52,6 +60,7 @@
   flex-direction: column;
 
   &::before {
+    box-sizing: border-box;
     content: '';
     display: block;
     margin: auto;
@@ -105,12 +114,29 @@
   }
 }
 
-.adv__title {
-  margin-bottom: 15px;
+.adv__subtitle {
+  @include font ($size: 14px, $weight: 600);
+  margin-bottom: 13px;
 
   &::after {
     text-align: center;
     width: 100%;
+  }
+
+  @include media-tablet {
+    font-size: 16px;
+  }
+
+  @include media-desktop {
+    font-size: 18px;
+  }
+}
+
+.adv__subtitle .transfer {
+  display: block;
+
+  @include media-desktop {
+  display: inline-block;
   }
 }
 
@@ -118,7 +144,7 @@
   display: none;
 
   @include media-desktop {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 }
