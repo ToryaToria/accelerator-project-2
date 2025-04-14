@@ -8,7 +8,7 @@
 
   display: flex;
   flex-direction: column;
-  
+
   &--1 {
     background-image:
       linear-gradient(transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
@@ -66,7 +66,11 @@
   margin-bottom: 15px;
 
   @include media-tablet {
-  justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  @include media-desktop {
+    margin-bottom: 15px;
   }
 }
 
@@ -128,7 +132,11 @@
     width: 80px;
     height: 1px;
     background-color: $color-white;
-}
+  }
+
+  @include media-desktop {
+    margin-bottom: 15px;
+  }
 }
 
 .tour-card__setting-list {
@@ -143,16 +151,23 @@
 
   // }
 }
+.tour-card__setting-img {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  align-items: start;
+}
+
 
 .tour-card__setting {
   display: flex;
-  gap: 5px;
+  gap: 6px;
   flex-direction: column;
   align-items: start;
-  }
+}
 
 .tour-card__stars-wrapp {
-   display: flex;
+  display: flex;
   gap: 1px;
 }
 
@@ -162,10 +177,9 @@
   height: 16px;
 
   background-repeat: repeat;
-   background-image: url("../__spritemap#sprite-star1-view");
-  
- &--not {
-  background-image: url("../__spritemap#sprite-star2-view");
- }
-}
+  background-image: url("../__spritemap#sprite-star1-view");
 
+  &--not {
+    background-image: url("../__spritemap#sprite-star2-view");
+  }
+}

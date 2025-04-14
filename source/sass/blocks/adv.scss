@@ -26,7 +26,18 @@
   }
 
   @include media-tablet {
-    margin-bottom: 50px;
+    margin-bottom: 46px;
+    padding-top: 20px;
+  }
+
+  @include media-desktop {
+    padding-top: 46px;
+    padding-bottom: 0;
+    margin-bottom: 49px;
+
+    &::after {
+      top: 16px;
+    }
   }
 }
 
@@ -40,7 +51,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 29px;
   }
 
   @include media-desktop {
@@ -52,12 +63,14 @@
 .adv__item {
   box-sizing: border-box;
   width: 290px;
+  min-height: 239px;
   padding: 20px 9px 20px 10px;
   border: 1px solid $color-line-light;
 
   text-align: center;
-  display: flex;
-  flex-direction: column;
+
+  // display: flex;
+  // flex-direction: column;
 
   &::before {
     box-sizing: border-box;
@@ -72,8 +85,48 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 24px 24px;
+
+    @include media-tablet {
+      width: 48px;
+      height: 48px;
+    }
+
+    @include media-desktop {
+      width: 54px;
+      height: 54px;
+    }
   }
 
+  @include media-tablet {
+    width: 324px;
+    min-height: 340px;
+
+    padding: 30px 20px;
+    flex-shrink: 0;
+    padding: 30px 19px 30px 18px;
+
+    &::before {
+      margin-bottom: 25px;
+    }
+
+    &--leaf {
+      padding-bottom: 35px;
+    }
+  }
+
+  @include media-desktop {
+    width: 380px;
+    min-height: 329px;
+
+    padding: 40px 19px 40px 20px;
+
+    &::before {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.adv__item {
   &--level:before {
     background-image: url("../__spritemap#sprite-level-view");
   }
@@ -93,25 +146,6 @@
   &--leaf:before {
     background-image: url("../__spritemap#sprite-leaf-view");
   }
-
-  @include media-tablet {
-    width: 324px;
-    padding: 30px 20px;
-    flex-shrink: 0;
-
-    &::before {
-      margin-bottom: 25px;
-    }
-  }
-
-  @include media-desktop {
-    width: 380px;
-    padding: 40px 20px;
-
-    &::before {
-      margin-bottom: 30px;
-    }
-  }
 }
 
 .adv__subtitle {
@@ -125,6 +159,8 @@
 
   @include media-tablet {
     font-size: 16px;
+    margin-bottom: 14px;
+
   }
 
   @include media-desktop {
@@ -136,7 +172,7 @@
   display: block;
 
   @include media-desktop {
-  display: inline-block;
+    display: inline-block;
   }
 }
 

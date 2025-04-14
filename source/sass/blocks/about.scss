@@ -19,6 +19,7 @@
     padding-top: 100px;
     padding-bottom: 100px;
     width: 1440px;
+    align-items: flex-start;
   }
 }
 
@@ -29,8 +30,8 @@
   object-fit: cover;
 
   @include media-tablet {
-    width: 343px;
-    height: 280px;
+    width: 450px;
+    height: 350px;
   }
 
   @include media-desktop {
@@ -47,10 +48,14 @@
   @include media-tablet {
     padding-left: 0;
     padding-right: 48px;
+    margin-top: 3px;
+
   }
 
   @include media-desktop {
     padding-right: 195px;
+    margin-top: 0;
+
   }
 }
 
@@ -60,19 +65,42 @@
   padding-top: 19px;
   padding-bottom: 14px;
 
+  @include media-tablet {
+    margin-bottom: 33px;
+  }
+
   @include media-desktop {
-    margin-bottom: 57px;
+    margin-bottom: 58px;
+    padding-top: 41px;
+    padding-bottom: 0;
+
+    &::after {
+      top: 1px;
+    }
   }
 }
 
 .about__subtitle {
   margin-bottom: 15px;
 
+  @include media-tablet {
+    margin-bottom: 12px;
+  }
+
   @include media-desktop {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 }
 
 .about__text {
   margin-bottom: 25px;
+
+  @include media-tablet {
+    margin-bottom: 28px;
+  }
+
+  @include media-desktop {
+  margin-bottom: 30px;
+  padding-right: 15px;
+  }
 }

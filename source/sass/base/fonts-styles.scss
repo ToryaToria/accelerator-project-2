@@ -78,18 +78,18 @@
   }
 }
 
-.text-tel {
-  @include font ($size: 14px, $weight: 600, $color: $color-white);
-  text-decoration: none;
+// .text-tel {
+//   @include font ($size: 14px, $weight: 600, $color: $color-white);
+//   text-decoration: none;
 
-  @include media-tablet {
-    font-size: 16px;
-  }
+//   @include media-tablet {
+//     font-size: 16px;
+//   }
 
-  @include media-desktop {
-    font-size: 18px;
-  }
-}
+//   @include media-desktop {
+//     font-size: 18px;
+//   }
+// }
 
 .text-medium {
   @include font ($size: 12px, $weight: 500, $color: $color-white);
@@ -105,7 +105,7 @@
 .text-bold {
   // background-color: rgb(43, 231, 18);
 
-  @include font ($size: 13px, $weight: 600);
+  @include font ($size: 13px, $weight: 700);
 }
 
 .title-section {
@@ -123,7 +123,7 @@
     z-index: -1;
     right: 0;
 
-    @include font ($size: 26px, $weight: 800, $color: rgb(255, 0, 0));
+    @include font ($size: 26px, $weight: 800, $color: $color-text-shadow);
 
     @include media-tablet {
       font-size: 40px;

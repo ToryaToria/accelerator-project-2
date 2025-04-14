@@ -5,6 +5,7 @@
   @include media-tablet {
     padding-top: 40px;
   }
+
   @include media-desktop {
     padding-top: 100px;
   }
@@ -15,9 +16,9 @@
   gap: 5px;
 
   @include media-desktop {
-  width: 1440px;
-  margin: 0 auto;
-  overflow-x: hidden;
+    width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
   }
 }
 
@@ -33,13 +34,13 @@
   }
 
   @include media-desktop {
-  margin-bottom: 46px;
+    margin-bottom: 46px;
   }
 }
 
 .gallery__navigation {
   @include media-desktop {
-  display: none;
+    display: none;
   }
 }
 
@@ -49,17 +50,40 @@
   padding-bottom: 14px;
 
   &::after {
-       top: 4px;
+    top: 4px;
+  }
+
+  @include media-tablet {
+    padding-top: 20px;
+    margin-bottom: 16px;
+
+    &::after {
+      top: 5px;
+    }
+  }
+
+  @include media-desktop {
+    margin-bottom: 25px;
+    padding-top: 21px;
+    padding-bottom: 0;
   }
 }
 
 .gallery__text {
   @include media-tablet {
     margin-right: 180px;
+
+    .transter {
+      display: block;
+    }
   }
 
   @include media-desktop {
     margin-right: 608px;
+
+    .transter {
+      display: inline;
+    }
   }
 }
 
