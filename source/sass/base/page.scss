@@ -16,7 +16,7 @@
   min-height: 100%;
   flex-direction: column;
 
-  background-position: top 688px right -207px;
+  background-position: top 678px right 0;
   background-repeat: no-repeat;
   background-size: auto;
 
@@ -28,7 +28,7 @@
         url("../../img/background/clouds-mob_2x.png") 2x);
 
   @include media-tablet {
-    background-position: top 1024px right -177px, top 4288px right -233px;
+    background-position: top 1024px right 0, top 4288px right -233px;
     background-image:
     image-set(url("../../img/background/clouds1-tabl_1x.webp") 1x type("image/webp"),
       url("../../img/background/clouds1-tabl_1x.png") 1x,
@@ -42,7 +42,7 @@
      }
 
      @include media-desktop {
-      background-position: top 802px right -207px, top 3643px right -339px;
+      background-position: top 800px right 0, top 3643px right -339px;
       background-image:
       image-set(url("../../img/background/clouds1-desct_1x.webp") 1x type("image/webp"),
         url("../../img/background/clouds1-desct_1x.png") 1x,

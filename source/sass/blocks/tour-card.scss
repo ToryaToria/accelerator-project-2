@@ -21,7 +21,9 @@
 
   &--2 {
     background-image:
-      linear-gradient(transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+      // linear-gradient(transparent, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.3)),
+
+      linear-gradient(transparent, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0)),
 
       image-set(url("../../img/belyha_1x.webp") 1x type("image/webp"),
         url("../..img/belyha_1x.jpg") 1x,
@@ -31,8 +33,8 @@
 
   &--3 {
     background-image:
-      linear-gradient(transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
-
+    linear-gradient(transparent, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0)),
+    
       image-set(url("../../img/fisht_1x.webp") 1x type("image/webp"),
         url("../..img/fisht_1x.jpg") 1x,
         url("../../img/fisht_2x.webp") 2x type("image/webp"),
@@ -122,7 +124,8 @@
 }
 
 .tour-card__title {
-  margin-bottom: 13px;
+  @include font ($size: 24px, $line-height: 28px, $weight: 700, $color: $color-white);
+  margin-bottom: 14px;
 
   &::after {
     margin-top: 15px;
@@ -132,28 +135,41 @@
     width: 80px;
     height: 1px;
     background-color: $color-white;
+    opacity: 0.2;
   }
 
-  @include media-desktop {
-    margin-bottom: 15px;
-  }
+  // @include media-desktop {
+  //   margin-bottom: 15px;
+  // }
 }
 
 .tour-card__setting-list {
   @include list-reset;
   display: flex;
-  // gap: 8px;
+  gap: 8px;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
 
-  // @include media-tablet {
-  //   gap: 28px;
+  @include media-tablet {
+    gap: 27px;
 
-  // }
+    &--1 {
+      gap: 28px;
+    }
+  }
+
+  @include media-desktop {
+    gap: 52px;
+
+    &--1 {
+      gap: 53px;
+    }
+  }
 }
+
 .tour-card__setting-img {
   display: flex;
-  gap: 4px;
+  gap: 5px;
   flex-direction: column;
   align-items: start;
 }
@@ -161,7 +177,7 @@
 
 .tour-card__setting {
   display: flex;
-  gap: 6px;
+  gap: 7px;
   flex-direction: column;
   align-items: start;
 }
