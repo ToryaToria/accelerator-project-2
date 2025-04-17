@@ -8,6 +8,30 @@
   }
 }
 
+.training__wysiwyg {
+
+  margin-bottom: 28px;
+
+  @include media-tablet {
+    margin-bottom: 25px;
+
+  }
+
+  @include media-desktop {
+    margin-bottom: 63px;
+    padding-right: 380px;
+  }
+
+  p {
+    @include font ($size: 14px, $line-height: 20px);
+
+    @include media-tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
 picture {
   display: block;
   width: fit-content;
@@ -99,6 +123,7 @@ picture {
 }
 
 .training__item {
+  position: relative;
   box-sizing: border-box;
   width: 290px;
   // min-height: 403px;
@@ -147,15 +172,23 @@ picture {
   }
 }
 
-.training__name-wrapp {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.training__wysiwyg-instr {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-start;
   margin-bottom: 13px;
 
   @include media-tablet {
     margin-bottom: 14px;
+  }
 
+  h4 {
+    @include font ($size: 14px, $line-height: 16px, $weight: 700);
+    margin-bottom: 15px;
+  }
+
+  p {
+    @include font ($size: 12px, $line-height: 16px);
   }
 }
 
@@ -172,6 +205,9 @@ picture {
 }
 
 .training__name-link {
+  position: absolute;
+  top: 230px;
+  right: 15px;
   box-sizing: border-box;
   display: inline-block;
   width: 24px;

@@ -12,21 +12,22 @@
   }
 }
 
-.text-big {
-  // текст в hero
-  background-color: aqua;
-  @include font ($size: 15px, $line-height: 20px, $color: $color-white);
+// .text-big {
+//   // текст в hero
+//   background-color: aqua;
+//   @include font ($size: 15px, $line-height: 20px, $color: $color-white);
 
 
-  @include media-tablet {
-    font-size: 17px;
-    line-height: 24px;
-  }
-}
+//   @include media-tablet {
+//     font-size: 17px;
+//     line-height: 24px;
+//   }
+// }
 
-.text-small {
-  @include font ($size: 12px, $line-height: 16px);
-}
+// .text-small {
+//   background-color: blueviolet;
+//   @include font ($size: 12px, $line-height: 16px);
+// }
 
 .text-mini {
   @include font ($size: 12px, $line-height: 18px);
@@ -43,32 +44,34 @@
   }
 }
 
-.text-adv {
-  @include font ($size: 12px, $line-height: 18px);
+// .text-adv {
+//   @include font ($size: 12px, $line-height: 18px);
 
-  @include media-tablet {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
+//   @include media-tablet {
+//     font-size: 14px;
+//     line-height: 22px;
+//   }
+// }
 
-.text-reviews {
-  @include font ($size: 12px, $line-height: 18px);
+// .text-reviews {
+//   // background-color: chartreuse;
+//   @include font ($size: 12px, $line-height: 18px);
 
-  @include media-desktop {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
+//   @include media-desktop {
+//     font-size: 14px;
+//     line-height: 22px;
+//   }
+// }
 
-.text-middle {
-  @include font ($size: 14px, $line-height: 20px);
+// .text-middle {
+//   // background-color: antiquewhite;
+//   @include font ($size: 14px, $line-height: 20px);
 
-  @include media-tablet {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
+//   @include media-tablet {
+//     font-size: 16px;
+//     line-height: 24px;
+//   }
+// }
 
 .text-nav {
   @include font ($size: 14px);
@@ -149,27 +152,28 @@
 
 // }
 
-.title-hero {
-  // h3-hero
-  @include font ($size: 26px, $weight: 800, $color: $color-white);
+// .title-hero {
+//   // h3-hero
+//   @include font ($size: 26px, $weight: 800, $color: $color-white);
 
-  background-color: aquamarine;
-  @include media-tablet {
-    font-size: 56px;
-  }
+//   background-color: aquamarine;
+//   @include media-tablet {
+//     font-size: 56px;
+//   }
 
-  @include media-desktop {
-    font-size: 77px;
-  }
-}
+//   @include media-desktop {
+//     font-size: 77px;
+//   }
+// }
 
 .title-tour {
   @include font ($size: 24px, $line-height: 28px, $weight: 700, $color: $color-white);
 }
 
-.title-name {
-  @include font ($size: 14px, $line-height: 16px, $weight: 700);
-}
+// .title-name {
+//   // background-color: blue;
+//   @include font ($size: 14px, $line-height: 16px, $weight: 700);
+// }
 
 // .title-adv {
 
@@ -200,6 +204,7 @@
 }
 
 .subtitle {
+  // background-color: gold;
   @include font ($size: 16px, $weight: 700);
 
   @include media-tablet {

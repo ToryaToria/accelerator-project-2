@@ -100,11 +100,12 @@
 
 .header__tel  {
 @include font ($size: 14px, $weight: 600, $color: $color-white);
-margin-top: 2px;
 text-decoration: none;
 
 @include media-tablet {
   font-size: 16px;
+  margin-top: 2px;
+
 }
 
 @include media-desktop {

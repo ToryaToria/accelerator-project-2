@@ -40,7 +40,7 @@
   }
 }
 
-.about__container {
+.about__wysiwyg {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: -28px;
@@ -49,58 +49,132 @@
     padding-left: 0;
     padding-right: 48px;
     margin-top: 3px;
-
   }
 
   @include media-desktop {
     padding-right: 195px;
     margin-top: 0;
-
-  }
-}
-
-
-.about__title {
-  margin-bottom: 28px;
-  padding-top: 19px;
-  padding-bottom: 14px;
-
-  @include media-tablet {
-    margin-bottom: 33px;
   }
 
-  @include media-desktop {
-    margin-bottom: 58px;
-    padding-top: 41px;
-    padding-bottom: 0;
+
+  h2 {
+    @include font ($size: 22px, $weight: 800);
+    position: relative;
+    margin-bottom: 28px;
+    padding-top: 19px;
+    padding-bottom: 14px;
+    z-index: 1;
 
     &::after {
-      top: 1px;
+      // $color-text-shadow
+      @include font ($size: 26px, $weight: 800, $color: red);
+      content: attr(data-tip);
+      position: absolute;
+      top: 3px;
+      left: 0;
+      z-index: -1;
+      right: 0;
+
+      @include media-tablet {
+        font-size: 40px;
+      }
+
+      @include media-desktop {
+        font-size: 55px;
+        top: 1px;
+      }
+    }
+
+    @include media-tablet {
+      font-size: 25px;
+      margin-bottom: 33px;
+    }
+
+    @include media-desktop {
+      font-size: 35px;
+      margin-bottom: 58px;
+    padding-top: 41px;
+    padding-bottom: 0;
     }
   }
-}
 
-.about__subtitle {
+h3 {
+  @include font ($size: 16px, $weight: 700);
   margin-bottom: 15px;
 
   @include media-tablet {
+    font-size: 18px;
     margin-bottom: 12px;
   }
 
   @include media-desktop {
+    font-size: 21px;
     margin-bottom: 16px;
   }
 }
 
-.about__text {
+p {
+  @include font ($size: 14px, $line-height: 20px);
   margin-bottom: 25px;
 
   @include media-tablet {
+    font-size: 16px;
+    line-height: 24px;
     margin-bottom: 28px;
+
   }
 
   @include media-desktop {
-  margin-bottom: 30px;
-  padding-right: 15px;
+    font-size: 14px;
+    line-height: 22px;
+
+    margin-bottom: 30px;
+    padding-right: 15px;
   }
 }
+}
+
+// .about__title {
+//   margin-bottom: 28px;
+//   padding-top: 19px;
+//   padding-bottom: 14px;
+
+//   @include media-tablet {
+//     margin-bottom: 33px;
+//   }
+
+//   @include media-desktop {
+//     margin-bottom: 58px;
+//     padding-top: 41px;
+//     padding-bottom: 0;
+
+//     &::after {
+//       top: 1px;
+//     }
+//   }
+// }
+
+// .about__subtitle {
+//   margin-bottom: 15px;
+
+//   @include media-tablet {
+//     margin-bottom: 12px;
+//   }
+
+//   @include media-desktop {
+//     margin-bottom: 16px;
+//   }
+// }
+
+// .about__text {
+//   margin-bottom: 25px;
+
+//   @include media-tablet {
+//     margin-bottom: 28px;
+//   }
+
+//   @include media-desktop {
+//   margin-bottom: 30px;
+//   padding-right: 15px;
+//   }
+// }

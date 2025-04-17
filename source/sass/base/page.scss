@@ -15,10 +15,58 @@
   display: flex;
   min-height: 100%;
   flex-direction: column;
-}
+
+  background-position: top 688px right -207px;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+
+    background-image:
+      image-set(url("../../img/background/clouds-mob_1x.webp") 1x type("image/webp"),
+        url("../../img/background/clouds-mob_1x.png") 1x,
+        url("../../img/background/clouds-mob_2x.webp") 2x type("image/webp"),
+        url("../../img/background/clouds-mob_2x.png") 2x);
+
+  @include media-tablet {
+    background-position: top 1024px right -177px, top 4288px right -233px;
+    background-image:
+    image-set(url("../../img/background/clouds1-tabl_1x.webp") 1x type("image/webp"),
+      url("../../img/background/clouds1-tabl_1x.png") 1x,
+      url("../../img/background/clouds1-tabl_2x.webp") 2x type("image/webp"),
+      url("../../img/background/clouds1-tabl_2x.png") 2x),
+
+      image-set(url("../../img/background/clouds2-tabl_1x.webp") 1x type("image/webp"),
+      url("../../img/background/clouds2-tabl_1x.jpg") 1x,
+      url("../../img/background/clouds2-tabl_2x.webp") 2x type("image/webp"),
+      url("../../img/background/clouds2-tabl_2x.jpg") 2x),
+     }
+
+     @include media-desktop {
+      background-position: top 802px right -207px, top 3643px right -339px;
+      background-image:
+      image-set(url("../../img/background/clouds1-desct_1x.webp") 1x type("image/webp"),
+        url("../../img/background/clouds1-desct_1x.png") 1x,
+        url("../../img/background/clouds1-desct_2x.webp") 2x type("image/webp"),
+        url("../../img/background/clouds1-desct_2x.png") 2x),
+
+        image-set(url("../../img/background/clouds2-desct_1x.webp") 1x type("image/webp"),
+        url("../../img/background/clouds2-desct_1x.jpg") 1x,
+        url("../../img/background/clouds2-desct_2x.webp") 2x type("image/webp"),
+        url("../../img/background/clouds2-desct_2x.jpg") 2x),
+       }
+    }
 
 // РАЗКОММЕНТИРОВАТЬ!!!
 // .page__main {
 //   /*  для стики-футера */
 //   flex-grow: 1;
 // }
+
+
+// ПРОВЕРИТЬ еще раз - а нужен ли? - для блока инструкторов
+picture {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  // outline: auto;
+}

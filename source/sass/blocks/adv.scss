@@ -66,6 +66,7 @@
   min-height: 239px;
   padding: 20px 9px 20px 10px;
   border: 1px solid $color-line-light;
+  background-color: $color-white;
 
   text-align: center;
 
@@ -148,31 +149,33 @@
   }
 }
 
-.adv__subtitle {
-  @include font ($size: 14px, $weight: 600);
-  margin-bottom: 13px;
+.about__wysiwyg {
+  h3 {
+    @include font ($size: 14px, $weight: 600);
+    margin-bottom: 13px;
 
-  &::after {
-    text-align: center;
-    width: 100%;
+    // &::after {
+    //   text-align: center;
+    //   width: 100%;
+    // }
+
+    @include media-tablet {
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    @include media-desktop {
+      font-size: 18px;
+    }
   }
 
-  @include media-tablet {
-    font-size: 16px;
-    margin-bottom: 14px;
+  p {
+    @include font ($size: 12px, $line-height: 18px);
 
-  }
-
-  @include media-desktop {
-    font-size: 18px;
-  }
-}
-
-.adv__subtitle .transfer {
-  display: block;
-
-  @include media-desktop {
-    display: inline-block;
+    @include media-tablet {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -184,3 +187,32 @@
     justify-content: center;
   }
 }
+
+// .adv__subtitle {
+//   @include font ($size: 14px, $weight: 600);
+//   margin-bottom: 13px;
+
+//   &::after {
+//     text-align: center;
+//     width: 100%;
+//   }
+
+//   @include media-tablet {
+//     font-size: 16px;
+//     margin-bottom: 14px;
+
+//   }
+
+//   @include media-desktop {
+//     font-size: 18px;
+//   }
+// }
+
+// .adv__subtitle .transfer {
+//   display: block;
+
+//   @include media-desktop {
+//     display: inline-block;
+//   }
+// }
+
