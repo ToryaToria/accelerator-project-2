@@ -26,7 +26,7 @@
 
   @include media-tablet {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 42px;
     align-items: center;
     flex-direction: row;
   }
@@ -42,7 +42,7 @@
 .about__img {
   display: block;
   width: 434px;
-    height: 400px;
+  height: 400px;
   object-fit: cover;
 
   @include media-tablet {
@@ -73,7 +73,7 @@
   @include media-desktop {
     padding-right: 184px;
     margin-top: 0;
-    }
+  }
 
 
   h2 {
@@ -138,10 +138,18 @@
     @include font ($size: 14px, $line-height: 20px);
     margin-bottom: 27px;
 
+    &:last-child {
+      margin-bottom: 0;
+
+    }
+
     @include media-tablet {
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 25px;
+      span {
+        display: none;
+      }
 
     }
 
@@ -151,13 +159,13 @@
 
       margin-bottom: 30px;
       padding-right: 15px;
-
-      span {
-        display: block;
-      }
     }
   }
 }
+
+// * {
+//   outline: auto;
+// }
 
 // .about__title {
 //   margin-bottom: 28px;

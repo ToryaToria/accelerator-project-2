@@ -2,18 +2,20 @@
   margin: 0 auto;
   overflow-x: hidden;
 
-  padding-top: 21px;
+  padding-top: 19px;
   padding-bottom: 20px;
 
   @include media-tablet {
-    padding-top: 40px;
+    padding-top: 39px;
     padding-bottom: 40px;
   }
 
   @include media-desktop {
     width: 1440px;
     padding-top: 100px;
-    padding-bottom: 77px;
+    padding-bottom: 89px;
+
+    // outline: auto;
   }
 }
 
@@ -35,7 +37,9 @@
   }
 
   @include media-desktop {
-    margin-bottom: 38px;
+    align-items: flex-start;
+
+    margin-bottom: 36px;
   }
 }
 
@@ -47,12 +51,12 @@
   }
 
   @include media-desktop {
-    margin-top: 40px;
+    margin-top: 39px;
   }
 }
 
 .reviews__title {
-  padding-top: 16px;
+  padding-top: 18px;
   padding-bottom: 14px;
 
   @include media-tablet {
@@ -65,11 +69,11 @@
   }
 
   @include media-desktop {
-    padding-top: 40px;
+    padding-top: 45px;
     padding-bottom: 0;
 
     &::after {
-      top: 1px;
+      top: 6px;
     }
   }
 }
@@ -138,12 +142,15 @@
 }
 
 .reviews__wrapp {
-  padding-top: 4px;
   display: flex;
   flex-direction: column;
   gap: 0;
 
   // justify-content: space-between;
+
+  @include media-tablet {
+    padding-top: 4px;
+  }
 
   @include media-desktop {
     padding-top: 0;
@@ -171,7 +178,7 @@
 .reviews__wysiwyg {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 15px;
 
   @include media-tablet {

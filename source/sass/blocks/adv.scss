@@ -26,17 +26,17 @@
   }
 
   @include media-tablet {
-    margin-bottom: 46px;
     padding-top: 20px;
+    margin-bottom: 46px;
   }
 
   @include media-desktop {
-    padding-top: 46px;
+    padding-top: 35px;
     padding-bottom: 0;
     margin-bottom: 49px;
 
     &::after {
-      top: 16px;
+      top: 3px;
     }
   }
 }
@@ -46,17 +46,24 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  // align-items: center;
+  justify-content: center;
 
   @include media-tablet {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 29px;
+    // justify-content: flex-start;
+    gap: 30px;
+
+    // align-items: flex-start;
+
   }
 
   @include media-desktop {
     margin-bottom: 50px;
     flex-wrap: nowrap;
+    gap: 30px;
+
   }
 }
 
@@ -64,7 +71,7 @@
   box-sizing: border-box;
   width: 290px;
   min-height: 239px;
-  padding: 20px 9px 20px 10px;
+  padding: 19px 9px 19px 9px;
   border: 1px solid $color-line-light;
   background-color: $color-white;
 
@@ -90,6 +97,7 @@
     @include media-tablet {
       width: 48px;
       height: 48px;
+      margin-bottom: 26px;
     }
 
     @include media-desktop {
@@ -102,16 +110,15 @@
     width: 324px;
     min-height: 340px;
 
-    padding: 30px 20px;
     flex-shrink: 0;
-    padding: 30px 19px 30px 18px;
+    padding: 29px 19px 28px 18px;
 
-    &::before {
-      margin-bottom: 25px;
-    }
+    // &::before {
+    //   margin-bottom: 25px;
+    // }
 
     &--leaf {
-      padding-bottom: 35px;
+      padding-bottom: 34px;
     }
   }
 
@@ -119,10 +126,14 @@
     width: 380px;
     min-height: 329px;
 
-    padding: 40px 19px 40px 20px;
+    padding: 40px 20px 40px 20px;
 
     &::before {
       margin-bottom: 30px;
+    }
+
+    &--boots {
+      padding-left: 19px;
     }
   }
 }
@@ -152,20 +163,28 @@
 .adv__wysiwyg {
   h3 {
     @include font ($size: 14px, $weight: 600);
-    margin-bottom: 13px;
+    margin-bottom: 15px;
 
     // &::after {
     //   text-align: center;
     //   width: 100%;
     // }
 
+    // br {
+    //   display: block;
+    // }
+
     @include media-tablet {
       font-size: 16px;
-      margin-bottom: 14px;
+      margin-bottom: 15px;
     }
 
     @include media-desktop {
       font-size: 18px;
+
+      br {
+        display: none;
+      }
     }
   }
 
@@ -215,4 +234,3 @@
 //     display: inline-block;
 //   }
 // }
-
