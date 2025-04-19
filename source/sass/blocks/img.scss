@@ -1,0 +1,58 @@
+
+
+.img__wrapp1 {
+  width: 158px;
+  height: 266px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  background-color: aqua;
+
+  @include media-tablet {
+    width: 253px;
+    height: 418px;
+  }
+
+  @include media-desktop {
+    width: 284px;
+    height: 463px;
+  }
+}
+
+.img__wrapp2 {
+  width: 157px;
+  height: 134px;
+  overflow: hidden;
+
+  background-color: rgb(180, 47, 221);
+
+
+  @include media-tablet {
+    width: 252px;
+    height: 210px;
+  }
+
+  @include media-desktop {
+    width: 284px;
+    height: 233px;
+  }
+}
+
+.img__wrapp3 {
+  width: 157px;
+  height: 125px;
+  overflow: hidden;
+
+  background-color: rgb(74, 248, 58);
+
+
+  @include media-tablet {
+    width: 252px;
+    height: 201px;
+  }
+
+  @include media-desktop {
+    width: 284px;
+    height: 223px;
+  }
+}

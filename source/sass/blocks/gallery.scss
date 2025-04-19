@@ -27,14 +27,14 @@
   justify-content: space-between;
   align-items: flex-end;
 
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 
   @include media-tablet {
     margin-bottom: 21px;
   }
 
   @include media-desktop {
-    margin-bottom: 46px;
+    margin-bottom: 45px;
   }
 }
 
@@ -61,108 +61,167 @@
       span {
         display: inline;
       }
-
     }
   }
 }
 
-  .gallery__navigation {
-    @include media-desktop {
-      display: none;
-    }
+.gallery__navigation {
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.gallery__title {
+  margin-bottom: 12px;
+  padding-top: 17px;
+  padding-bottom: 14px;
+
+  &::after {
+    top: 4px;
   }
 
-  .gallery__title {
-    margin-bottom: 12px;
-    padding-top: 17px;
-    padding-bottom: 14px;
+  @include media-tablet {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 
     &::after {
-      top: 4px;
-    }
-
-    @include media-tablet {
-      padding-top: 20px;
-      margin-bottom: 16px;
-
-      &::after {
-        top: 5px;
-      }
-    }
-
-    @include media-desktop {
-      margin-bottom: 25px;
-      padding-top: 21px;
-      padding-bottom: 0;
+      top: 5px;
     }
   }
 
-  // .gallery__text {
-  //   @include media-tablet {
-  //     margin-right: 180px;
+  @include media-desktop {
+    padding-top: 23px;
+    margin-bottom: 24px;
+    padding-bottom: 0;
+  }
+}
 
-  //     .transter {
-  //       display: block;
-  //     }
-  //   }
+// .gallery__text {
+//   @include media-tablet {
+//     margin-right: 180px;
 
-  //   @include media-desktop {
-  //     margin-right: 608px;
+//     .transter {
+//       display: block;
+//     }
+//   }
 
-  //     .transter {
-  //       display: inline;
-  //     }
-  //   }
-  // }
+//   @include media-desktop {
+//     margin-right: 608px;
 
-  .gallery__img1 {
-    display: block;
-    width: 158px;
-    height: 266px;
-    object-fit: cover;
+//     .transter {
+//       display: inline;
+//     }
+//   }
+// }
 
-    @include media-tablet {
-      width: 253px;
-      height: 418px;
-    }
+.gallery__img1 {
+  display: block;
+  width: 418px;
+  height: 269px;
+  object-fit: cover;
+  object-position: -130px -7px;
 
-    @include media-desktop {
-      width: 284px;
-      height: 463px;
-    }
+  @include media-tablet {
+    width: 654px;
+    height: 422px;
+
+    object-position: -200px -9px;
+
   }
 
-  .gallery__img2 {
-    display: block;
-    width: 157px;
-    height: 130px;
-    object-fit: cover;
+  @include media-desktop {
+    width: 717px;
+    height: 463px;
 
-    @include media-tablet {
-      width: 252px;
-      height: 205px;
-    }
+    object-position: -216px -9px;
+  }
+}
 
-    @include media-desktop {
-      width: 284px;
-      height: 228px;
-    }
+.gallery__img2 {
+  display: block;
+  width: 204px;
+  height: 149px;
+  object-fit: cover;
+
+  object-position: -21px -15px;
+
+  @include media-tablet {
+    width: 319px;
+    height: 233px;
+    object-position: -33px -26px;
   }
 
-  .gallery__img-wrapp {
-    width: 157px;
-    height: 266px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-    @include media-tablet {
-      width: 252px;
-      height: 418px;
-    }
-
-    @include media-desktop {
-      width: 284px;
-      height: 463px;
-    }
+  @include media-desktop {
+    object-position: -17px -3px;
   }
+}
+
+.gallery__img3 {
+  display: block;
+  width: 157px;
+  height: 223px;
+  object-fit: cover;
+
+  object-position: -97px 0px;
+
+
+  @include media-tablet {
+    width: 252px;
+    // height: 205px;
+
+    object-position: -50px 0px;
+
+  }
+
+  @include media-desktop {
+    width: 284px;
+    object-position: -33px 0px;
+  }
+}
+
+.gallery__img4 {
+  display: block;
+  width: 266px;
+  height: 425px;
+  object-fit: cover;
+  object-position: -86px -4px;
+  
+  @include media-desktop {
+    width: 284px;
+    height: 463px;
+
+    object-position: -90px 0;
+  }
+}
+
+.gallery__img5 {
+  display: block;
+  width: 344px;
+  height: 233px;
+  object-fit: cover;
+
+  object-position: -32px 0;
+}
+
+.gallery__img6 {
+  display: block;
+  width: 284px;
+  height: 223px;
+  object-fit: cover;
+
+  object-position: -16px -5px;
+}
+
+.gallery__img7 {
+  display: block;
+  width: 284px;
+  height: 463px;
+  object-fit: cover;
+}
+
+.gallery__img-wrapp {
+   display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
