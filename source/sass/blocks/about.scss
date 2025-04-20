@@ -27,7 +27,7 @@
   @include media-tablet {
     padding-top: 40px;
     padding-bottom: 42px;
-    align-items: center;
+    // align-items: center;
     flex-direction: row;
   }
 
@@ -39,6 +39,27 @@
   }
 }
 
+.about__img-wrapp {
+  display: block;
+  width: 320px;
+  height: 400px;
+  // object-fit: cover;
+
+  @include media-tablet {
+    width: 450px;
+    height: 350px;
+    padding-top: 134px;
+
+    // margin-left: -30px;
+  }
+
+  @include media-desktop {
+    width: 660px;
+    height: 498px;
+    padding-top: 0;
+  }
+}
+
 .about__img {
   display: block;
   width: 434px;
@@ -46,13 +67,19 @@
   object-fit: cover;
 
   @include media-tablet {
-    width: 450px;
+    width: 542px;
     height: 350px;
+
+    object-fit: contain;
+
+    // object-position: -16px -5px;
 
     // margin-left: -30px;
   }
 
   @include media-desktop {
+    object-fit: cover;
+
     width: 660px;
     height: 498px;
   }
@@ -106,7 +133,7 @@
 
     @include media-tablet {
       font-size: 25px;
-      margin-bottom: 33px;
+      margin-bottom: 32px;
     }
 
     @include media-desktop {

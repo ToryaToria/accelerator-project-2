@@ -549,25 +549,27 @@
     </section>
 
     <section class="about" data-test="about">
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)" srcset="./img/tourists/tourists-desct_1x.webp 1x,
-        ./img/tourists/tourists-desct_2x.webp 2x" width="660" height="498">
-
-        <source type="image/webp" media="(min-width: 768px)" srcset="./img/tourists/tourists-tabl_1x.webp 1x,
-        ./img/tourists/tourists-tabl_2x.webp 2x" width="542" height="350">
-
-        <source type="image/webp" srcset="./img/tourists/tourists-mob_1x.webp 1x,
-      ./img/tourists/tourists-mob_2x.webp 2x" width="434" height="400">
-
-        <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/tourists/tourists-desct_1x.jpg 1x,
-      ./img/tourists/tourists-desct_2x.jpg 2x" width="660" height="498">
-
-        <source type="image/jpg" media="(min-width: 768px)" srcset="./img/tourists/tourists-tabl_1x.jpg 1x,
-      ./img/tourists/tourists-tabl_2x.jpg 2x" width="542" height="350">
-
-        <img class="about__img" src="./img/tourists/tourists-mob_1x.jpg" srcset="./img/tourists/tourists-mob_2x.jpg"
-          alt="туристы в горах" width="320" height="400">
-      </picture>
+      <div class="about__img-wrapp">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="./img/tourists/tourists-desct_1x.webp 1x,
+          ./img/tourists/tourists-desct_2x.webp 2x" width="660" height="498">
+  
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/tourists/tourists-tabl_1x.webp 1x,
+          ./img/tourists/tourists-tabl_2x.webp 2x" width="542" height="350">
+  
+          <source type="image/webp" srcset="./img/tourists/tourists-mob_1x.webp 1x,
+        ./img/tourists/tourists-mob_2x.webp 2x" width="434" height="400">
+  
+          <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/tourists/tourists-desct_1x.jpg 1x,
+        ./img/tourists/tourists-desct_2x.jpg 2x" width="660" height="498">
+  
+          <source type="image/jpg" media="(min-width: 768px)" srcset="./img/tourists/tourists-tabl_1x.jpg 1x,
+        ./img/tourists/tourists-tabl_2x.jpg 2x" width="542" height="350">
+  
+          <img class="about__img" src="./img/tourists/tourists-mob_1x.jpg" srcset="./img/tourists/tourists-mob_2x.jpg"
+            alt="туристы в горах" width="320" height="400">
+        </picture>
+      </div>
 
       <div class="about__wysiwyg">
         <!-- class="about__title title-section" -->
@@ -728,8 +730,7 @@
             <h3>Безопасность</h3>
             <!-- class="text-adv" -->
             <p>
-              Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы
-              действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.
+              Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.
             </p>
           </div>
         </li>
@@ -749,9 +750,8 @@
           <div class="adv__wysiwyg">
             <h3>Оборудование и снаряжение</h3>
             <p>
-              Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет
-              клиентов
-              от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически
+              Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. <br> Это избавляет
+              клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически
               выгодным.
             </p>
           </div>
@@ -773,7 +773,7 @@
             <!-- class="transfer" -->
             <h3>Бережное отношение
               <br>
-              к&nbsp;природе
+              к природе
             </h3>
             <p>
               Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное

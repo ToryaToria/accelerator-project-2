@@ -9,12 +9,10 @@
 }
 
 .training__wysiwyg {
-
   margin-bottom: 28px;
 
   @include media-tablet {
     margin-bottom: 25px;
-
   }
 
   @include media-desktop {
@@ -366,10 +364,13 @@
     background-size: auto;
     background-position: center;
     flex-shrink: 0;
+
   }
 
   &--map:before {
     background-image: url("../__spritemap#sprite-map-view");
+    background-color: red;
+
   }
 
   &--boots:before {
