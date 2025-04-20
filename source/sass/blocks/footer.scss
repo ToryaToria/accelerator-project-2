@@ -1,8 +1,10 @@
 .footer {
-  padding-top: 20px;
+  padding-top: 23px;
   padding-bottom: 20px;
   border-top: 1px solid $color-line-footer;
   text-align: center;
+
+// background-color: rgb(188, 197, 206);
 
   @include media-tablet {
     padding-top: 34px;
@@ -22,6 +24,7 @@
   margin-bottom: 19px;
   margin-left: auto;
   margin-right: auto;
+  flex-shrink: 0;
 
   @include media-tablet {
     margin-left: 0;

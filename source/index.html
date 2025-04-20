@@ -966,18 +966,31 @@
       </div>
 
       <picture>
-        <source type="image/webp" srcset="./img/map_1x.webp 1x,
-        ./img/map_2x.webp 2x" width="158" height="266">
+        <source type="image/webp" media="(min-width: 1366px)" srcset="./img/map/map-desct_1x.webp 1x, 
+        ./img/map/map-desct_2x.webp 2x" width="600" height="324">
 
-        <img class="contacts__img" src="./img/map_1x.jpg" srcset="./img/map_2x.jpg" alt="карта сокровищ" width="320"
-          height="343">
+        <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/map/map-desct_1x.jpg 1x, 
+        ./img/map/map-desct_2x.jpg 2x" width="600" height="324">
+
+        <source type="image/webp" media="(min-width: 768px)" srcset="./img/map/map-tabl_1x.webp 1x,
+          ./img/map/map-tabl_2x.webp 2x" width="768" height="340">
+
+        <source type="image/jpg" media="(min-width: 768px)" srcset="./img/map/map-tabl_1x.jpg 1x, ./img/map/map-tabl_2x.jpg 2x" width="768"
+          height="340">
+
+        <source type="image/webp" srcset="./img/map/map-mob_1x.webp 1x,
+          ./img/map/map-mob_2x.webp 2x" width="320" height="343">
+
+        <img class="contacts__img" src="./img/map/map-mob_1x.jpg" srcset="./img/map/map-mob_2x.jpg" alt="карта сокровищ"
+          width="320" height="343">
       </picture>
     </section>
-
+ 
     <section class="footer">
       <div class="container">
         <div class="footer__wrapp">
           <img class="footer__logo" src="/__spritemap#sprite-logotype_footer-view" alt="logo" width="142" height="42">
+
           <ul class="footer__list">
             <li class="footer__item">
               <a class="text-nav" href="">Туры</a>
