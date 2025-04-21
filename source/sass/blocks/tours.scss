@@ -123,15 +123,36 @@
   gap: 10px;
   align-items: center;
 
+    cursor: pointer;
+
   &::after {
     content: '';
     display: block;
     width: 10px;
     height: 12px;
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    background-image: url("../__spritemap#sprite-arrow2-view");
+    background-color: currentColor;
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: auto;
+    mask-image: url("../__spritemap#sprite-arrow2-view");
+  }
+
+  &:hover {
+    color: $color-additional-10;
+  }
+
+  &:focus {
+    color: $color-additional;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+
+  &--disabled {
+    color: $color-disabled;
   }
 }

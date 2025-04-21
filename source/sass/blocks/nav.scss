@@ -1,0 +1,41 @@
+.nav__link {
+  @include font ($size: 14px, $color: $color-white);
+  text-decoration: none;
+
+  cursor: pointer;
+
+  padding: 3px 5px;
+  border: 1px solid transparent;
+
+
+
+  @include media-desktop {
+    font-size: 16px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid currentColor;
+  }
+
+  &:focus {
+    border: 1px solid currentColor;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-active;
+    border: 1px solid transparent;
+  }
+
+  &--disabled {
+    color: $color-disabled;
+  }
+
+  &--footer {
+    color: $color-text-base;
+
+    &:active {
+      color: $color-additional;
+    }
+  }
+}

@@ -12,16 +12,16 @@
     padding-bottom: 20px;
     align-items: center;
     justify-content: left;
-    }
+  }
 
-    @include media-desktop {
-      padding-top: 32px;
-      padding-bottom: 32px;
-        }
+  @include media-desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
-      // * {
-      //   outline: auto;
-      // }
+  // * {
+  //   outline: auto;
+  // }
 }
 
 .header__burger {
@@ -37,11 +37,11 @@
   background-position: left;
 
   @include media-tablet {
-  padding-right: 200px;
+    padding-right: 200px;
   }
 
   @include media-desktop {
-  display: none;
+    display: none;
   }
 }
 
@@ -55,8 +55,8 @@
 
 .header__list {
   @include list-reset;
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 
 }
 
@@ -79,7 +79,7 @@
   }
 
   @include media-desktop {
-  justify-content: space-between;
+    justify-content: space-between;
   }
 }
 
@@ -91,36 +91,48 @@
   @include media-tablet {
     padding-left: 68px;
     // padding-right: 42px;
-    }
+  }
 
-    @include media-desktop {
+  @include media-desktop {
     padding: 10px 31px 10px 32px;
-    }
+  }
 }
 
-.header__tel  {
-@include font ($size: 14px, $weight: 600, $color: $color-white);
-text-decoration: none;
+.header__tel {
+  @include font ($size: 14px, $weight: 600, $color: $color-white);
+  text-decoration: none;
 
-@include media-tablet {
-  font-size: 16px;
-  margin-top: 2px;
+  @include media-tablet {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  @include media-desktop {
+    font-size: 18px;
+  }
 }
 
-@include media-desktop {
-  font-size: 18px;
-}
+.header__tel {
+  cursor: pointer;
+
+  &:hover {
+    color: $color-white-50;
+  }
+
+  &:focus {
+    color: $color-text-base;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+
+  &:disabled {
+    color: $color-disabled;
+  }
 }
 
-// .header__tel  {
-//   @include media-tablet {
-//     // padding-left: 86px;
-//     // flex-shrink: 0;
-//     // flex-grow: 1;
-//     }
+// .header__link {
 
-//     @include media-desktop {
-//       padding-left: 0;
-//       flex-grow: 0;
-//     }
 // }

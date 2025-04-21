@@ -24,9 +24,6 @@
     content: '';
     display: block;
 
-    // width: 37px;
-    // height: 35px;
-    
     width: 23px;
     height: 9px;
     background-color: $color-white;
@@ -42,8 +39,39 @@
     transform: rotate(180deg);
   }
 
+
+  &:not(:disabled):hover {
+    color: $color-active;
+    border: 1px solid $color-active;
+    background-color: $color-white;
+
+
+    &::before {
+      background-color: $color-active;
+    }
+  }
+
+  &:not(:disabled):focus {
+    border: 1px solid transparent;
+    background-color: $color-white;
+    outline: none;
+
+    &::before {
+      background-color: $color-active;
+    }
+  }
+
+  &:not(:disabled):active {
+    border: 1px solid $color-active;
+    background-color: $color-active;
+
+    &::before {
+      background-color: $color-white;
+    }
+  }
+
   &:disabled {
-    background-color: $color-btn-disabled;
-    border: 1px solid  $color-btn-disabled;
+    border: 1px solid $color-disabled;
+    background-color: $color-disabled;
   }
 }

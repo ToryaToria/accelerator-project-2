@@ -24,30 +24,31 @@
     <div class="header__wrapper">
       <img class="header__logo" src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
 
-      <nav class="header__nav">
+      <nav class="header__nav nav">
         <ul class="header__list">
           <li>
-            <a class="text-nav text-invert" href="">Туры</a>
+            <!-- text-nav text-invert -->
+            <a class="header__link nav__link" href="">Туры</a>
           </li>
 
           <li>
-            <a class="text-nav text-invert" href="">Обучение</a>
+            <a class="header__link nav__link " href="">Обучение</a>
           </li>
 
           <li>
-            <a class="text-nav text-invert" href="">О нас</a>
+            <a class="header__link nav__link " href="">О нас</a>
           </li>
 
           <li>
-            <a class="text-nav text-invert" href="">Отзывы</a>
+            <a class="header__link nav__link " href="">Отзывы</a>
           </li>
 
           <li>
-            <a class="text-nav text-invert" href="">Фотографии</a>
+            <a class="header__link nav__link" href="">Фотографии</a>
           </li>
 
           <li>
-            <a class="text-nav text-invert" href="">Контакты</a>
+            <a class="header__link nav__link" href="">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -72,7 +73,7 @@
                 горы Чегет.</span>
             </p>
           </div>
-          <button class="hero__btn button text-btn" type="button">Смотреть тур</button>
+          <button class="button hero__btn text-btn" type="button">Смотреть тур</button>
 
           <ul class="hero__features-list">
             <li class="hero__features-item hero__features-item--day">
@@ -147,9 +148,9 @@
       </ul>
 
       <div class="hero_bullit-wrapp">
-        <button class="bullit bullit--current " type="button"></button>
-        <button class="bullit" type="button"></button>
-        <button class="bullit" type="button"></button>
+        <button class="bullit bullit--current " type="button" ></button>
+        <button class="bullit" type="button" ></button>
+        <button class="bullit" type="button" disabled ></button>
       </div>
     </section>
 
@@ -553,19 +554,19 @@
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="./img/tourists/tourists-desct_1x.webp 1x,
           ./img/tourists/tourists-desct_2x.webp 2x" width="660" height="498">
-  
+
           <source type="image/webp" media="(min-width: 768px)" srcset="./img/tourists/tourists-tabl_1x.webp 1x,
           ./img/tourists/tourists-tabl_2x.webp 2x" width="542" height="350">
-  
+
           <source type="image/webp" srcset="./img/tourists/tourists-mob_1x.webp 1x,
         ./img/tourists/tourists-mob_2x.webp 2x" width="434" height="400">
-  
+
           <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/tourists/tourists-desct_1x.jpg 1x,
         ./img/tourists/tourists-desct_2x.jpg 2x" width="660" height="498">
-  
+
           <source type="image/jpg" media="(min-width: 768px)" srcset="./img/tourists/tourists-tabl_1x.jpg 1x,
         ./img/tourists/tourists-tabl_2x.jpg 2x" width="542" height="350">
-  
+
           <img class="about__img" src="./img/tourists/tourists-mob_1x.jpg" srcset="./img/tourists/tourists-mob_2x.jpg"
             alt="туристы в горах" width="320" height="400">
         </picture>
@@ -730,7 +731,8 @@
             <h3>Безопасность</h3>
             <!-- class="text-adv" -->
             <p>
-              Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.
+              Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы
+              действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.
             </p>
           </div>
         </li>
@@ -751,7 +753,8 @@
             <h3>Оборудование и снаряжение</h3>
             <p>
               Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. <br> Это избавляет
-              клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически
+              клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным
+              и экономически
               выгодным.
             </p>
           </div>
@@ -912,14 +915,22 @@
           </p>
         </div>
 
-        <form class="form__wrapp" action="https://echo.htmlacademy.ru">
+        <form class="form__wrapp" action="https://echo.htmlacademy.ru" method="post">
 
-          <label>
-            <input class="form__field text-field" type="tel" placeholder="Телефон" name="phone">
+          <label class="form__label">
+            <input class="form__field text-field" type="tel" placeholder="Телефон" name="phone" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
+            <span class="form__label-text">Телефон-label</span>
+            <span class="form__err">Только не буквы!</span>
           </label>
 
-          <label>
-            <input class="form__field text-field" type="email" placeholder="Email" name="email">
+          <!-- pattern="[A-Za-zА-Яа-яЁё0-9\s]+(@[A-Za-zА-Яа-яЁё0-9\s])+\.([A-Za-zА-Яа-яЁё]{2,})+$" -->
+
+          <label class="form__label">
+            <input class="form__field text-field" type="email" placeholder="Email" name="email" 
+            
+            required>
+            <span class="form__label-text">Email</span>
+            <span class="form__err">Email невалидный!</span>
           </label>
 
           <button class="form__button button text-btn" type="submit">Отправить</button>
@@ -945,14 +956,14 @@
           <li class="contacts__item contacts__item--phone">
             <div class="contacts__wrapp">
               <p class="text-cont1">Телефон</p>
-              <a class="text-cont2" href="tel:+79837454545">+7 983 745-45-45</a>
+              <a class="contacts__link text-cont2" href="tel:+79837454545">+7 983 745-45-45</a>
             </div>
           </li>
 
           <li class="contacts__item contacts__item--mail">
             <div class="contacts__wrapp">
               <p class="text-cont1">Email</p>
-              <a class="text-cont2" href="mailto:info@lifetour.com">info@lifetour.com</a>
+              <a class="contacts__link text-cont2" href="mailto:info@lifetour.com">info@lifetour.com</a>
             </div>
           </li>
 
@@ -975,8 +986,8 @@
         <source type="image/webp" media="(min-width: 768px)" srcset="./img/map/map-tabl_1x.webp 1x,
           ./img/map/map-tabl_2x.webp 2x" width="768" height="340">
 
-        <source type="image/jpg" media="(min-width: 768px)" srcset="./img/map/map-tabl_1x.jpg 1x, ./img/map/map-tabl_2x.jpg 2x" width="768"
-          height="340">
+        <source type="image/jpg" media="(min-width: 768px)"
+          srcset="./img/map/map-tabl_1x.jpg 1x, ./img/map/map-tabl_2x.jpg 2x" width="768" height="340">
 
         <source type="image/webp" srcset="./img/map/map-mob_1x.webp 1x,
           ./img/map/map-mob_2x.webp 2x" width="320" height="343">
@@ -985,38 +996,39 @@
           width="320" height="343">
       </picture>
     </section>
- 
+
     <section class="footer">
       <div class="container">
         <div class="footer__wrapp">
           <img class="footer__logo" src="/__spritemap#sprite-logotype_footer-view" alt="logo" width="142" height="42">
 
-          <ul class="footer__list">
+          <ul class="footer__list nav">
             <li class="footer__item">
-              <a class="text-nav" href="">Туры</a>
+              <!-- text-nav -->
+              <a class="nav__link nav__link--footer" href="">Туры</a>
             </li>
 
             <li class="footer__item">
-              <a class="text-nav" href="">Отзывы</a>
+              <a class="nav__link nav__link--footer" href="">Отзывы</a>
             </li>
 
             <li class="footer__item">
-              <a class="text-nav" href="">Обучение</a>
+              <a class="nav__link nav__link--footer" href="">Обучение</a>
             </li>
 
             <li class="footer__item">
-              <a class="text-nav" href="">Фотографии</a>
+              <a class="nav__link nav__link--footer" href="">Фотографии</a>
             </li>
 
             <li class="footer__item">
-              <a class="text-nav" href="">О нас</a>
+              <a class="nav__link nav__link--footer" href="">О нас</a>
             </li>
             <li class="footer__item">
-              <a class="text-nav" href="">Контакты</a>
+              <a class="nav__link nav__link--footer" href="">Контакты</a>
             </li>
           </ul>
 
-          <p class="footer__tel">8 800 725-32-32</p>
+          <a class="footer__tel" href="tel:88007253232">8 800 725-32-32</a>
         </div>
 
         <ul class="footer__social-list">
@@ -1039,7 +1051,7 @@
           </li>
         </ul>
 
-        <a class="text-light" href="">Политика конфиденциальности</a>
+        <a class="contacts__link text-light" href="">Политика конфиденциальности</a>
       </div>
     </section>
   </footer>

@@ -4,7 +4,7 @@
   border-top: 1px solid $color-line-footer;
   text-align: center;
 
-// background-color: rgb(188, 197, 206);
+  // background-color: rgb(188, 197, 206);
 
   @include media-tablet {
     padding-top: 34px;
@@ -106,41 +106,95 @@
   display: block;
   width: 30px;
   height: 30px;
-  border: 1px solid $color-line;
   flex-shrink: 0;
 }
 
 .footer__social-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
+  border: 1px solid $color-line;
 
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &--vk {
-    background-size: 16px 9px;
-    background-image: url("../__spritemap#sprite-vk-view");
+  &::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-text-base;
   }
 
-  &--ok {
-    background-size: 9px 16px;
-    background-image: url("../__spritemap#sprite-ok-view");
+  &--vk::before {
+    mask-size: 16px 9px;
+    mask-image: url("../__spritemap#sprite-vk-view");
   }
 
-  &--reddit {
-    background-size: 14px 15px;
-    background-image: url("../__spritemap#sprite-reddit-view");
+  &--ok::before {
+    mask-size: 9px 16px;
+    mask-image: url("../__spritemap#sprite-ok-view");
+  }
+
+  &--reddit::before {
+    mask-size: 14px 15px;
+    mask-image: url("../__spritemap#sprite-reddit-view");
+  }
+
+
+  &:hover {
+    border: 1px solid $color-text-base;
+  }
+
+  &:focus {
+    border: 1px solid transparent;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid $color-active;
+    background-color: $color-active;
+
+    &::before {
+      background-color: $color-white;
+    }
+  }
+
+  &--disabled {
+    background-color: $color-disabled;
+
+    &::before {
+      background-color: $color-disabled;
+    }
   }
 }
 
 .footer__tel {
   display: none;
+  text-decoration: none;
 
   @include media-desktop {
     display: block;
     @include font ($size: 18px, $weight: 600);
+  }
 
+  cursor: pointer;
 
+  &:hover {
+    color: $color-additional-10;
+  }
+
+  &:focus {
+    color: $color-additional;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+
+  &:disabled {
+    color: $color-disabled;
   }
 }

@@ -73,14 +73,14 @@
 //   }
 // }
 
-.text-nav {
-  @include font ($size: 14px);
-  text-decoration: none;
+// .text-nav {
+//   @include font ($size: 14px);
+//   text-decoration: none;
 
-  @include media-desktop {
-    font-size: 16px;
-  }
-}
+//   @include media-desktop {
+//     font-size: 16px;
+//   }
+// }
 
 // .text-tel {
 //   @include font ($size: 14px, $weight: 600, $color: $color-white);
@@ -190,6 +190,8 @@
 }
 
 .text-btn-big {
+
+// Показать все туры
   @include font ($size: 14px, $weight: 700);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -231,6 +233,8 @@
 .text-cont2 {
   @include font ($size: 14px, $line-height: 20px);
   text-decoration: none;
+
+  // background-color: aqua;
 
   @include media-tablet {
     $line-height: 22px;

@@ -23,7 +23,6 @@
       url("../../img/background/form_bg-mob_2x.png") 2x);
 
   @include media-tablet {
-
     min-height: 680px;
   }
 
@@ -32,14 +31,12 @@
     background-size: 1440px 760px;
 
     background-image:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    image-set(url("../../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
-    url("../..img/background/form_bg-desct_1x.png") 1x,
-    url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
-    url("../../img/background/form_bg-desct_2x.png") 2x);
-
+      linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      image-set(url("../../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
+        url("../..img/background/form_bg-desct_1x.png") 1x,
+        url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
+        url("../../img/background/form_bg-desct_2x.png") 2x);
   }
-
 }
 
 .form__container {
@@ -60,7 +57,6 @@
     @include font ($size: 22px, $weight: 800, $color: $color-white);
     margin-top: 4px;
     margin-bottom: 16px;
-
 
     @include media-tablet {
       font-size: 25px;
@@ -97,6 +93,127 @@
     }
   }
 }
+
+.form__label {
+  position: relative;
+}
+
+.form__label-text {
+  @include font ($size: 16px);
+  color: red;
+  padding: 3px;
+  position: absolute;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 28px;
+  z-index: 5;
+  background-color: $color-white;
+}
+
+.form__wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include media-tablet {
+    gap: 11px;
+  }
+
+  @include media-desktop {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.form__field {
+  box-sizing: border-box;
+  display: block;
+  height: 50px;
+  width: 100%;
+  padding: 17px 15px;
+  border: 1px solid $color-additional-10;
+  border-radius: 2px;
+
+  @include media-tablet {
+    height: 56px;
+    padding: 18px 30px;
+  }
+
+  @include media-desktop {
+    width: 360px;
+  }
+
+  &::placeholder {
+    opacity: 50%;
+    @include font ($size: 16px);
+  }
+
+  &:placeholder-shown + .form__label-text {
+    display: block;
+  }
+
+  &:hover {
+    border: 1px solid $color-additional;
+  }
+
+  // &:hover + .form__label-text {
+  //   display: none;
+  // }
+
+  &:focus,
+  &:active {
+    border: 1px solid $color-text-base;
+    outline: none;
+  }
+
+  &:focus+.form__label-text {
+    display: none;
+  }
+
+
+  &:disabled {
+    border: 1px solid $color-disabled;
+    color: $color-disabled;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border: 1px solid $color-error;
+  }
+
+  &:not(:placeholder-shown):invalid~.form__err {
+    display: block;
+  }
+}
+
+.form__button {
+  width: 100%;
+  min-height: 58px;
+
+  @include media-tablet {
+    min-height: 56px;
+  }
+}
+
+.form__err {
+  color: $color-error;
+  position: absolute;
+  display: none;
+  top: -30px;
+  left: 30px;
+}
+
+
+
+// const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+
+// pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+
+
+// RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$/)
+
+// var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 // .form__title {
 //   position: static;
@@ -140,47 +257,3 @@
 //     margin-bottom: 40px;
 //     }
 // }
-
-.form__wrapp {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  @include media-tablet {
-    gap: 11px;
-  }
-
-  @include media-desktop {
-    flex-direction: row;
-    gap: 30px;
-  }
-}
-
-.form__field {
-  box-sizing: border-box;
-  display: block;
-  height: 50px;
-  width: 100%;
-  padding: 17px 15px;
-  border: none;
-  border-radius: 2px;
-
-  @include media-tablet {
-    height: 56px;
-    padding: 20px 30px;
-
-  }
-
-  @include media-desktop {
-    width: 360px;
-  }
-}
-
-.form__button {
-  width: 100%;
-  height: 58px;
-
-  @include media-tablet {
-    height: 56px;
-  }
-}
