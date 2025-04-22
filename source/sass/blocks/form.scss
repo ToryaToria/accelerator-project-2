@@ -99,17 +99,24 @@
 }
 
 .form__label-text {
+
   @include font ($size: 16px);
-  color: red;
+  color: $color-text-base-50;
   padding: 3px;
   position: absolute;
   display: none;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 28px;
+  top: 20px;
+  // transform: translateY(-50%);
+  left: 12px;
   z-index: 5;
   background-color: $color-white;
-}
+
+  @include media-tablet {
+    left: 28px;
+    top: 18px;
+
+  }
+  }
 
 .form__wrapp {
   display: flex;
@@ -137,7 +144,7 @@
 
   @include media-tablet {
     height: 56px;
-    padding: 18px 30px;
+    padding: 18px 30px 20px 30px;
   }
 
   @include media-desktop {
@@ -192,6 +199,8 @@
 
   @include media-tablet {
     min-height: 56px;
+    padding-top: 18px;
+    // padding-bottom: 15px;
   }
 }
 

@@ -1,9 +1,10 @@
 .button {
   box-sizing: border-box;
 
-  padding: 19px 20px;
+  padding: 17px 20px;
   background-color: $color-bg-primary;
   border: 1px solid  $color-bg-primary;
+  min-height: 56px;
 
   cursor: pointer;
 
