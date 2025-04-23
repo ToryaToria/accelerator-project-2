@@ -173,13 +173,13 @@
 .footer__tel {
   display: none;
   text-decoration: none;
+  cursor: pointer;
 
   @include media-desktop {
     display: block;
     @include font ($size: 18px, $weight: 600);
   }
 
-  cursor: pointer;
 
   &:hover {
     color: $color-additional-10;

@@ -1,0 +1,24 @@
+.burger {
+  display: block;
+  width: 26px;
+  height: 26px;
+
+  // background-image: url("../__spritemap#sprite-menu-view");
+  background-repeat: no-repeat;
+  background-size: 26px 20px;
+  background-position: left;
+
+  &--close {
+    background-image: url("../__spritemap#sprite-menu-view");
+  }
+
+  &--open {
+    background-size: auto;
+
+    background-image: url("../__spritemap#sprite-menu-open-view");
+  }
+
+  @include media-desktop {
+    display: none;
+  }
+}

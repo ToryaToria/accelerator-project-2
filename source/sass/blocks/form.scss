@@ -102,19 +102,20 @@
 
   @include font ($size: 16px);
   color: $color-text-base-50;
+  text-align: left;
   padding: 3px;
   position: absolute;
   display: none;
-  top: 20px;
+  top: 14px;
   // transform: translateY(-50%);
   left: 12px;
+  right: 3px;
   z-index: 5;
   background-color: $color-white;
 
   @include media-tablet {
     left: 28px;
     top: 18px;
-
   }
   }
 
@@ -182,8 +183,13 @@
   &:disabled {
     border: 1px solid $color-disabled;
     color: $color-disabled;
+    background-color: $color-white;
   }
 
+    &:disabled + .form__label-text {
+      color: $color-text-base-50;
+    }
+  
   &:not(:placeholder-shown):invalid {
     border: 1px solid $color-error;
   }

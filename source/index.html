@@ -17,38 +17,38 @@
 
 
   <header class="header container" data-test="header">
-    <div class="header__burger">
+    <div class="header__burger burger burger--close">
       <span class="visually-hidden">burger-menu</span>
     </div>
 
     <div class="header__wrapper">
       <img class="header__logo" src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
 
-      <nav class="header__nav nav">
+      <nav class="header__nav nav nav--open">
         <ul class="header__list">
           <li>
             <!-- text-nav text-invert -->
-            <a class="header__link nav__link" href="">Туры</a>
+            <a class="header__link nav__link" href="#tours">Туры</a>
           </li>
 
           <li>
-            <a class="header__link nav__link " href="">Обучение</a>
+            <a class="header__link nav__link" href="#training">Обучение</a>
           </li>
 
           <li>
-            <a class="header__link nav__link " href="">О нас</a>
+            <a class="header__link nav__link" href="#about">О нас</a>
           </li>
 
           <li>
-            <a class="header__link nav__link " href="">Отзывы</a>
+            <a class="header__link nav__link" href="#reviews">Отзывы</a>
           </li>
 
           <li>
-            <a class="header__link nav__link" href="">Фотографии</a>
+            <a class="header__link nav__link" href="#gallery">Фотографии</a>
           </li>
 
           <li>
-            <a class="header__link nav__link" href="">Контакты</a>
+            <a class="header__link nav__link" href="#contacts">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -148,13 +148,13 @@
       </ul>
 
       <div class="hero_bullit-wrapp">
-        <button class="bullit bullit--current " type="button" ></button>
-        <button class="bullit" type="button" ></button>
-        <button class="bullit" type="button" disabled ></button>
+        <button class="bullit bullit--current " type="button"></button>
+        <button class="bullit" type="button"></button>
+        <button class="bullit" type="button" disabled></button>
       </div>
     </section>
 
-    <section class="tours container" data-test="tours">
+    <section class="tours container" data-test="tours" id="tours">
       <div class="tours__navigation-wrapp">
         <h2 class="tours__title title-section" data-tip="Ближайшие туры">Ближайшие туры</h2>
 
@@ -360,7 +360,7 @@
       <button class="tours__button text-btn-big" type="button">Показать все туры</button>
     </section>
 
-    <section class="training container" data-test="training">
+    <section class="training container" data-test="training" id="training">
       <h2 class="training__title title-section" data-tip="Обучение">Обучение</h2>
       <div class="training__wysiwyg">
         <p>
@@ -549,7 +549,7 @@
       </ul>
     </section>
 
-    <section class="about" data-test="about">
+    <section class="about" data-test="about" id="about">
       <div class="about__img-wrapp">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="./img/tourists/tourists-desct_1x.webp 1x,
@@ -593,7 +593,7 @@
       </div>
     </section>
 
-    <section class="reviews container" data-test="reviews">
+    <section class="reviews container" data-test="reviews" id="reviews">
 
       <div class="reviews__navigation-wrapp">
         <h2 class="reviews__title title-section" data-tip="Отзывы">Отзывы</h2>
@@ -796,7 +796,7 @@
       </div>
     </section>
 
-    <section class="gallery" data-test="gallery">
+    <section class="gallery" data-test="gallery" id="gallery">
       <div class="container">
         <h2 class="gallery__title title-section " data-tip="Фотогалерея">Фотогалерея</h2>
 
@@ -917,8 +917,11 @@
 
         <form class="form__wrapp" action="https://echo.htmlacademy.ru" method="post">
 
+          <!-- "[^A-Za-zА-Яа-яЁё]+$" -->
+
           <label class="form__label">
-            <input class="form__field text-field" type="tel" placeholder="Телефон" name="phone" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
+            <input class="form__field text-field" type="tel" placeholder="+7(800)000-00-00" name="phone"
+              pattern="[0-9\-]+$" required>
             <span class="form__label-text">Телефон</span>
             <!-- <span class="form__err">Только не буквы!</span> -->
           </label>
@@ -926,9 +929,7 @@
           <!-- pattern="[A-Za-zА-Яа-яЁё0-9\s]+(@[A-Za-zА-Яа-яЁё0-9\s])+\.([A-Za-zА-Яа-яЁё]{2,})+$" -->
 
           <label class="form__label">
-            <input class="form__field text-field" type="email" placeholder="Email" name="email" 
-            
-            required>
+            <input class="form__field text-field" type="email" placeholder="вашемейл@емейл.рф" name="email" required>
             <span class="form__label-text">Email</span>
             <!-- <span class="form__err">Email невалидный!</span> -->
           </label>
@@ -940,7 +941,7 @@
   </main>
 
   <footer data-test="footer">
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="contacts__container">
         <h2 class="contacts__title title-section" data-tip="Контакты">Контакты</h2>
 
@@ -1056,7 +1057,7 @@
     </section>
   </footer>
 
-  <!-- <script type="module" src="js/main.js"></script> -->
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

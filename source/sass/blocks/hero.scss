@@ -4,7 +4,7 @@
   overflow-x: hidden;
 
   @include media-desktop {
-    width: 1440px;
+    max-width: $desktop-width;  
   }
 }
 

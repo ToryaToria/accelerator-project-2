@@ -54,6 +54,10 @@
         url("../../img/background/clouds2-desct_2x.webp") 2x type("image/webp"),
         url("../../img/background/clouds2-desct_2x.jpg") 2x),
        }
+
+       &--noscroll{
+        overflow: hidden;
+       }
     }
 
 // РАЗКОММЕНТИРОВАТЬ!!!
@@ -69,4 +73,9 @@
 //   width: fit-content;
 //   height: fit-content;
 //   // outline: auto;
+// }
+
+
+// *{
+//   outline: auto;
 // }

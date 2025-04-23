@@ -14,11 +14,11 @@
 .gallery__container {
   display: flex;
   gap: 5px;
+  overflow-x: hidden;
 
   @include media-desktop {
     width: 1440px;
     margin: 0 auto;
-    overflow-x: hidden;
   }
 }
 

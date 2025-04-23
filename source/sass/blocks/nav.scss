@@ -1,17 +1,12 @@
+.nav--open {
+ display: none;
+
+ @include media-desktop {
+display: block; 
+}
+}
+
 .nav__link {
-  @include font ($size: 14px, $color: $color-white);
-  text-decoration: none;
-
-  cursor: pointer;
-
-  padding: 3px 5px;
-  border: 1px solid transparent;
-
-
-
-  @include media-desktop {
-    font-size: 16px;
-  }
 
   &:hover {
     border-bottom: 1px solid currentColor;
@@ -32,7 +27,14 @@
   }
 
   &--footer {
-    color: $color-text-base;
+    @include font ($size: 14px, $color: $color-text-base);
+    text-decoration: none;
+
+    @include media-desktop {
+      font-size: 16px;
+      text-decoration: none;
+      padding: 3px 5px;
+    }
 
     &:active {
       color: $color-additional;

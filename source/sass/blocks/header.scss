@@ -18,23 +18,13 @@
     padding-top: 32px;
     padding-bottom: 32px;
   }
-
-  // * {
-  //   outline: auto;
-  // }
 }
 
 .header__burger {
   @include btn-reset;
   box-sizing: border-box;
   display: block;
-  width: 26px;
-  height: 26px;
-
-  background-image: url("../__spritemap#sprite-menu-view");
-  background-repeat: no-repeat;
-  background-size: 26px 20px;
-  background-position: left;
+  
 
   @include media-tablet {
     padding-right: 200px;
@@ -46,18 +36,53 @@
 }
 
 .header__nav {
-  display: none;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  text-align: left;
+
+  // display: none;
+
+  box-sizing: border-box;
+  // width: 100%;
+  // height: 100%;
+  background-color: $color-text-base-60;
+
+  @include media-tablet {
+    top: 82px;
+  }
 
   @include media-desktop {
+    position: static;
     display: block;
+    text-align: right;
   }
 }
 
 .header__list {
   @include list-reset;
-  display: flex;
-  gap: 30px;
+  // display: none;
 
+  padding: 14px 15px 50px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: $color-bg-primary;
+
+  @include media-tablet {
+    padding: 30px 45px 70px 45px;
+    gap: 24px;
+  }
+
+  @include media-desktop {
+    padding: 0;
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .header__wrapper {
@@ -65,9 +90,7 @@
   flex-direction: column;
   gap: 14px;
   text-align: right;
-
   justify-content: flex-end;
-
 
   @include media-tablet {
     width: 100%;
@@ -75,7 +98,6 @@
     align-items: center;
     gap: 0;
     justify-content: space-between;
-
   }
 
   @include media-desktop {
@@ -101,6 +123,7 @@
 .header__tel {
   @include font ($size: 14px, $weight: 600, $color: $color-white);
   text-decoration: none;
+  cursor: pointer;
 
   @include media-tablet {
     font-size: 16px;
@@ -110,10 +133,6 @@
   @include media-desktop {
     font-size: 18px;
   }
-}
-
-.header__tel {
-  cursor: pointer;
 
   &:hover {
     color: $color-white-50;
@@ -133,6 +152,27 @@
   }
 }
 
-// .header__link {
+.header__link {
+  box-sizing: border-box;
+  display: inline-block;
+  @include font ($size: 14px, $color: $color-white, $weight: 700);
+  text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
 
-// }
+  border: 1px solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+
+  @include media-tablet {
+    font-size: 16px;
+  }
+
+  @include media-desktop {
+    font-size: 16px;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 3px 5px;
+  }
+}
