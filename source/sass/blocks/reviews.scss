@@ -82,7 +82,7 @@
   box-sizing: border-box;
   @include list-reset;
   display: flex;
-  gap: 15px;
+  // gap: 15px;
   // flex-direction: column;
 
   @include media-tablet {

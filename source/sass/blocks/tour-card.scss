@@ -69,8 +69,6 @@
 
   @include media-tablet {
     justify-content: space-between;
-    // margin-bottom: 15px;
-
   }
 
   @include media-desktop {
@@ -146,7 +144,6 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  // justify-content: space-between;
 
   @include media-tablet {
     gap: 27px;

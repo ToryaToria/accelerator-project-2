@@ -5,10 +5,9 @@
   border: 1px solid $color-white;
   border-radius: 50%;
   background-color: transparent;
+  cursor: pointer;
 
   margin: 5px;
-
-  cursor: pointer;
 
   &--current {
     background-color: $color-white;

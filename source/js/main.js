@@ -5,3 +5,4 @@
 
 
 import './mob-menu.js';
+import './swipers.js';

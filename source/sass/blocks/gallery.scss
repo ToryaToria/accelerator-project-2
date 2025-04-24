@@ -13,8 +13,8 @@
 
 .gallery__container {
   display: flex;
-  gap: 5px;
-  overflow-x: hidden;
+  // gap: 5px;
+  // overflow-x: hidden;
 
   @include media-desktop {
     width: 1440px;
