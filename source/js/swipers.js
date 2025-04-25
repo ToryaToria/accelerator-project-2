@@ -225,11 +225,17 @@ const swiperGallery = new Swiper('.gallery__swrapper', {
     },
     1440: {
       // КАК ОТКЛЮЧИТЬ СЛАЙДЕР?
-      watchOverflow: true,
+      // watchOverflow: false,
+      enabled: false,
+
     }
   }
 
 });
+
+if(body.offsetWidth >= 1440) {
+  swiperGallery.destroy();
+}
 
 swiperGallery.on('slideChange', () => {
   console.log('slider change');
