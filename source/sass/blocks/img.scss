@@ -6,7 +6,7 @@
   overflow: hidden;
   flex-shrink: 0;
 
-  background-color: aqua;
+  // background-color: aqua;
 
   @include media-tablet {
     width: 253px;
@@ -16,6 +16,8 @@
   @include media-desktop {
     width: 284px;
     height: 463px;
+    flex-shrink: 1;
+
   }
 }
 

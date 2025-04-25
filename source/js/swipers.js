@@ -212,26 +212,27 @@ console.log(body.offsetWidth);
 
 
 
-// const swiperGallery = new Swiper('.gallery__swrapper', {
-//   loop: true, // зациклен
-//   allowTouchMove: true, // свайп и мышка
-//   slidesPerView: 2,
-//   spaceBetween: 5,
+const swiperGallery = new Swiper('.gallery__swrapper', {
+  loop: true, // зациклен
+  allowTouchMove: true, // свайп и мышка
+  slidesPerView: 2,
+  spaceBetween: 5,
 
-//   breakpoints: {
-//     768: {
-//       slidesPerView: 3,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
 
-//     },
-//     1440: {
-//       // КАК ОТКЛЮЧИТЬ СЛАЙДЕР?
-//     }
-//   }
+    },
+    1440: {
+      // КАК ОТКЛЮЧИТЬ СЛАЙДЕР?
+      watchOverflow: true,
+    }
+  }
 
-// });
+});
 
-// swiperGallery.on('slideChange', () => {
-//   console.log('slider change');
-//   console.log(swiperGallery.activeIndex);
-// });
+swiperGallery.on('slideChange', () => {
+  console.log('slider change');
+  console.log(swiperGallery.activeIndex);
+});
 
