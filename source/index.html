@@ -156,7 +156,7 @@
           <button class="bullit" type="button"></button>
           <button class="bullit" type="button"></button>
         </div> -->
-        </div>
+      </div>
     </section>
 
     <section class="tours container" data-test="tours" id="tours">
@@ -384,11 +384,11 @@
         <h3 class="training__instructors title-section">Наши инструкторы</h3>
 
         <div class="training__navigation navigation">
-          <button class="navigation__btn navigation__btn--back" type="button" disabled>
+          <button class="navigation__btn navigation__btn--back swiper-button-back-training" type="button">
             <span class="visually-hidden">назад</span>
           </button>
 
-          <button class="navigation__btn navigation__btn--next" type="button">
+          <button class="navigation__btn navigation__btn--next swiper-button-next-training" type="button">
             <span class="visually-hidden">вперед</span>
           </button>
         </div>
@@ -610,11 +610,11 @@
         <h2 class="reviews__title title-section" data-tip="Отзывы">Отзывы</h2>
 
         <div class="reviews__navigation navigation">
-          <button class="navigation__btn navigation__btn--back" type="button" disabled>
+          <button class="navigation__btn navigation__btn--back swiper-button-back-reviews" type="button" >
             <span class="visually-hidden">назад</span>
           </button>
 
-          <button class="navigation__btn navigation__btn--next" type="button">
+          <button class="navigation__btn navigation__btn--next swiper-button-next-reviews" type="button">
             <span class="visually-hidden">вперед</span>
           </button>
         </div>
@@ -734,7 +734,7 @@
       </div>
     </section>
 
-    <section class="adv container" data-test="adv">
+    <section class="adv container-" data-test="adv">
       <h2 class="adv__title title-section" data-tip="Преимущества">Преимущества</h2>
 
       <div class="adv__swiper swiper">
@@ -788,7 +788,6 @@
 
           <li class="adv__item adv__item--leaf swiper-slide">
             <div class="adv__wysiwyg">
-              <!-- class="transfer" -->
               <h3>Бережное отношение
                 <br>
                 к природе
@@ -798,17 +797,30 @@
                 воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».
               </p>
           </li>
+
+          <!-- <li class="adv__item adv__item--leaf swiper-slide">
+            <div class="adv__wysiwyg">
+              <h3>Бережное отношение-2
+                <br>
+                к природе
+              </h3>
+              <p>
+                Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное
+                воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».
+              </p>
+          </li> -->
         </ul>
-      </div>
 
-      <div class="adv__navigation navigation">
-        <button class="navigation__btn navigation__btn--back" type="button">
-          <span class="visually-hidden">назад</span>
-        </button>
 
-        <button class="navigation__btn navigation__btn--next" type="button">
-          <span class="visually-hidden">вперед</span>
-        </button>
+        <div class="adv__navigation navigation">
+          <button class="navigation__btn navigation__btn--back swiper-button-back-adv" type="button">
+            <span class="visually-hidden">назад</span>
+          </button>
+
+          <button class="navigation__btn navigation__btn--next swiper-button-next-adv" type="button">
+            <span class="visually-hidden">вперед</span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -840,8 +852,8 @@
       </div>
 
       <div class="gallery__swrapper swrapper">
-      <div class="gallery__container img swiper-wrapper">
-        <!-- <p>??? что является одним слайдом???</p> -->
+        <div class="gallery__container img swiper-wrapper">
+          <!-- <p>??? что является одним слайдом???</p> -->
           <div class="img__wrapp1 swiper-slide">
             <picture>
               <source type="image/webp" srcset="./img/gallery1_1x.webp 1x,

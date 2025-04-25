@@ -128,6 +128,9 @@
   padding: 15px;
   border: 1px solid $color-line-light;
   background-color: $color-white;
+  flex-grow: 0;
+
+
 
   @include media-tablet {
     width: 213px;
