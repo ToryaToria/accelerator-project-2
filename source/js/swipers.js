@@ -5,6 +5,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 
 console.log('ky');
+const breakpointDesctop = 1440;
 
 const swiperHero = new Swiper('.hero__swiper', {
   modules: [Pagination],
@@ -33,7 +34,6 @@ const swiperHero = new Swiper('.hero__swiper', {
 //   console.log(swiperHero.activeIndex);
 // });
 
-
 const swiperTours = new Swiper('.tours__swiper', {
   modules: [Navigation],
 
@@ -60,23 +60,9 @@ const swiperTours = new Swiper('.tours__swiper', {
   }
 });
 
-swiperTours.on('slideChange', () => {
-  console.log('slider change');
-  console.log(swiperTours.activeIndex);
-});
-
-// const toursBtnNext = document.querySelector('.swiper-button-next-tours');
-
-// const toursBtnPrev = document.querySelector('.swiper-button-back-tours');
-
-// toursBtnNext.addEventListener('click', () => {
-//   swiperTours.slideNext();
-//   console.log('вперед');
-// });
-
-// toursBtnPrev.addEventListener('click', () => {
-//   swiperTours.slidePrev();
-//   console.log('назад');
+// swiperTours.on('slideChange', () => {
+//   console.log('slider change');
+//   console.log(swiperTours.activeIndex);
 // });
 
 const swiperTraining = new Swiper('.training__swiper', {
@@ -86,7 +72,6 @@ const swiperTraining = new Swiper('.training__swiper', {
   allowTouchMove: true, // свайп и мышка
   spaceBetween: 15,
   grabCursor: true,
-  // centeredSlides: true,
   initialSlide: 2,
 
   navigation: {
@@ -132,15 +117,13 @@ const swiperReviews = new Swiper('.reviews__swiper', {
     768: {
       spaceBetween: 30,
       slidesPerView: '1.2',
-
     },
+
     1440: {
       spaceBetween: 120,
       slidesPerView: 'auto',
-
     }
   }
-
 });
 
 // swiperReviews.on('slideChange', () => {
@@ -148,17 +131,15 @@ const swiperReviews = new Swiper('.reviews__swiper', {
 //   console.log(swiperReviews.activeIndex);
 // });
 
+console.log('Экран:');
+console.log(window.innerWidth);
 
-// window.addEventListener('resize', () => {
-//   console.log('обновили экран');
-
-
-const body = document.body;
-console.log(body.offsetWidth);
+const initSwiperAdv = () => {
+  console.log('swiperAdv = ');
 
   const swiperAdv = new Swiper('.adv__swiper', {
     modules: [Navigation],
-  
+
     enabled: false,
     breakpoints: {
       1440: {
@@ -166,79 +147,114 @@ console.log(body.offsetWidth);
         loop: true, // зациклен
         allowTouchMove: true, // свайп и мышка
         grabCursor: true,
-
-  //       initialSlide: 2,
-  // centeredSlides: true,
-
-
         spaceBetween: 30,
         slidesPerView: 'auto',
         slidesPerGroup: 2,
-  // centeredSlides: true,
-  // loopAddBlankSlides: true,
-  // loopFillGroupWithBlank: true,
-  
+        // centeredSlides: true,
+        // loopAddBlankSlides: true,
+        // loopFillGroupWithBlank: true,
+
         navigation: {
           nextEl: '.swiper-button-next-adv',
           prevEl: '.swiper-button-back-adv',
         },
-    
-  
       }
     }
   });
 
-  console.log(swiperAdv.slides.length);
-  const adv = document.querySelector('.adv__list');
+  if (window.innerWidth >= breakpointDesctop) {
 
+    console.log('>=1440 - init adv-swiper');
+    console.log(swiperAdv);
 
-      // for (let i = 0; i < swiperAdv.slides.length; i++) {
-      //   const virtualSlide = swiperAdv.slides[i].cloneNode(true);
-      //   virtualSlide.style.backgroundColor = 'red';
-      //   adv.appendChild(virtualSlide);
-      // }
+    return swiperAdv;
 
-
-  if(body.offsetWidth < 1440) {
-    swiperAdv.destroy();
-  }
-    
-
-// swiperAdv.on('click', () => {
-//   console.log('slider change');
-//   console.log(swiperAdv.activeIndex);
-//   adv.style.marginLeft = '0';
-// });
-
-
-
-const swiperGallery = new Swiper('.gallery__swrapper', {
-  loop: true, // зациклен
-  allowTouchMove: true, // свайп и мышка
-  slidesPerView: 2,
-  spaceBetween: 5,
-
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-
-    },
-    1440: {
-      // КАК ОТКЛЮЧИТЬ СЛАЙДЕР?
-      // watchOverflow: false,
-      enabled: false,
-
+  } else {
+    console.log('<1440 - без слайдера');
+    if (swiperAdv !== undefined) {
+      swiperAdv.destroy(true, true);
+      console.log(swiperAdv);
+      return;
     }
   }
+};
 
+initSwiperAdv();
+
+
+// console.log(swiperAdv.slides.length);
+// const adv = document.querySelector('.adv__list');
+
+// for (let i = 0; i < swiperAdv.slides.length; i++) {
+//   const virtualSlide = swiperAdv.slides[i].cloneNode(true);
+//   virtualSlide.style.backgroundColor = 'red';
+//   adv.appendChild(virtualSlide);
+// }
+
+const initSwiperGallery = () => {
+  console.log('swiperGallery');
+
+  const swiperGallery = new Swiper('.gallery__swrapper', {
+    modules: [Navigation],
+
+    loop: true, // зациклен
+    allowTouchMove: true, // свайп и мышка
+    slidesPerView: 2,
+    spaceBetween: 5,
+
+    navigation: {
+      nextEl: '.swiper-button-next-gallery',
+      prevEl: '.swiper-button-back-gallery',
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+
+      },
+      1440: {
+        // КАК ОТКЛЮЧИТЬ СЛАЙДЕР?
+        // watchOverflow: false,
+        enabled: false,
+      }
+    }
+
+  });
+
+  console.log(window.innerWidth);
+
+  if (window.innerWidth < breakpointDesctop) {
+    console.log(swiperGallery);
+    return swiperGallery;
+  } else {
+    console.log('>=1440 - destroy gallery-swiper');
+    if (swiperGallery !== undefined) {
+      swiperGallery.destroy(true, true);
+      console.log(swiperGallery);
+      return;
+    }
+  }
+};
+
+initSwiperGallery();
+
+// resize change
+window.addEventListener('resize', (e) => {
+
+// варианты принудительнй перезагрузки экрана, но с ними тесты не работают!
+  // location.reload() // устаревшее
+  // window.location.reload();
+  // location.href=location.href;
+  // window.location.href = window.location.href;
+  // window.location.replace(window.location.href);
+
+  console.log('экран изменен!', e);
+  initSwiperAdv();
+  initSwiperGallery();
 });
 
-if(body.offsetWidth >= 1440) {
-  swiperGallery.destroy();
-}
-
-swiperGallery.on('slideChange', () => {
-  console.log('slider change');
-  console.log(swiperGallery.activeIndex);
-});
+// swiperGallery.on('slideChange', () => {
+//   console.log('slider change');
+//   console.log(swiperGallery.activeIndex);
+// });
 
