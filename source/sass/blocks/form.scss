@@ -16,11 +16,10 @@
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-
     image-set(url("../../img/background/form_bg-mob_1x.webp") 1x type("image/webp"),
-      url("../..img/background/form_bg-mob_1x.png") 1x,
-      url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
-      url("../../img/background/form_bg-mob_2x.png") 2x);
+    url("../..img/background/form_bg-mob_1x.png") 1x,
+    url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
+    url("../../img/background/form_bg-mob_2x.png") 2x);
 
   @include media-tablet {
     min-height: 680px;
@@ -33,9 +32,9 @@
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       image-set(url("../../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
-        url("../..img/background/form_bg-desct_1x.png") 1x,
-        url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
-        url("../../img/background/form_bg-desct_2x.png") 2x);
+      url("../..img/background/form_bg-desct_1x.png") 1x,
+      url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
+      url("../../img/background/form_bg-desct_2x.png") 2x);
   }
 }
 
@@ -56,7 +55,7 @@
   margin-bottom: 20px;
 
   @include media-tablet {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
   }
 
   @include media-desktop {
@@ -65,6 +64,7 @@
 
   h2 {
     @include font ($size: 22px, $weight: 800, $color: $color-white);
+
     margin-top: 4px;
     margin-bottom: 16px;
 
@@ -83,16 +83,12 @@
   p {
     @include font ($size: 12px, $line-height: 18px, $color: $color-white);
 
-    span {
-      display: block;
-    }
-
-    @include media-tablet {
+        @include media-tablet {
       font-size: 16px;
       line-height: 24px;
 
-      span {
-        display: inline;
+      br {
+        display: none;
       }
     }
   }
@@ -103,15 +99,14 @@
 }
 
 .form__label-text {
-
   @include font ($size: 16px);
+
   color: $color-text-base-50;
   text-align: left;
   padding: 3px;
   position: absolute;
   display: none;
   top: 14px;
-  // transform: translateY(-50%);
   left: 12px;
   right: 3px;
   z-index: 5;
@@ -121,7 +116,7 @@
     left: 28px;
     top: 18px;
   }
-  }
+}
 
 .form__wrapp {
   display: flex;
@@ -149,7 +144,7 @@
 
   @include media-tablet {
     height: 56px;
-    padding: 18px 30px 20px 30px;
+    padding: 18px 30px 20px;
   }
 
   @include media-desktop {
@@ -158,6 +153,7 @@
 
   &::placeholder {
     opacity: 50%;
+
     @include font ($size: 16px);
   }
 
@@ -179,10 +175,9 @@
     outline: none;
   }
 
-  &:focus+.form__label-text {
+  &:focus + .form__label-text {
     display: none;
   }
-
 
   &:disabled {
     border: 1px solid $color-disabled;
@@ -190,15 +185,15 @@
     background-color: $color-white;
   }
 
-    &:disabled + .form__label-text {
-      color: $color-text-base-50;
-    }
-  
+  &:disabled + .form__label-text {
+    color: $color-text-base-50;
+  }
+
   &:not(:placeholder-shown):invalid {
     border: 1px solid $color-error;
   }
 
-  &:not(:placeholder-shown):invalid~.form__err {
+  &:not(:placeholder-shown):invalid ~ .form__err {
     display: block;
   }
 }
@@ -210,7 +205,6 @@
   @include media-tablet {
     min-height: 56px;
     padding-top: 18px;
-    // padding-bottom: 15px;
   }
 }
 
@@ -221,18 +215,6 @@
   top: -30px;
   left: 30px;
 }
-
-
-
-// const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-
-
-// pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-
-
-// RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$/)
-
-// var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 // .form__title {
 //   position: static;

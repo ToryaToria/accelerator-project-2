@@ -4,7 +4,7 @@
   overflow-x: hidden;
 
   @include media-desktop {
-    max-width: $desktop-width;  
+    max-width: $desktop-width;
   }
 }
 
@@ -25,6 +25,7 @@
 
   h3 {
     @include font ($size: 26px, $weight: 800, $color: $color-white);
+
     margin-bottom: 15px;
 
     @include media-tablet {
@@ -41,6 +42,7 @@
 
   p {
     @include font ($size: 15px, $line-height: 20px, $color: $color-white);
+
     margin-bottom: 60px;
 
     @include media-tablet {
@@ -66,6 +68,7 @@
 
 .hero__list {
   @include list-reset;
+
   display: flex;
 
   // flex-direction: column;
@@ -96,27 +99,27 @@
     background-image:
       linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/kavkaz_1x.webp") 1x type("image/webp"),
-        url("../..img/kavkaz_1x.jpg") 1x,
-        url("../../img/kavkaz_2x.webp") 2x type("image/webp"),
-        url("../../img/kavkaz_2x.jpg") 2x);
+      url("../..img/kavkaz_1x.jpg") 1x,
+      url("../../img/kavkaz_2x.webp") 2x type("image/webp"),
+      url("../../img/kavkaz_2x.jpg") 2x);
   }
 
   &--2 {
     background-image:
       linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/kamchatka_1x.webp") 1x type("image/webp"),
-        url("../..img/kamchatka_1x.jpg") 1x,
-        url("../../img/kamchatka_2x.webp") 2x type("image/webp"),
-        url("../../img/kamchatka_2x.jpg") 2x);
+      url("../..img/kamchatka_1x.jpg") 1x,
+      url("../../img/kamchatka_2x.webp") 2x type("image/webp"),
+      url("../../img/kamchatka_2x.jpg") 2x);
   }
 
   &--3 {
     background-image:
       linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/altay_1x.webp") 1x type("image/webp"),
-        url("../..img/altay_1x.jpg") 1x,
-        url("../../img/altay_2x.webp") 2x type("image/webp"),
-        url("../../img/altay_2x.jpg") 2x);
+      url("../..img/altay_1x.jpg") 1x,
+      url("../../img/altay_2x.webp") 2x type("image/webp"),
+      url("../../img/altay_2x.jpg") 2x);
   }
 
   @include media-tablet {
@@ -189,11 +192,10 @@
 
   @include media-desktop {
     margin-bottom: 134px;
-
   }
 }
 
-.hero__bullit-wrapp  {
+.hero__bullit-wrapp {
   // position: absolute;
   // bottom: 40px;
   // right: 50%;
@@ -204,8 +206,8 @@
   justify-content: center;
   margin-bottom: 32px;
 
-    @include media-desktop {
-     margin-bottom: 0;
+  @include media-desktop {
+    margin-bottom: 0;
   }
 }
 
@@ -232,6 +234,7 @@
 
   @include media-desktop {
     @include list-reset;
+
     display: flex;
     gap: 10px;
     align-items: center;
@@ -244,11 +247,12 @@
   border: 1px solid $color-white-50;
 
   display: flex;
+
   // gap: 3px;
   align-items: center;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 12px;
     height: 12px;
@@ -267,7 +271,6 @@
   &--level::before {
     background-image: url("../__spritemap#sprite-level1-view");
   }
-
 }
 
 .hero__features-text {
@@ -276,20 +279,20 @@
 
 
 .hero__swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-@include media-desktop {
-  width: fit-content;
-  bottom: 92px;
-  right: 116px;
-  top: unset;
-  left: unset;
-  // transform: none;
-}
+  @include media-desktop {
+    width: fit-content;
+    bottom: 92px;
+    right: 116px;
+    top: unset;
+    left: unset;
+
+    // transform: none;
+  }
 }
 
 .hero__swiper .swiper-pagination-bullet {
-  // background-color: aquamarine;
   box-sizing: border-box;
-opacity: 1;
+  opacity: 1;
   display: block;
   width: 16px;
   height: 16px;
@@ -300,6 +303,9 @@ opacity: 1;
 
   margin: 0;
 
+  // background-color: aquamarine;
+
+
   @include media-tablet {
     width: 20px;
     height: 20px;
@@ -307,10 +313,7 @@ opacity: 1;
 }
 
 .hero__swiper .swiper-pagination-bullet-active {
-  
-    background-color: $color-white;
-  
- 
+  background-color: $color-white;
 
   &:hover,
   &:active {
@@ -320,11 +323,11 @@ opacity: 1;
   &:focus {
     outline: 1px solid $color-white-50;
     outline-offset: 2px;
-    background-color: blueviolet;
+
+    // background-color: blueviolet;
   }
 
   &:disabled {
     background-color: $color-disabled-bullit;
   }
-
 }

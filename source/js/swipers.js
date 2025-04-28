@@ -174,7 +174,7 @@ const initSwiperAdv = () => {
     if (swiperAdv !== undefined) {
       swiperAdv.destroy(true, true);
       console.log(swiperAdv);
-      return;
+
     }
   }
 };
@@ -231,7 +231,7 @@ const initSwiperGallery = () => {
     if (swiperGallery !== undefined) {
       swiperGallery.destroy(true, true);
       console.log(swiperGallery);
-      return;
+
     }
   }
 };
@@ -241,7 +241,7 @@ initSwiperGallery();
 // resize change
 window.addEventListener('resize', (e) => {
 
-// варианты принудительнй перезагрузки экрана, но с ними тесты не работают!
+  // варианты принудительнй перезагрузки экрана, но с ними тесты не работают!
   // location.reload() // устаревшее
   // window.location.reload();
   // location.href=location.href;
@@ -257,4 +257,3 @@ window.addEventListener('resize', (e) => {
 //   console.log('slider change');
 //   console.log(swiperGallery.activeIndex);
 // });
-

@@ -1,10 +1,8 @@
 .about {
   margin: 0 auto;
   overflow-x: hidden;
-
   padding-top: 20px;
   padding-bottom: 21px;
-
   display: flex;
   flex-direction: column;
 
@@ -12,22 +10,15 @@
   // background-repeat: no-repeat;
   // background-size: auto;
 
-
   // background-image:
   //   image-set(url("../../img/tourists/tourists-mob_1x.webp") 1x type("image/webp"),
   //     url("../../img/tourists/tourists-mob_1x.jpg") 1x,
   //     url("../../img/tourists/tourists-mob_2x.webp") 2x type("image/webp"),
   //           url("../../img/tourists/tourists-mob_2x.jpg") 2x);
 
-
-  // * {
-  //   outline: auto;
-  // }
-
   @include media-tablet {
     padding-top: 40px;
     padding-bottom: 43px;
-    // align-items: center;
     flex-direction: row;
   }
 
@@ -43,6 +34,7 @@
   display: block;
   width: 320px;
   height: 400px;
+
   // object-fit: cover;
 
   @include media-tablet {
@@ -69,17 +61,14 @@
   @include media-tablet {
     width: 542px;
     height: 350px;
-
     object-fit: contain;
 
     // object-position: -16px -5px;
-
     // margin-left: -30px;
   }
 
   @include media-desktop {
     object-fit: cover;
-
     width: 660px;
     height: 498px;
   }
@@ -89,6 +78,7 @@
   // margin-top: 400px;
   padding-left: 15px;
   padding-right: 15px;
+
   // margin-top: -28px;
 
   @include media-tablet {
@@ -102,9 +92,9 @@
     margin-top: 0;
   }
 
-
   h2 {
     @include font ($size: 22px, $weight: 800);
+
     position: relative;
     margin-bottom: 25px;
     padding-top: 17px;
@@ -114,6 +104,7 @@
     &::after {
       // $color-text-shadow
       @include font ($size: 26px, $weight: 800, $color: $color-text-shadow);
+
       content: attr(data-tip);
       position: absolute;
       top: 3px;
@@ -146,13 +137,12 @@
 
   h3 {
     @include font ($size: 16px, $weight: 700);
+
     margin-bottom: 13px;
 
     @include media-tablet {
       font-size: 18px;
       margin-bottom: 11px;
-
-      // background-color: aqua;
     }
 
     @include media-desktop {
@@ -163,21 +153,21 @@
 
   p {
     @include font ($size: 14px, $line-height: 20px);
+
     margin-bottom: 27px;
 
     &:last-child {
       margin-bottom: 0;
-
     }
 
     @include media-tablet {
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 28px;
+
       span {
         display: none;
       }
-
     }
 
     @include media-desktop {
@@ -189,10 +179,6 @@
     }
   }
 }
-
-// * {
-//   outline: auto;
-// }
 
 // .about__title {
 //   margin-bottom: 28px;

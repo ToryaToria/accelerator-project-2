@@ -4,6 +4,7 @@
 
   background-repeat: no-repeat;
   background-position: top;
+
   // background-image:
   //   image-set(url("../../img/bg1_1x.webp") 1x type("image/webp"),
   //     url("../..img/bg1_1x.png") 1x,
@@ -76,9 +77,11 @@
 
 .tours__list {
   @include list-reset;
+
   margin-bottom: 25px;
 
   display: flex;
+
   // flex-direction: row-reverse;
   // gap: 15px;
   justify-content: flex-start;
@@ -90,7 +93,6 @@
   @include media-tablet {
     // gap: 18px;
     margin-bottom: 25px;
-
   }
 
   @include media-desktop {
@@ -127,10 +129,10 @@
   gap: 10px;
   align-items: center;
 
-    cursor: pointer;
+  cursor: pointer;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 10px;
     height: 12px;

@@ -103,6 +103,7 @@
   // background-color: red;
 
   @include font ($size: 12px, $weight: 300);
+
   text-decoration: none;
 }
 
@@ -115,6 +116,7 @@
 .title-section {
   // h2
   @include font ($size: 22px, $weight: 800);
+
   // padding-top: 19px;
   // padding-bottom: 14px;
   position: relative;
@@ -190,9 +192,9 @@
 }
 
 .text-btn-big {
-
-// Показать все туры
+  // Показать все туры
   @include font ($size: 14px, $weight: 700);
+
   text-transform: uppercase;
   letter-spacing: 0.04em;
 
@@ -232,6 +234,7 @@
 
 .text-cont2 {
   @include font ($size: 14px, $line-height: 20px);
+
   text-decoration: none;
 
   // background-color: aqua;
@@ -242,12 +245,12 @@
 
   @include media-desktop {
     font-size: 16px;
+
     $line-height: 24px;
   }
 }
 
-//==============
-
+// ==============
 .text-invert {
   color: $color-white;
 }

@@ -1,9 +1,9 @@
 .nav--open {
- display: none;
+  display: none;
 
- @include media-desktop {
-display: block; 
-}
+  @include media-desktop {
+    display: block;
+  }
 }
 
 .nav__link {
@@ -29,6 +29,7 @@ display: block;
 
   &--footer {
     @include font ($size: 14px, $color: $color-text-base);
+
     text-decoration: none;
 
     @include media-desktop {

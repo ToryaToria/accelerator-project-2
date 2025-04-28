@@ -13,14 +13,14 @@
 
 .gallery__container {
   display: flex;
+
   // gap: 5px;
   // overflow-x: hidden;
 
   @include media-desktop {
     width: 1440px;
     margin: 0 auto;
-      gap: 5px;
-
+    gap: 5px;
   }
 }
 
@@ -44,13 +44,12 @@
   p {
     @include font ($size: 12px, $line-height: 18px);
 
-    // background-color: aqua;
     @include media-tablet {
       font-size: 14px;
       line-height: 22px;
       margin-right: 180px;
 
-      span {
+      br {
         display: block;
       }
     }
@@ -60,12 +59,14 @@
       line-height: 24px;
       margin-right: 608px;
 
-      span {
-        display: inline;
+      br {
+        display: none;
       }
     }
   }
 }
+
+// Можно ли использовать <br> - там где нужен перенос, и потом убирать его display: none?
 
 .gallery__navigation {
   @include media-desktop {
@@ -129,7 +130,6 @@
     height: 422px;
 
     object-position: -200px -9px;
-
   }
 
   @include media-desktop {
@@ -165,20 +165,20 @@
   height: 223px;
   object-fit: cover;
 
-  object-position: -97px 0px;
+  object-position: -97px 0;
 
 
   @include media-tablet {
     width: 252px;
+
     // height: 205px;
 
-    object-position: -50px 0px;
-
+    object-position: -50px 0;
   }
 
   @include media-desktop {
     width: 284px;
-    object-position: -33px 0px;
+    object-position: -33px 0;
   }
 }
 
@@ -191,10 +191,10 @@
   object-position: -43px 0;
 
   @include media-tablet {
-  width: 266px;
-  height: 425px;
+    width: 266px;
+    height: 425px;
 
-  object-position: -86px -4px;
+    object-position: -86px -4px;
   }
 
   @include media-desktop {
@@ -212,25 +212,24 @@
   object-fit: cover;
 
   @include media-tablet {
-  width: 344px;
-  height: 233px;
+    width: 344px;
+    height: 233px;
 
-  object-position: -32px 0;
+    object-position: -32px 0;
   }
 }
 
 .gallery__img6 {
-
   display: block;
   width: 190px;
   height: auto;
   object-fit: cover;
 
   @include media-tablet {
-  width: 284px;
-  height: 223px;
+    width: 284px;
+    height: 223px;
 
-  object-position: -16px 0;
+    object-position: -16px 0;
   }
 }
 
@@ -239,15 +238,15 @@
   width: 161px;
   height: 269px;
   object-fit: cover;
-  
+
   @include media-tablet {
-  width: 284px;
-  height: 463px;
+    width: 284px;
+    height: 463px;
   }
 }
 
 .gallery__img-wrapp {
-   display: flex;
+  display: flex;
   flex-direction: column;
   gap: 7px;
 }

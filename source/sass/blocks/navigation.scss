@@ -9,7 +9,6 @@
 
 .navigation__btn {
   box-sizing: border-box;
-  display: block;
   width: 37px;
   height: 35px;
 
@@ -21,7 +20,7 @@
   align-items: center;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
 
     width: 23px;
@@ -32,7 +31,6 @@
     mask-size: auto;
     mask-position: center;
     mask-image: url("../../__spritemap#sprite-arrow1-view");
-
   }
 
   &--back {
