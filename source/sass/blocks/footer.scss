@@ -1,4 +1,5 @@
 .footer {
+  box-sizing: border-box;
   padding-top: 23px;
   padding-bottom: 17px;
   border-top: 1px solid $color-line-footer;
@@ -14,6 +15,8 @@
     padding-top: 32px;
     max-width: $desktop-width;
     margin: 0 auto;
+    padding-bottom: 27px;
+
   }
 }
 
@@ -103,7 +106,14 @@
 
   @include media-desktop {
     margin-bottom: 0;
-    gap: 30px;
+    gap: 19px;
+    justify-content: flex-start;
+
+    // outline: auto;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+
   }
 }
 
@@ -112,7 +122,13 @@
 
   @include media-tablet {
     width: fit-content;
-  }
+    }
+
+    @include media-desktop {
+    flex-grow: 0;
+
+    // outline: 1px solid tomato;
+    }
 }
 
 .footer__social-list {
@@ -210,6 +226,8 @@
   @include media-desktop {
     display: block;
     @include font ($size: 18px, $weight: 600);
+
+    margin-left: 55px;
   }
 
 

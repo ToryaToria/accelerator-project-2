@@ -53,6 +53,16 @@
 }
 
 .form__wysiwyg {
+  margin-bottom: 20px;
+
+  @include media-tablet {
+  margin-bottom: 25px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 40px;
+  }
+
   h2 {
     @include font ($size: 22px, $weight: 800, $color: $color-white);
     margin-top: 4px;
@@ -72,24 +82,18 @@
 
   p {
     @include font ($size: 12px, $line-height: 18px, $color: $color-white);
-    margin-bottom: 20px;
 
     span {
       display: block;
     }
 
     @include media-tablet {
-      margin-bottom: 25px;
       font-size: 16px;
       line-height: 24px;
 
       span {
         display: inline;
       }
-    }
-
-    @include media-desktop {
-      margin-bottom: 40px;
     }
   }
 }
