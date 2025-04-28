@@ -221,7 +221,11 @@
 
 // reviews__item swiper-slide swiper-slide-active
 
-.reviews__swiper .swiper-slide-active {
+.reviews__swiper .reviews__swiper {
+  @include media-tablet {
+    width: 565px;
+
+  }
   @include media-desktop {
 width: 700px;
   }

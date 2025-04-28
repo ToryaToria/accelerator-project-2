@@ -26,7 +26,7 @@
 
   @include media-tablet {
     padding-top: 40px;
-    padding-bottom: 42px;
+    padding-bottom: 43px;
     // align-items: center;
     flex-direction: row;
   }
@@ -133,7 +133,7 @@
 
     @include media-tablet {
       font-size: 25px;
-      margin-bottom: 32px;
+      margin-bottom: 31px;
     }
 
     @include media-desktop {
@@ -150,7 +150,7 @@
 
     @include media-tablet {
       font-size: 18px;
-      margin-bottom: 12px;
+      margin-bottom: 11px;
 
       // background-color: aqua;
     }
@@ -173,7 +173,7 @@
     @include media-tablet {
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
       span {
         display: none;
       }

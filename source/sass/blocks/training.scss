@@ -92,13 +92,18 @@
 
 .training__swiper {
     overflow-x: hidden;
+    margin-bottom: 26px;
+
+    @include media-desktop {
+      margin-bottom: 57px;
+    }
 }
 
 .training__list {
   @include list-reset;
   display: flex;
   // gap: 15px;
-  margin-bottom: 26px;
+  // margin-bottom: 26px;
 
   width: 100%;
 
@@ -109,11 +114,12 @@
 
   // @include media-tablet {
   //   gap: 20px;
+  //   min-height: 388px;
   // }
 
-  @include media-desktop {
-    margin-bottom: 57px;
-  }
+  // @include media-desktop {
+  //   margin-bottom: 57px;
+  // }
 
   // * {
   //   outline: auto;
