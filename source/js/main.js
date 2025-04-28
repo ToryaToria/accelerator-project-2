@@ -4,6 +4,6 @@
 // import 'swiper/css';
 
 
-// import './mob-menu.js';
+import './mob-menu.js';
 import './swipers.js';
-// import './footer-nav.js';
+import './footer-nav.js';
