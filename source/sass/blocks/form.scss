@@ -17,9 +17,9 @@
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     image-set(url("../../img/background/form_bg-mob_1x.webp") 1x type("image/webp"),
-    url("../..img/background/form_bg-mob_1x.png") 1x,
-    url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
-    url("../../img/background/form_bg-mob_2x.png") 2x);
+      url("../..img/background/form_bg-mob_1x.png") 1x,
+      url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
+      url("../../img/background/form_bg-mob_2x.png") 2x);
 
   @include media-tablet {
     min-height: 680px;
@@ -32,9 +32,9 @@
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       image-set(url("../../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
-      url("../..img/background/form_bg-desct_1x.png") 1x,
-      url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
-      url("../../img/background/form_bg-desct_2x.png") 2x);
+        url("../..img/background/form_bg-desct_1x.png") 1x,
+        url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
+        url("../../img/background/form_bg-desct_2x.png") 2x);
   }
 }
 
@@ -83,7 +83,7 @@
   p {
     @include font ($size: 12px, $line-height: 18px, $color: $color-white);
 
-        @include media-tablet {
+    @include media-tablet {
       font-size: 16px;
       line-height: 24px;
 
@@ -118,7 +118,7 @@
   }
 }
 
-.form__wrapp {
+.form__myform {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -157,7 +157,7 @@
     @include font ($size: 16px);
   }
 
-  &:placeholder-shown + .form__label-text {
+  &:placeholder-shown+.form__label-text {
     display: block;
   }
 
@@ -175,7 +175,7 @@
     outline: none;
   }
 
-  &:focus + .form__label-text {
+  &:focus+.form__label-text {
     display: none;
   }
 
@@ -185,15 +185,15 @@
     background-color: $color-white;
   }
 
-  &:disabled + .form__label-text {
+  &:disabled+.form__label-text {
     color: $color-text-base-50;
   }
 
-  &:not(:placeholder-shown):invalid {
-    border: 1px solid $color-error;
-  }
+  // &:not(:placeholder-shown):invalid {
+  //   border: 1px solid $color-error;
+  // }
 
-  &:not(:placeholder-shown):invalid ~ .form__err {
+  &:not(:placeholder-shown):invalid~.form__err {
     display: block;
   }
 }
@@ -208,12 +208,9 @@
   }
 }
 
-.form__err {
-  color: $color-error;
-  position: absolute;
-  display: none;
-  top: -30px;
-  left: 30px;
+.form__error {
+  border: 1px solid $color-error;
+//  background-color: red;
 }
 
 // .form__title {

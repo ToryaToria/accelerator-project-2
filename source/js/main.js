@@ -5,5 +5,8 @@
 
 
 import './mob-menu.js';
-import './swipers.js';
+import './sliders.js';
 import './footer-nav.js';
+import {validatesForm} from './form-valid.js';
+
+validatesForm();

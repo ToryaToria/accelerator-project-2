@@ -4,7 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 // import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-console.log('ky');
+// console.log('ky');
 const breakpointDesctop = 1440;
 
 const swiperHero = new Swiper('.hero__swiper', {
@@ -131,11 +131,11 @@ const swiperReviews = new Swiper('.reviews__swiper', {
 //   console.log(swiperReviews.activeIndex);
 // });
 
-console.log('Экран:');
-console.log(window.innerWidth);
+// console.log('Экран:');
+// console.log(window.innerWidth);
 
 const initSwiperAdv = () => {
-  console.log('swiperAdv = ');
+  // console.log('swiperAdv = ');
 
   const swiperAdv = new Swiper('.adv__swiper', {
     modules: [Navigation],
@@ -164,13 +164,13 @@ const initSwiperAdv = () => {
 
   if (window.innerWidth >= breakpointDesctop) {
 
-    console.log('>=1440 - init adv-swiper');
-    console.log(swiperAdv);
+    // console.log('>=1440 - init adv-swiper');
+    // console.log(swiperAdv);
 
     return swiperAdv;
 
   } else {
-    console.log('<1440 - без слайдера');
+    // console.log('<1440 - без слайдера');
     if (swiperAdv !== undefined) {
       swiperAdv.destroy(true, true);
       console.log(swiperAdv);
@@ -192,7 +192,7 @@ initSwiperAdv();
 // }
 
 const initSwiperGallery = () => {
-  console.log('swiperGallery');
+  // console.log('swiperGallery');
 
   const swiperGallery = new Swiper('.gallery__swrapper', {
     modules: [Navigation],
@@ -221,16 +221,16 @@ const initSwiperGallery = () => {
 
   });
 
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
 
   if (window.innerWidth < breakpointDesctop) {
-    console.log(swiperGallery);
+    // console.log(swiperGallery);
     return swiperGallery;
   } else {
-    console.log('>=1440 - destroy gallery-swiper');
+    // console.log('>=1440 - destroy gallery-swiper');
     if (swiperGallery !== undefined) {
       swiperGallery.destroy(true, true);
-      console.log(swiperGallery);
+      // console.log(swiperGallery);
 
     }
   }
@@ -248,7 +248,7 @@ window.addEventListener('resize', (e) => {
   // window.location.href = window.location.href;
   // window.location.replace(window.location.href);
 
-  console.log('экран изменен!', e);
+  // console.log('экран изменен!', e);
   initSwiperAdv();
   initSwiperGallery();
 });
