@@ -210,8 +210,21 @@
 
 .form__error {
   border: 1px solid $color-error;
-//  background-color: red;
+ background-color: red;
 }
+
+.form__field:invalid {
+  background-color: aqua;
+}
+
+.form__field:user-invalid {
+  background-color: rgb(226, 11, 226);
+}
+
+form input::-webkit-validation-bubble-message {
+    // display:none;
+    background-color: antiquewhite;
+} 
 
 // .form__title {
 //   position: static;

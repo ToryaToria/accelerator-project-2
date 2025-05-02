@@ -12,12 +12,13 @@ const patternEmail = new RegExp(/^[a-zA-Zа-яА-ЯёЁ0-9][a-zA-Zа-яА-ЯёЁ
 
 form.noValidate = true;
 
+
 const isValid = (pattern, field) => {
   return pattern.test(field.value);
 }
 
 form.addEventListener('input', () => {
-   
+
   if (phone.value === '' || isValid(patternPhone, phone)) {
     phone.classList.remove('form__error');
     phone.setCustomValidity('');
@@ -50,13 +51,42 @@ const onSubmitForm = (evt) => {
     phone.reportValidity();
 
   } else if (!isValid(patternEmail, email)) {
+
+    let a = email.validationMessage;
+    console.log(`a = ${a}`);
+    // email.validationMessage = "!!!"; // getter, присвоить нельзя!
+
+    console.log(email.willValidate);
+    console.log(email.validationMessage);
+
+    //     email.addEventListener('invalid', function (e) {
+    //     e.target.setCustomValidity('');
+
+    //     if (!isValid(patternEmail, email)) {
+    //       // email.reportValidity();
+
+    //       email.setCustomValidity('Пожалуйста, введите комментарий.');
+    //     }
+    // });
+
     email.setCustomValidity('Пожалуйста, введите корректный email: имя@домен.рф');
     email.classList.add('form__error');
     email.reportValidity();
+
+    // checkValidity
+
+    // email.addEventListener('invalid', (function () {
+    //   return function (e) {
+    //     e.preventDefault();
+    //     console.log(e);
+
+    // console.log('отключить инвалида!')
+    //   };
+    // }));
   }
 
   if (isValid(patternPhone, phone) && isValid(patternEmail, email)) {
-    form.submit();
+    // form.submit();
     console.log('OK!')
   }
 };
