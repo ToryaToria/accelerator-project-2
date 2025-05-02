@@ -52,12 +52,12 @@ const onSubmitForm = (evt) => {
 
   } else if (!isValid(patternEmail, email)) {
 
-    let a = email.validationMessage;
-    console.log(`a = ${a}`);
+    // let a = email.validationMessage;
+    // console.log(`a = ${a}`);
     // email.validationMessage = "!!!"; // getter, присвоить нельзя!
 
-    console.log(email.willValidate);
-    console.log(email.validationMessage);
+    // console.log(email.willValidate);
+    // console.log(email.validationMessage);
 
     //     email.addEventListener('invalid', function (e) {
     //     e.target.setCustomValidity('');

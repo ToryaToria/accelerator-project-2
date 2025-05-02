@@ -4,7 +4,7 @@ import 'swiper/css';
 // import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-console.log('hero__swiper');
+// console.log('hero__swiper');
 const breakpointDesctop = 1440; // почему в слайдере не работает?
 
 const initSwiperHero = () => {

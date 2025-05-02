@@ -39,21 +39,21 @@ const initSwiperGallery = () => {
   // console.log(window.innerWidth);
 
   const gallerySlids = document.querySelectorAll('.gallery .swiper-slide');
-  console.log(gallerySlids);
 
   if (window.innerWidth < breakpointDesctop) {
     console.log(swiperGallery);
      swiperGallery.init;
   } else {
-    console.log('>=1440 - destroy gallery-swiper');
+    // console.log('>=1440 - destroy gallery-swiper');
+
     if (swiperGallery !== undefined) {
       swiperGallery.destroy(true, true);
-      console.log(swiperGallery);
+      // console.log(swiperGallery);
     
-    // удалила стили swiper-slide - как ихdthyenm yf 320-768?
+    // удалила стили swiper-slide - как их добавить на 320-768?
       gallerySlids.forEach((item) => {
         item.classList.remove('swiper-slide');
-        console.log(gallerySlids);
+        // console.log(gallerySlids);
 
       })
     }

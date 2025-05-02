@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 const breakpointDesctop = 1440;
 
 const initSwiperAdv = () => {
-  console.log('swiperAdv');
+  // console.log('swiperAdv');
 
   const swiperAdv = new Swiper('.adv__swiper', {
     modules: [Navigation],
@@ -37,13 +37,9 @@ const initSwiperAdv = () => {
   });
 
   if (window.innerWidth >= breakpointDesctop) {
-
-    console.log('>=1440 - init adv-swiper');
-    console.log(swiperAdv);
-
     swiperAdv.init();
 
-    console.log(swiperAdv.slides.length);
+    // console.log(swiperAdv.slides.length);
     // const adv = document.querySelector('.adv__list');
 
     // for (let i = 0; i < swiperAdv.slides.length; i++) {
@@ -53,7 +49,7 @@ const initSwiperAdv = () => {
     // }
 
   } else {
-    console.log('<1440 - без слайдера');
+    // console.log('<1440 - без слайдера');
     if (swiperAdv !== undefined) {
       swiperAdv.destroy(true, true);
       console.log(swiperAdv);
