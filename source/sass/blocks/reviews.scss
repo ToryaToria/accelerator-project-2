@@ -99,13 +99,20 @@
   }
 }
 
+.reviews__slider {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+  overflow: unset;
+ }
+
 .reviews__item {
   box-sizing: border-box;
   width: 290px;
   padding: 20px;
 
-  flex-shrink: 0;
-  flex-grow: 0;
+  // flex-shrink: 0;
+  // flex-grow: 0;
   display: flex;
   flex-direction: column;
   background-color: $color-white;
@@ -114,6 +121,7 @@
 
   @include media-tablet {
     width: 565px;
+    // width: 100%;
     padding: 20px 30px 20px 20px;
     flex-direction: row;
     gap: 30px;
@@ -226,12 +234,20 @@
 
 // reviews__item swiper-slide swiper-slide-active
 
-.reviews__swiper .reviews__swiper {
+.reviews .swiper-slide,
+.reviews .swiper-slide-active {
   @include media-tablet {
+    // background-color: aqua;
     width: 565px;
   }
 
   @include media-desktop {
     width: 700px;
   }
+}
+
+.reviews .swiper{
+  overflow: unset;
+    // background-color: aqua;
+
 }

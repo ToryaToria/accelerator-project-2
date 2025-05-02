@@ -23,3 +23,5 @@ initswiperTraining();
 initswiperReviews();
 initSwiperAdv();
 initSwiperGallery();
+
+// import './sliders/slider-adv.js';

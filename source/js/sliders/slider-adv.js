@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation} from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 // import 'swiper/css';
 // import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -20,6 +20,7 @@ const initSwiperAdv = () => {
         loop: true, // зациклен
         allowTouchMove: true, // свайп и мышка
         grabCursor: true,
+
         spaceBetween: 30,
         slidesPerView: 'auto',
         slidesPerGroup: 2,
@@ -38,12 +39,21 @@ const initSwiperAdv = () => {
   if (window.innerWidth >= breakpointDesctop) {
 
     console.log('>=1440 - init adv-swiper');
-    // console.log(swiperAdv);
+    console.log(swiperAdv);
 
-     swiperAdv.init();
+    swiperAdv.init();
+
+    console.log(swiperAdv.slides.length);
+    // const adv = document.querySelector('.adv__list');
+
+    // for (let i = 0; i < swiperAdv.slides.length; i++) {
+    //   const virtualSlide = swiperAdv.slides[i].cloneNode(true);
+    //   virtualSlide.style.backgroundColor = 'red';
+    //   adv.appendChild(virtualSlide);
+    // }
 
   } else {
-    // console.log('<1440 - без слайдера');
+    console.log('<1440 - без слайдера');
     if (swiperAdv !== undefined) {
       swiperAdv.destroy(true, true);
       console.log(swiperAdv);
@@ -51,17 +61,10 @@ const initSwiperAdv = () => {
     }
   }
 
-  console.log(swiperAdv.slides.length);
-const adv = document.querySelector('.adv__list');
 
-for (let i = 0; i < swiperAdv.slides.length; i++) {
-  const virtualSlide = swiperAdv.slides[i].cloneNode(true);
-  virtualSlide.style.backgroundColor = 'red';
-  adv.appendChild(virtualSlide);
-}
 
 };
 
 
-export {initSwiperAdv};
+export { initSwiperAdv };
 
