@@ -5,7 +5,6 @@
 
 
 import './mob-menu.js';
-// import './sliders.js';
 import './footer-nav.js';
 
 import {validatesForm} from './form-valid.js';
@@ -17,7 +16,6 @@ import {initswiperTraining} from './sliders/slider-training.js';
 import {initswiperReviews} from './sliders/slider-reviwes.js';
 import {initSwiperAdv} from './sliders/slider-adv.js';
 import {initSwiperGallery} from './sliders/slider-gallery.js';
-
 
 initSwiperHero();
 initswiperTours();

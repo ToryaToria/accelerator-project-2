@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 const breakpointDesctop = 1440;
 
 const initSwiperAdv = () => {
-  // console.log('swiperAdv = ');
+  console.log('swiperAdv');
 
   const swiperAdv = new Swiper('.adv__swiper', {
     modules: [Navigation],
@@ -37,10 +37,10 @@ const initSwiperAdv = () => {
 
   if (window.innerWidth >= breakpointDesctop) {
 
-    // console.log('>=1440 - init adv-swiper');
+    console.log('>=1440 - init adv-swiper');
     // console.log(swiperAdv);
 
-    return swiperAdv;
+     swiperAdv.init();
 
   } else {
     // console.log('<1440 - без слайдера');
@@ -50,16 +50,18 @@ const initSwiperAdv = () => {
 
     }
   }
+
+  console.log(swiperAdv.slides.length);
+const adv = document.querySelector('.adv__list');
+
+for (let i = 0; i < swiperAdv.slides.length; i++) {
+  const virtualSlide = swiperAdv.slides[i].cloneNode(true);
+  virtualSlide.style.backgroundColor = 'red';
+  adv.appendChild(virtualSlide);
+}
+
 };
 
 
 export {initSwiperAdv};
 
-// console.log(swiperAdv.slides.length);
-// const adv = document.querySelector('.adv__list');
-
-// for (let i = 0; i < swiperAdv.slides.length; i++) {
-//   const virtualSlide = swiperAdv.slides[i].cloneNode(true);
-//   virtualSlide.style.backgroundColor = 'red';
-//   adv.appendChild(virtualSlide);
-// }
