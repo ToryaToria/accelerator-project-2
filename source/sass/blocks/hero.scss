@@ -31,6 +31,8 @@
     @include media-tablet {
       font-size: 56px;
       margin-top: 0;
+      margin-bottom: 12px;
+
     }
 
     @include media-desktop {
@@ -56,12 +58,10 @@
 
     @include media-desktop {
       padding-left: 0;
-      padding-right: 680px;
+      padding-right: 730px;
       margin-bottom: 37px;
 
-      span {
-        display: block;
-      }
+      
     }
   }
 }

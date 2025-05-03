@@ -4,7 +4,11 @@
 
   @include media-tablet {
     padding-top: 40px;
-    padding-bottom: 36px;
+    padding-bottom: 42px;
+  }
+
+  @include media-tablet {
+    padding-bottom: 42px;
   }
 }
 
@@ -58,7 +62,7 @@
   margin-bottom: 19px;
 
   @include media-tablet {
-    margin-bottom: 21px;
+    // margin-bottom: 21px;
 
     &::after {
       top: 4px;
@@ -102,6 +106,8 @@
 
   display: flex;
   width: 100%;
+
+  align-items: stretch;
 }
 
 .training__item {
@@ -381,4 +387,8 @@
       margin-top: 3px;
     }
   }
+}
+
+.training .swiper-slide {
+  height: auto;
 }

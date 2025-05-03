@@ -77,10 +77,10 @@
     margin-left: -335px;
     // width: fit-content;
 
-    justify-content: space-between;
+    justify-content: flex-start;
 
 
-      outline: auto;
+      // outline: auto;
       // overflow: hidden;
 
   }
@@ -118,7 +118,7 @@
     @include media-desktop {
       width: 54px;
       height: 54px;
-      margin-bottom: 26px;
+      // margin-bottom: 26px;
     }
   }
 
@@ -195,6 +195,9 @@
       font-size: 18px;
       margin-bottom: 15px;
 
+      padding-left: 0;
+      padding-right: 0;
+
       // br {
       //   display: none;
       // }
@@ -204,24 +207,24 @@
   p {
     @include font ($size: 12px, $line-height: 18px);
 
-    // br {
-    //   display: none;
-    // }
+    br {
+      display: block;
+    }
 
     @include media-tablet {
       font-size: 14px;
       line-height: 22px;
 
-      // br {
-      //   display: none;
-      // }
+      br {
+        display: none;
+      }
     }
 
-    // @include media-desktop {
-    //   br {
-    //     display: none;
-    //   }
-    // }
+    @include media-desktop {
+      br {
+        display: none;
+      }
+    }
   }
 }
 

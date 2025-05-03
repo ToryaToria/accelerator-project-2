@@ -16,6 +16,7 @@ const swiperTraining = new Swiper('.training__swiper', {
   spaceBetween: 15,
   grabCursor: true,
   initialSlide: 2,
+  // autoHeight: false,
 
   navigation: {
     nextEl: '.swiper-button-next-training',

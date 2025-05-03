@@ -6,11 +6,10 @@
   text-align: center;
 
   @include media-tablet {
-    padding-top: 34px;
+    padding-top: 32px;
   }
 
   @include media-desktop {
-    padding-top: 32px;
     max-width: $desktop-width;
     margin: 0 auto;
     padding-bottom: 27px;
@@ -79,8 +78,10 @@
 
   @include media-tablet {
     flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 22px;
+    flex-shrink: 0;
+    flex-grow: 0;
   }
 
 
