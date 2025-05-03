@@ -25,7 +25,7 @@ const initSwiperAdv = () => {
         slidesPerView: 'auto',
         slidesPerGroup: 2,
         // centeredSlides: true,
-        // loopAddBlankSlides: true,
+        loopAddBlankSlides: false,
         // loopFillGroupWithBlank: true,
 
         navigation: {
@@ -39,14 +39,14 @@ const initSwiperAdv = () => {
   if (window.innerWidth >= breakpointDesctop) {
     swiperAdv.init();
 
-    // console.log(swiperAdv.slides.length);
-    // const adv = document.querySelector('.adv__list');
+    console.log(swiperAdv.slides.length);
+    const adv = document.querySelector('.adv__list');
 
-    // for (let i = 0; i < swiperAdv.slides.length; i++) {
-    //   const virtualSlide = swiperAdv.slides[i].cloneNode(true);
-    //   virtualSlide.style.backgroundColor = 'red';
-    //   adv.appendChild(virtualSlide);
-    // }
+    for (let i = 0; i <= 4; i++) {
+      const virtualSlide = swiperAdv.slides[i].cloneNode(true);
+      virtualSlide.style.backgroundColor = 'red';
+      adv.appendChild(virtualSlide);
+    }
 
   } else {
     // console.log('<1440 - без слайдера');
