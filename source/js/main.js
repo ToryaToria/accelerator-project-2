@@ -25,3 +25,9 @@ initSwiperAdv();
 initSwiperGallery();
 
 // import './sliders/slider-adv.js';
+
+// import './sliders/adv.js';
+
+
+
+ 

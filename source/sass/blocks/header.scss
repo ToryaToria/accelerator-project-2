@@ -82,6 +82,8 @@
   }
 
   @include media-desktop {
+    max-width: 600px;
+    flex-wrap: wrap;
     padding: 0;
     flex-direction: row;
     gap: 19px;

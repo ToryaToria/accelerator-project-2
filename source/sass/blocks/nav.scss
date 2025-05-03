@@ -28,6 +28,7 @@
   }
 
   &--footer {
+    display: inline-block;
     @include font ($size: 14px, $color: $color-text-base);
     // background-color: antiquewhite;
 

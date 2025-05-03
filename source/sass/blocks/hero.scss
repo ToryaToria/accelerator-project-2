@@ -4,7 +4,7 @@
   overflow-x: hidden;
 
   @include media-desktop {
-    max-width: $desktop-width;
+    // max-width: $desktop-width;
   }
 }
 
@@ -147,6 +147,7 @@
     text-align: left;
 
     align-items: flex-start;
+    width: 100%;
   }
 }
 
@@ -242,6 +243,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 

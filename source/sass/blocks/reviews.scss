@@ -11,7 +11,7 @@
   }
 
   @include media-desktop {
-    max-width: 1440px;
+    // max-width: $desktop-width;
     padding-top: 100px;
     padding-bottom: 89px;
 

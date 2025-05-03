@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lifetour</title>
   <link rel="stylesheet" href="sass/style.scss">
+
+  <meta name="description" content="незабываемые впечатления от похода в горы">
+
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicons/favicon.png" type="image/png">
+  <link rel="mask-icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font">
 </head>
 
 <body class="page__body text-base">
@@ -15,15 +26,15 @@
       <use href="/__spritemap#sprite-user"></use>
     </svg> -->
 
-
   <header class="header container" data-test="header">
     <button class="header__burger burger burger--close" type="button">
       <span class="visually-hidden">burger-menu</span>
     </button>
 
     <div class="header__wrapper">
+    <div>
       <img class="header__logo logo" src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
-
+    </div>
       <nav class="header__nav nav nav--open">
         <ul class="header__list">
           <li>
@@ -599,7 +610,8 @@
         <!-- class="about__text text-base" -->
         <p>
           В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, <br> нам это настолько
-          понравилось, <br>что мы этим стали жить. Спустя&nbsp;5&nbsp;лет, в&nbsp;2005&nbsp;году мы основали компанию, чтобы показывать людям
+          понравилось, <br>что мы этим стали жить. Спустя&nbsp;5&nbsp;лет, в&nbsp;2005&nbsp;году мы основали компанию,
+          чтобы показывать людям
           удивительные места нашей страны.
         </p>
         <h3>Наша цель</h3>
@@ -819,20 +831,7 @@
               </p>
             </div>
           </li>
-
-          <!-- <li class="adv__item adv__item--leaf swiper-slide">
-            <div class="adv__wysiwyg">
-              <h3>Бережное отношение-2
-                <br>
-                к природе
-              </h3>
-              <p>
-                Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное
-                воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».
-              </p>
-          </li> -->
         </ul>
-
 
         <div class="adv__navigation navigation">
           <button class="navigation__btn navigation__btn--back swiper-button-back-adv" type="button">
@@ -1066,7 +1065,6 @@
         <div class="footer__wrapp">
           <a class="footer__logo-link" href="#"><img class="footer__logo" src="/__spritemap#sprite-logotype_footer-view"
               alt="logo" width="142" height="42"></a>
-
           <ul class="footer__list nav">
             <li class="footer__item">
               <!-- text-nav -->

@@ -7,10 +7,12 @@ import 'swiper/css/pagination';
 // console.log('ky');
 const breakpointDesctop = 1440;
 
+let swiperAdv = undefined;
+
 const initSwiperAdv = () => {
   // console.log('swiperAdv');
 
-  const swiperAdv = new Swiper('.adv__swiper', {
+  new Swiper('.adv__swiper', {
     modules: [Navigation],
 
     enabled: false,
@@ -36,15 +38,22 @@ const initSwiperAdv = () => {
     }
   });
 
-  if (window.innerWidth >= breakpointDesctop) {
-    swiperAdv.init();
+  
+};
 
-    // console.log(swiperAdv.slides.length);
+// const swiperAdv = initSwiperAdv;
+
+const adv = () => {
+  if (window.innerWidth >= 1440) {
+    initSwiperAdv();
+    // swiperAdv();
+
+    console.log(swiperAdv.slides.length);
     const adv = document.querySelector('.adv__list');
 
     for (let i = 0; i <= 4; i++) {
       const virtualSlide = swiperAdv.slides[i].cloneNode(true);
-      // virtualSlide.style.backgroundColor = 'red';
+      virtualSlide.style.backgroundColor = 'red';
       adv.appendChild(virtualSlide);
     }
 
@@ -52,37 +61,18 @@ const initSwiperAdv = () => {
     // console.log('<1440 - без слайдера');
     if (swiperAdv !== undefined) {
       swiperAdv.destroy(true, true);
-      // console.log(swiperAdv);
+      console.log(swiperAdv);
     }
   }
+}
 
-  // window.addEventListener('resize', () => {
-  //   // console.log('resize');
-  //   if (window.innerWidth >= breakpointDesctop) {
-  //     swiperAdv.init();
-  //     console.log('resize');
+adv();
 
-  //     console.log(swiperAdv.slides.length);
-  //     const adv = document.querySelector('.adv__list');
+const body = document.documentElement;
 
-  //     for (let i = 0; i <= 4; i++) {
-  //       const virtualSlide = swiperAdv.slides[i].cloneNode(true);
-  //       virtualSlide.style.backgroundColor = 'red';
-  //       adv.appendChild(virtualSlide);
-  //     }
+body.addEventListener('resize', () => {
+  console.log('resize');
+});
 
-  //   } else {
-  //     console.log('<1440 - без слайдера');
-  //     if (swiperAdv !== undefined) {
-  //       swiperAdv.destroy(true, true);
-  //       console.log(swiperAdv);
-  //     }
-  //   }
-  // });
-};
-
-
-
-
-export { initSwiperAdv };
+// export { initSwiperAdv };
 
