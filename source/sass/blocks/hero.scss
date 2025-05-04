@@ -9,15 +9,7 @@
 }
 
 .hero__wysiwyg {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   text-align: center;
-  margin-top: auto;
-
-  @include media-tablet {
-    margin-top: 0;
-  }
 
   @include media-desktop {
     text-align: left;
@@ -67,13 +59,7 @@
   @include list-reset;
 
   display: flex;
-
-  // flex-direction: column;
 }
-
-// .hero__slid {
-
-// }
 
 .hero__item {
   box-sizing: border-box;
@@ -89,7 +75,6 @@
   flex-direction: column;
   align-items: center;
 
-  // text-align: center;
   background-color: $color-bg-img;
   background-position: center;
   background-repeat: no-repeat;
@@ -100,27 +85,27 @@
     background-image:
       linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/kavkaz_1x.webp") 1x type("image/webp"),
-      url("../..img/kavkaz_1x.jpg") 1x,
-      url("../../img/kavkaz_2x.webp") 2x type("image/webp"),
-      url("../../img/kavkaz_2x.jpg") 2x);
+        url("../..img/kavkaz_1x.jpg") 1x,
+        url("../../img/kavkaz_2x.webp") 2x type("image/webp"),
+        url("../../img/kavkaz_2x.jpg") 2x);
   }
 
   &--2 {
     background-image:
       linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/kamchatka_1x.webp") 1x type("image/webp"),
-      url("../..img/kamchatka_1x.jpg") 1x,
-      url("../../img/kamchatka_2x.webp") 2x type("image/webp"),
-      url("../../img/kamchatka_2x.jpg") 2x);
+        url("../..img/kamchatka_1x.jpg") 1x,
+        url("../../img/kamchatka_2x.webp") 2x type("image/webp"),
+        url("../../img/kamchatka_2x.jpg") 2x);
   }
 
   &--3 {
     background-image:
       linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
       image-set(url("../../img/altay_1x.webp") 1x type("image/webp"),
-      url("../..img/altay_1x.jpg") 1x,
-      url("../../img/altay_2x.webp") 2x type("image/webp"),
-      url("../../img/altay_2x.jpg") 2x);
+        url("../..img/altay_1x.jpg") 1x,
+        url("../../img/altay_2x.webp") 2x type("image/webp"),
+        url("../../img/altay_2x.jpg") 2x);
   }
 
   @include media-tablet {
@@ -148,20 +133,6 @@
   }
 }
 
-// .hero__title {
-//   margin-top: auto;
-//   margin-bottom: 15px;
-
-//   @include media-tablet {
-//     margin-top: 0;
-//   }
-
-//   @include media-desktop {
-//     margin-bottom: 24px;
-//     padding-right: 256px;
-//   }
-// }
-
 .hero__text {
   margin-bottom: 60px;
 
@@ -172,7 +143,6 @@
   }
 
   @include media-desktop {
-    // text-align: left;
     padding-left: 0;
     padding-right: 680px;
     margin-bottom: 37px;
@@ -183,12 +153,14 @@
   }
 }
 
-.hero__btn {
+.hero__item-wrapp {
   margin-bottom: auto;
   flex-shrink: 0;
-  min-width: 180px;
+
+  margin-top: auto;
 
   @include media-tablet {
+    margin-top: 0;
     margin-bottom: 45px;
   }
 
@@ -197,12 +169,17 @@
   }
 }
 
-.hero__bullit-wrapp {
-  // position: absolute;
-  // bottom: 40px;
-  // right: 50%;
-  // transform: translate(50%);
+.hero__btn {
+  min-width: 180px;
+  display: block;
+  margin: 0 auto;
 
+  @include media-desktop {
+    margin: 0;
+  }
+}
+
+.hero__bullit-wrapp {
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -250,8 +227,6 @@
   border: 1px solid $color-white-50;
 
   display: flex;
-
-  // gap: 3px;
   align-items: center;
 
   &::before {
@@ -288,8 +263,6 @@
     right: 116px;
     top: unset;
     left: unset;
-
-    // transform: none;
   }
 }
 
@@ -305,9 +278,6 @@
   cursor: pointer;
 
   margin: 0;
-
-  // background-color: aquamarine;
-
 
   @include media-tablet {
     width: 20px;
@@ -326,8 +296,6 @@
   &:focus {
     outline: 1px solid $color-white-50;
     outline-offset: 2px;
-
-    // background-color: blueviolet;
   }
 
   &:disabled {

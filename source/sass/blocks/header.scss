@@ -26,7 +26,6 @@
   box-sizing: border-box;
   display: block;
 
-
   @include media-tablet {
     padding-right: 200px;
   }
@@ -44,13 +43,7 @@
   bottom: 0;
   z-index: 10;
   text-align: left;
-
-  // display: none;
-
   box-sizing: border-box;
-
-  // width: 100%;
-  // height: 100%;
   background-color: $color-text-base-60;
 
   @include media-tablet {
@@ -66,10 +59,7 @@
 
 .header__list {
   @include list-reset;
-
-  // display: none;
-
-  padding: 11px 15px 46px 9px;
+   padding: 11px 15px 46px 9px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -117,8 +107,6 @@
 
   @include media-tablet {
     padding-left: 68px;
-
-    // padding-right: 42px;
   }
 
   @include media-desktop {

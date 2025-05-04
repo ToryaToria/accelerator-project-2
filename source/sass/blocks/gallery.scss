@@ -16,15 +16,10 @@
 .gallery__container {
   display: flex;
 
-  // gap: 5px;
-  // overflow-x: hidden;
-
   @include media-desktop {
     width: 1440px;
     margin: 0 auto;
     gap: 5px;
-
-    // background-color: antiquewhite;
   }
 }
 
@@ -77,8 +72,6 @@
   }
 }
 
-// Можно ли использовать <br> - там где нужен перенос, и потом убирать его display: none?
-
 .gallery__navigation {
   @include media-desktop {
     display: none;
@@ -110,24 +103,6 @@
     padding-bottom: 0;
   }
 }
-
-// .gallery__text {
-//   @include media-tablet {
-//     margin-right: 180px;
-
-//     .transter {
-//       display: block;
-//     }
-//   }
-
-//   @include media-desktop {
-//     margin-right: 608px;
-
-//     .transter {
-//       display: inline;
-//     }
-//   }
-// }
 
 .gallery__img1 {
   display: block;
@@ -181,9 +156,6 @@
 
   @include media-tablet {
     width: 252px;
-
-    // height: 205px;
-
     object-position: -50px 0;
   }
 
@@ -204,14 +176,12 @@
   @include media-tablet {
     width: 266px;
     height: 425px;
-
     object-position: -86px -4px;
   }
 
   @include media-desktop {
     width: 284px;
     height: 463px;
-
     object-position: -90px 0;
   }
 }
@@ -225,7 +195,6 @@
   @include media-tablet {
     width: 344px;
     height: 233px;
-
     object-position: -32px 0;
   }
 }
@@ -239,7 +208,6 @@
   @include media-tablet {
     width: 284px;
     height: 223px;
-
     object-position: -16px 0;
   }
 }

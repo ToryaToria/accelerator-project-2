@@ -32,8 +32,6 @@
 
     @include font ($size: 14px, $color: $color-text-base);
 
-    // background-color: antiquewhite;
-
     text-decoration: none;
 
     @include media-desktop {

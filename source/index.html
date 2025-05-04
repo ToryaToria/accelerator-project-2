@@ -32,13 +32,12 @@
     </button>
 
     <div class="header__wrapper">
-    <div>
-      <img class="header__logo logo" src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
-    </div>
+      <div>
+        <img class="header__logo logo" src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
+      </div>
       <nav class="header__nav nav nav--open">
         <ul class="header__list">
           <li>
-            <!-- text-nav text-invert -->
             <a class="header__link nav__link" href="#tours">Туры</a>
           </li>
 
@@ -79,16 +78,17 @@
           <li class="hero__slid swiper-slide">
 
             <div class="hero__item hero__item--1 container">
-              <div class="hero__wysiwyg">
-                <!-- class="hero__title title-hero" -->
-                <h3>Захватывающие вершины Кавказа</h3>
-                <!-- class="hero__text text-big" -->
-                <p>
-                  В сопровождении опытных гидов вы пройдёте через&nbsp;потрясающие ландшафты и совершите восход
-                  на&nbsp;вершину горы Чегет.
-                </p>
+              <div class="hero__item-wrapp">
+
+                <div class="hero__wysiwyg">
+                  <h3>Захватывающие вершины Кавказа</h3>
+                  <p>
+                    В сопровождении опытных гидов вы пройдёте через&nbsp;потрясающие ландшафты и совершите восход
+                    на&nbsp;вершину горы Чегет.
+                  </p>
+                </div>
+                <button class="button hero__btn" type="button">Смотреть тур</button>
               </div>
-              <button class="button hero__btn text-btn" type="button">Смотреть тур</button>
 
               <ul class="hero__features-list">
                 <li class="hero__features-item hero__features-item--day">
@@ -104,15 +104,18 @@
 
           <li class="swiper-slide">
             <div class="hero__item hero__item--2 container">
-              <div class="hero__wysiwyg">
-                <h3>Невероятная природа Камчатки</h3>
-                <p>
-                  Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых
-                  уголков дикой природы в мире.
-                </p>
-              </div>
+              <div class="hero__item-wrapp">
+                <div class="hero__wysiwyg">
+                  <h3>Невероятная природа Камчатки</h3>
+                  <p>
+                    Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
+                    нетронутых
+                    уголков дикой природы в мире.
+                  </p>
+                </div>
 
-              <button class="hero__btn button text-btn" type="button">Смотреть тур</button>
+                <button class="hero__btn button" type="button">Смотреть тур</button>
+              </div>
 
               <ul class="hero__features-list">
                 <li class="hero__features-item hero__features-item--day">
@@ -150,7 +153,7 @@
                 </p>
               </div>
 
-              <button class="hero__btn button text-btn" type="button">Смотреть тур</button>
+              <button class="hero__btn button" type="button">Смотреть тур</button>
 
               <ul class="hero__features-list">
                 <li class="hero__features-item hero__features-item--day">
@@ -274,7 +277,6 @@
                   </div>
                 </li>
 
-
                 <li class="tour-card__setting">
                   <p class="text-light text-invert">Даты набора:</p>
                   <p class="text-bold text-invert">14.06–23.06</p>
@@ -306,7 +308,6 @@
               </div>
 
               <h3 class="tour-card__title">Через Фишт<br> к Чёрному морю и&nbsp;обратно</h3>
-
 
               <ul class="tour-card__setting-list">
                 <li class="tour-card__setting-img">
@@ -385,7 +386,7 @@
         </ul>
       </div>
 
-      <button class="tours__button text-btn-big" type="button">Показать все туры</button>
+      <button class="tours__button" type="button">Показать все туры</button>
     </section>
 
     <section class="training container" data-test="training" id="training">
@@ -395,7 +396,7 @@
           Обучение проводится квалифицированными специалистами, за&nbsp;плечами&nbsp;которых десятки пройденных
           маршрутов
           Кавказа,
-          Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.
+          Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.
         </p>
       </div>
 
@@ -429,7 +430,6 @@
             </a>
 
             <div class="training__wysiwyg-instr">
-              <!-- class="training__name title-name" -->
               <h4>
                 Александр
                 <br>
@@ -477,9 +477,6 @@
               <img class="training__img" src="./img/nadejda_1x.jpg" srcset="./img/nadejda_2x.jpg"
                 alt="Надежда Колесниченко" width="260" height="200">
             </picture>
-
-            <!-- <img class="training__img" src="./img/nadejda_1x.jpg" srcset="./img/nadejda_2x.jpg"
-          alt="Надежда Колесниченко" width="260" height="200"> -->
 
             <a class="training__name-link" href="#">
               <span class="visually-hidden">VK</span>
@@ -558,22 +555,22 @@
       <h4 class="training__subtitle subtitle">Процесс обучения</h4>
       <ul class="training__process-list">
         <li class="training__process-item">
-          <p class="training__process training__process--map text-mini">Изучение спортивного туристского движения</p>
+          <p class="training__process training__process--map">Изучение спортивного туристского движения</p>
         </li>
 
         <li class="training__process-item training__process-item--two">
-          <p class="training__process training__process--boots text-mini">Подготовка и техническое снаряжение в походах
+          <p class="training__process training__process--boots">Подготовка и техническое снаряжение в походах
           </p>
         </li>
 
         <li class="training__process-item training__process-item--end">
-          <p class="training__process training__process--tree text-mini">Лекции по&nbsp;окружающей среде, экологии
+          <p class="training__process training__process--tree">Лекции по&nbsp;окружающей среде, экологии
             и гигиене
           </p>
         </li>
 
         <li class="training__process-item">
-          <p class="training__process training__process--mountain text-mini">Разъяснение сложности горных препятствий
+          <p class="training__process training__process--mountain">Разъяснение сложности горных препятствий
           </p>
         </li>
       </ul>
@@ -603,11 +600,8 @@
       </div>
 
       <div class="about__wysiwyg">
-        <!-- class="about__title title-section" -->
         <h2 data-tip="О нас">О нас</h2>
-        <!-- class="about__subtitle subtitle" -->
         <h3>История компании</h3>
-        <!-- class="about__text text-base" -->
         <p>
           В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, <br>нам это настолько
           понравилось, <br>что мы этим стали жить. Спустя&nbsp;5&nbsp;лет, в&nbsp;2005&nbsp;году мы основали компанию,
@@ -615,7 +609,6 @@
           удивительные места нашей страны.
         </p>
         <h3>Наша цель</h3>
-        <!-- class="text-base"> -->
         <p>
           Подарить вам незабываемые впечатления от похода в горы. Мы&nbsp;берём на себя
           все&nbsp;организационные&nbsp;вопросы.
@@ -656,7 +649,6 @@
 
               <div class="reviews__wrapp">
                 <div class="reviews__wysiwyg">
-                  <!-- class="reviews__text text-reviews" -->
                   <p>
                     Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты,
                     всему
@@ -744,7 +736,6 @@
               </picture>
 
               <div class="reviews__wrapp">
-                <!-- Это был опыт, изменивший мою жизнь! -->
                 <div class="reviews__wysiwyg">
                   <p>
                     Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности
@@ -774,9 +765,7 @@
         <ul class="adv__list swiper-wrapper">
           <li class="adv__item adv__item--level swiper-slide">
             <div class="adv__wysiwyg">
-              <!-- class="adv__subtitle" -->
               <h3>Безопасность</h3>
-              <!-- class="text-adv" -->
               <p>
                 Уделяем внимание безопасности клиентов, внедряя строгие процедуры и&nbsp;протоколы
                 безопасности.&nbsp;Имеем планы действий на&nbsp;случай непредвиденных обстоятельств и&nbsp;даём гарантию
@@ -851,9 +840,7 @@
 
         <div class="gallery__navigation-wrapp">
           <div class="gallery__wysiwyg">
-            <!-- class="gallery__text text-mini"  -->
             <p>
-              <!-- class="transter" -->
               Добавляйте фото с хэштегом #лайфтур, <br>а также отмечайте нас на фото. Лучшие фотографии украсят
               этот&nbsp;раздел нашего сайта.
             </p>
@@ -873,7 +860,6 @@
 
       <div class="gallery__swrapper swrapper">
         <div class="gallery__container img swiper-wrapper">
-          <!-- <p>??? что является одним слайдом???</p> -->
           <div class="swiper-slide">
             <div class="img__wrapp1">
               <picture>
@@ -965,37 +951,25 @@
     <section class="form container" data-test="form">
       <div class="form__container">
         <div class="form__wysiwyg">
-          <!-- class="form__title title-section" -->
           <h2>Остались вопросы?</h2>
-          <!-- <span class="transfer"></span> -->
-          <!-- class="form__text" -->
           <p>
             Заполните форму и наш оператор свяжется <br>с вами для консультации.
           </p>
         </div>
 
         <form class="form__myform" action="https://echo.htmlacademy.ru" method="post">
-
-          <!-- pattern="[\+]?\d{1}\s?[\(]?\d{3}[\)]?\s?\d{3}[\-]?\d{2}[\-]?\d{2}" -->
-
           <label class="form__label">
-            <input class="form__field text-field" type="tel" placeholder="+7 (800)  000-00-00" name="phone" id="phone"
-              required>
-
-            <!-- +7 (978) 720-59-19, 8 (800) 123-45-67, +79787205910, 88001234567 -->
+            <input class="form__field" type="tel" placeholder="+7 (800)  000-00-00" name="phone" id="phone" required>
 
             <span class="form__label-text">Телефон</span>
           </label>
 
-          <!-- formnovalidate на <input> - не сработало!?! - ПОЧЕМУ!!! -->
-
           <label class="form__label">
-            <input class="form__field text-field" type="email" placeholder="вашимейл@имейл.рф" name="email" id="email"
-              required>
+            <input class="form__field" type="email" placeholder="вашимейл@имейл.рф" name="email" id="email" required>
             <span class="form__label-text">Email</span>
           </label>
 
-          <button class="form__button button text-btn" type="submit">Отправить</button>
+          <button class="form__button button" type="submit">Отправить</button>
         </form>
       </div>
     </section>
@@ -1007,7 +981,6 @@
         <h2 class="contacts__title title-section" data-tip="Контакты">Контакты</h2>
 
         <div class="contacts__wysiwyg">
-          <!-- class="contacts__text text-middle" -->
           <p>
             Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться
             увлекательными историями и подобрать для вас тур.
@@ -1017,22 +990,22 @@
         <ul class="contacts__list">
           <li class="contacts__item contacts__item--phone">
             <div class="contacts__wrapp">
-              <p class="text-cont1">Телефон</p>
-              <a class="contacts__link text-cont2" href="tel:+79837454545">+7 983 745-45-45</a>
+              <p class="contacts__text">Телефон</p>
+              <a class="contacts__link text-cont" href="tel:+79837454545">+7 983 745-45-45</a>
             </div>
           </li>
 
           <li class="contacts__item contacts__item--mail">
             <div class="contacts__wrapp">
-              <p class="text-cont1">Email</p>
-              <a class="contacts__link text-cont2" href="mailto:info@lifetour.com">info@lifetour.com</a>
+              <p class="contacts__text">Email</p>
+              <a class="contacts__link text-cont" href="mailto:info@lifetour.com">info@lifetour.com</a>
             </div>
           </li>
 
           <li class="contacts__item contacts__item--address">
             <div class="contacts__wrapp">
-              <p class="text-cont1">Адрес</p>
-              <p class="text-cont2">г.&nbsp;Москва,&nbsp;пр-т&nbsp;Мира, д.&nbsp;14,&nbsp;офис&nbsp;101</p>
+              <p class="contacts__text">Адрес</p>
+              <p class="text-cont">г.&nbsp;Москва,&nbsp;пр-т&nbsp;Мира, д.&nbsp;14,&nbsp;офис&nbsp;101</p>
             </div>
           </li>
         </ul>
@@ -1067,7 +1040,6 @@
               alt="logo" width="142" height="42"></a>
           <ul class="footer__list nav">
             <li class="footer__item">
-              <!-- text-nav -->
               <a class="nav__link nav__link--footer" href="#tours">Туры</a>
             </li>
 

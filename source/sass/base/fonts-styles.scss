@@ -12,113 +12,23 @@
   }
 }
 
-// .text-big {
-//   // текст в hero
-//   background-color: aqua;
-//   @include font ($size: 15px, $line-height: 20px, $color: $color-white);
-
-
-//   @include media-tablet {
-//     font-size: 17px;
-//     line-height: 24px;
-//   }
-// }
-
-// .text-small {
-//   background-color: blueviolet;
-//   @include font ($size: 12px, $line-height: 16px);
-// }
-
-.text-mini {
-  @include font ($size: 12px, $line-height: 18px);
-
-  // background-color: aqua;
-  @include media-tablet {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  @include media-desktop {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-// .text-adv {
-//   @include font ($size: 12px, $line-height: 18px);
-
-//   @include media-tablet {
-//     font-size: 14px;
-//     line-height: 22px;
-//   }
-// }
-
-// .text-reviews {
-//   // background-color: chartreuse;
-//   @include font ($size: 12px, $line-height: 18px);
-
-//   @include media-desktop {
-//     font-size: 14px;
-//     line-height: 22px;
-//   }
-// }
-
-// .text-middle {
-//   // background-color: antiquewhite;
-//   @include font ($size: 14px, $line-height: 20px);
-
-//   @include media-tablet {
-//     font-size: 16px;
-//     line-height: 24px;
-//   }
-// }
-
-// .text-nav {
-//   @include font ($size: 14px);
-//   text-decoration: none;
-
-//   @include media-desktop {
-//     font-size: 16px;
-//   }
-// }
-
-// .text-tel {
-//   @include font ($size: 14px, $weight: 600, $color: $color-white);
-//   text-decoration: none;
-
-//   @include media-tablet {
-//     font-size: 16px;
-//   }
-
-//   @include media-desktop {
-//     font-size: 18px;
-//   }
-// }
-
 .text-medium {
   @include font ($size: 12px, $weight: 500, $color: $color-white);
 }
 
 .text-light {
-  // background-color: red;
-
   @include font ($size: 12px, $weight: 300);
 
   text-decoration: none;
 }
 
 .text-bold {
-  // background-color: rgb(43, 231, 18);
-
   @include font ($size: 13px, $weight: 700);
 }
 
 .title-section {
   // h2
   @include font ($size: 22px, $weight: 800);
-
-  // padding-top: 19px;
-  // padding-bottom: 14px;
   position: relative;
 
   &::after {
@@ -131,8 +41,6 @@
     z-index: -1;
 
     @include font ($size: 26px, $weight: 800, $color: $color-text-shadow);
-
-    // color: blueviolet;
 
     @include media-tablet {
       font-size: 40px;
@@ -152,95 +60,10 @@
   }
 }
 
-// .title-shadow {
-//   // тень у  заголовка
-
-// }
-
-// .title-hero {
-//   // h3-hero
-//   @include font ($size: 26px, $weight: 800, $color: $color-white);
-
-//   background-color: aquamarine;
-//   @include media-tablet {
-//     font-size: 56px;
-//   }
-
-//   @include media-desktop {
-//     font-size: 77px;
-//   }
-// }
-
-// .title-tour {
-//   @include font ($size: 24px, $line-height: 28px, $weight: 700, $color: $color-white);
-// }
-
-// .title-name {
-//   // background-color: blue;
-//   @include font ($size: 14px, $line-height: 16px, $weight: 700);
-// }
-
-// .title-adv {
-
-//   @include media-tablet {
-//   }
-
-//   @include media-desktop {
-//     font-size: 18px;
-//   }
-// }
-
-.text-btn {
-  @include font ($size: 16px, $weight: 500, $color: $color-white);
-}
-
-.text-btn-big {
-  // Показать все туры
-  @include font ($size: 14px, $weight: 700);
-
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-
-  @include media-tablet {
-    font-size: 16px;
-  }
-}
-
-.text-field {
-  @include font ($size: 16px);
-}
-
-.subtitle {
-  // background-color: gold;
-  @include font ($size: 16px, $weight: 700);
-
-  @include media-tablet {
-    font-size: 18px;
-  }
-
-  @include media-desktop {
-    font-size: 21px;
-  }
-}
-
-.text-cont1 {
-  @include font ($size: 14px, $weight: 600);
-
-  @include media-tablet {
-    font-size: 16px;
-  }
-
-  @include media-desktop {
-    font-size: 18px;
-  }
-}
-
-.text-cont2 {
+.text-cont {
   @include font ($size: 14px, $line-height: 20px);
 
   text-decoration: none;
-
-  // background-color: aqua;
 
   @include media-tablet {
     $line-height: 22px;

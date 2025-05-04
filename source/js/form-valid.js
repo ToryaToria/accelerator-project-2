@@ -10,7 +10,6 @@ const patternEmail = new RegExp(/^[a-zA-Zа-яА-ЯёЁ0-9][a-zA-Zа-яА-ЯёЁ
 
 form.noValidate = true;
 
-
 const isValid = (pattern, field) => pattern.test(field.value);
 
 form.addEventListener('input', () => {
@@ -22,8 +21,9 @@ form.addEventListener('input', () => {
 
   if (email === '' || isValid(patternEmail, email)) {
     email.classList.remove('form__error');
-    email.setCustomValidity('');
-  }
+    email.setCustomValidity(''); // фокс = ок, хром - сообщение :(
+    // email.setCustomValidity(' '); // с этим хром работает без лишнего сообщения, а фокс - выдаёт его
+     }
 });
 
 const onSubmitForm = (evt) => {
@@ -46,42 +46,14 @@ const onSubmitForm = (evt) => {
     phone.reportValidity();
 
   } else if (!isValid(patternEmail, email)) {
-
-    // let a = email.validationMessage;
-    // console.log(`a = ${a}`);
-    // email.validationMessage = "!!!"; // getter, присвоить нельзя!
-
-    // console.log(email.willValidate);
-    // console.log(email.validationMessage);
-
-    //     email.addEventListener('invalid', function (e) {
-    //     e.target.setCustomValidity('');
-
-    //     if (!isValid(patternEmail, email)) {
-    //       // email.reportValidity();
-
-    //       email.setCustomValidity('Пожалуйста, введите комментарий.');
-    //     }
-    // });
-
+    email.reportValidity();
     email.setCustomValidity('Пожалуйста, введите корректный email: имя@домен.рф');
     email.classList.add('form__error');
-    email.reportValidity();
-
-    // checkValidity
-
-    // email.addEventListener('invalid', (function () {
-    //   return function (e) {
-    //     e.preventDefault();
-    //     console.log(e);
-
-    // console.log('отключить инвалида!')
-    //   };
-    // }));
   }
 
   if (isValid(patternPhone, phone) && isValid(patternEmail, email)) {
     form.submit();
+    form.reset();
     // console.log('OK!');
   }
 };

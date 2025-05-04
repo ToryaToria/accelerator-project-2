@@ -75,14 +75,7 @@
     flex-wrap: nowrap;
     gap: 0;
     margin-left: -335px;
-
-    // width: fit-content;
-
     justify-content: flex-start;
-
-
-    // outline: auto;
-    // overflow: hidden;
   }
 }
 
@@ -118,8 +111,6 @@
     @include media-desktop {
       width: 54px;
       height: 54px;
-
-      // margin-bottom: 26px;
     }
   }
 
@@ -198,10 +189,6 @@
 
       padding-left: 0;
       padding-right: 0;
-
-      // br {
-      //   display: none;
-      // }
     }
   }
 
@@ -238,14 +225,8 @@
   }
 }
 
-// .adv__swiper {
-//   outline: auto;
-// }
-
 .adv .swiper {
   overflow: unset;
-
-  // background-color: aqua;
 }
 
 .adv .swiper-slide {
@@ -259,32 +240,3 @@
     min-height: 329px;
   }
 }
-
-
-// .adv__subtitle {
-//   @include font ($size: 14px, $weight: 600);
-//   margin-bottom: 13px;
-
-//   &::after {
-//     text-align: center;
-//     width: 100%;
-//   }
-
-//   @include media-tablet {
-//     font-size: 16px;
-//     margin-bottom: 14px;
-
-//   }
-
-//   @include media-desktop {
-//     font-size: 18px;
-//   }
-// }
-
-// .adv__subtitle .transfer {
-//   display: block;
-
-//   @include media-desktop {
-//     display: inline-block;
-//   }
-// }

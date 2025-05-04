@@ -25,9 +25,6 @@
 
 .contacts__container {
   box-sizing: border-box;
-
-  // width: 100%;
-  // margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -87,19 +84,17 @@
   }
 }
 
-// .contacts__text {
-//   margin-bottom: 30px;
+.contacts__text {
+  @include font ($size: 14px, $weight: 600);
 
-//   @include media-tablet {
-//     margin-bottom: 40px;
-//     padding-right: 198px;
-//   }
+  @include media-tablet {
+    font-size: 16px;
+  }
 
-//   @include media-desktop {
-//     margin-bottom: 50px;
-//     padding-right: 0;
-//   }
-// }
+  @include media-desktop {
+    font-size: 18px;
+  }
+}
 
 .contacts__list {
   @include list-reset;
@@ -124,7 +119,6 @@
 }
 
 .contacts__wrapp {
-  // margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -139,15 +133,12 @@
 }
 
 .contacts__item {
-  // margin-bottom: 30px;
   display: flex;
   gap: 10px;
 
   &::before {
     content: "";
     display: inline-block;
-
-    // margin: auto;
     width: 22px;
     height: 22px;
     flex-shrink: 0;

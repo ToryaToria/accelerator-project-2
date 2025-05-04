@@ -14,14 +14,8 @@
     max-width: $desktop-width;
     padding-top: 100px;
     padding-bottom: 89px;
-
-    // outline: auto;
   }
 }
-
-// .reviews * {
-// outline: auto;
-// }
 
 .reviews__navigation-wrapp {
   display: flex;
@@ -84,18 +78,8 @@
 
   display: flex;
 
-  // gap: 15px;
-  // flex-direction: column;
-
-  // @include media-tablet {
-  //   // gap: 30px;
-  // }
-
   @include media-desktop {
-    // gap: 120px;
     padding-left: 10px;
-
-    // outline: auto;
   }
 }
 
@@ -111,8 +95,6 @@
   min-width: 290px;
   padding: 20px;
 
-  // flex-shrink: 0;
-  // flex-grow: 0;
   display: flex;
   flex-direction: column;
   background-color: $color-white;
@@ -121,8 +103,6 @@
 
   @include media-tablet {
     width: 565px;
-
-    // width: 100%;
     padding: 20px 30px 20px 20px;
     flex-direction: row;
     gap: 30px;
@@ -163,8 +143,6 @@
   flex-direction: column;
   gap: 0;
 
-  // justify-content: space-between;
-
   @include media-tablet {
     padding-top: 4px;
   }
@@ -198,37 +176,14 @@
   }
 }
 
-// .reviews__text {
-//   padding-bottom: 10px;
-
-//   &--last {
-//     margin-bottom: 15px;
-//     padding-bottom: 0;
-
-
-//     @include media-tablet {
-//       margin-bottom: 25px;
-//     }
-
-//     @include media-desktop {
-//       margin-bottom: 2px;
-//       flex-grow: 1;
-//     }
-//   }
-// }
-
 .reviews__name {
   @include font ($size: 12px, $weight: 600);
 
   margin-bottom: 8px;
 
-  // margin-top: auto;
-  // background-color: red;
-
   @include media-tablet {
     @include font ($size: 13px, $weight: 600);
 
-    // margin-top: auto;
     margin-bottom: 6px;
   }
 
@@ -237,12 +192,9 @@
   }
 }
 
-// reviews__item swiper-slide swiper-slide-active
-
 .reviews .swiper-slide,
 .reviews .swiper-slide-active {
   @include media-tablet {
-    // background-color: aqua;
     width: 565px;
   }
 
@@ -253,6 +205,4 @@
 
 .reviews .swiper {
   overflow: unset;
-
-  // background-color: aqua;
 }

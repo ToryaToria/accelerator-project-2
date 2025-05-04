@@ -17,9 +17,9 @@
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     image-set(url("../../img/background/form_bg-mob_1x.webp") 1x type("image/webp"),
-    url("../..img/background/form_bg-mob_1x.png") 1x,
-    url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
-    url("../../img/background/form_bg-mob_2x.png") 2x);
+      url("../..img/background/form_bg-mob_1x.png") 1x,
+      url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
+      url("../../img/background/form_bg-mob_2x.png") 2x);
 
   @include media-tablet {
     min-height: 680px;
@@ -28,14 +28,12 @@
   @include media-desktop {
     min-height: 760px;
 
-    // background-size: 1440px 760px;
-
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       image-set(url("../../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
-      url("../..img/background/form_bg-desct_1x.png") 1x,
-      url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
-      url("../../img/background/form_bg-desct_2x.png") 2x);
+        url("../..img/background/form_bg-desct_1x.png") 1x,
+        url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
+        url("../../img/background/form_bg-desct_2x.png") 2x);
   }
 }
 
@@ -101,6 +99,10 @@
 
 .form__label-text {
   @include font ($size: 16px);
+  box-sizing: border-box;
+  // overflow: hidden; // как ограничить размер, чтобы при переполнении не выходило из формы?
+  // width: 243px;
+  // height: 22px;
 
   color: $color-text-base-50;
   text-align: left;
@@ -135,6 +137,8 @@
 }
 
 .form__field {
+  @include font ($size: 16px);
+
   box-sizing: border-box;
   display: block;
   height: 50px;
@@ -158,7 +162,7 @@
     @include font ($size: 16px);
   }
 
-  &:placeholder-shown + .form__label-text {
+  &:placeholder-shown+.form__label-text {
     display: block;
   }
 
@@ -166,17 +170,13 @@
     border: 1px solid $color-additional;
   }
 
-  // &:hover + .form__label-text {
-  //   display: none;
-  // }
-
   &:focus,
   &:active {
     border: 1px solid $color-text-base;
     outline: none;
   }
 
-  &:focus + .form__label-text {
+  &:focus+.form__label-text {
     display: none;
   }
 
@@ -186,15 +186,11 @@
     background-color: $color-white;
   }
 
-  &:disabled + .form__label-text {
+  &:disabled+.form__label-text {
     color: $color-text-base-50;
   }
 
-  // &:not(:placeholder-shown):invalid {
-  //   border: 1px solid $color-error;
-  // }
-
-  &:not(:placeholder-shown):invalid ~ .form__err {
+  &:not(:placeholder-shown):invalid~.form__err {
     display: block;
   }
 }
@@ -212,7 +208,7 @@
 .form__error {
   border: 1px solid $color-error;
 
-  //  background-color: red;
+  background-color: red;
 }
 
 // .form__field:invalid {
@@ -226,47 +222,4 @@
 // form input::-webkit-validation-bubble-message {
 //   display:none;
 //   background-color: antiquewhite;
-// }
-
-// .form__title {
-//   position: static;
-//   margin-bottom: 20px;
-//   color: $color-white;
-
-//   &::after {
-//     display: none;
-//   }
-
-//   @include media-tablet {
-//     margin-bottom: 25px;
-//   }
-
-//   @include media-desktop {
-//     margin-bottom: 20px;
-//   }
-// }
-
-// .form__text {
-//   @include font ($size: 12px, $line-height: 18px, $color: $color-white);
-
-//   margin-bottom: 20px;
-
-
-//   .transfer {
-//     display: block;
-// }
-
-//   @include media-tablet {
-//     margin-bottom: 25px;
-//     font-size: 16px;
-//     line-height: 24px;
-
-//     .transter {
-//       display: inline;
-//     }
-//   }
-
-//   @include media-desktop {
-//     margin-bottom: 40px;
-//     }
 // }

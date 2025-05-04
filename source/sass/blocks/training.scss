@@ -62,7 +62,6 @@
   margin-bottom: 19px;
 
   @include media-tablet {
-    // margin-bottom: 21px;
 
     &::after {
       top: 4px;
@@ -115,7 +114,6 @@
   box-sizing: border-box;
   width: 290px;
 
-  // min-height: 403px;
   padding: 15px;
   border: 1px solid $color-line-light;
   background-color: $color-white;
@@ -124,17 +122,12 @@
 
   @include media-tablet {
     width: 213px;
-
-    // min-height: 388px;
-
     padding-right: 12px;
   }
 
   @include media-desktop {
     width: 285px;
     padding-right: 15px;
-
-    // min-height: 356px;
   }
 
   &--mob {
@@ -164,15 +157,6 @@
 }
 
 .training__wysiwyg-instr {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: flex-start;
-  // margin-bottom: 13px;
-
-  // @include media-tablet {
-  //   margin-bottom: 14px;
-  // }
-
   h4 {
     @include font ($size: 14px, $line-height: 16px, $weight: 700);
 
@@ -185,13 +169,17 @@
 }
 
 .training__subtitle {
+  @include font ($size: 16px, $weight: 700);
+
   margin-bottom: 25px;
 
   @include media-tablet {
+    font-size: 18px;
     margin-bottom: 102px;
   }
 
   @include media-desktop {
+    font-size: 21px;
     margin-bottom: 26px;
   }
 }
@@ -318,7 +306,6 @@
   }
 
   @include media-desktop {
-    // width: auto;
     width: 253px;
     min-height: 102px;
 
@@ -350,6 +337,8 @@
 }
 
 .training__process {
+  @include font ($size: 12px, $line-height: 18px);
+
   display: flex;
   gap: 9px;
 
@@ -380,7 +369,14 @@
     background-image: url("../__spritemap#sprite-mountain-view");
   }
 
+  @include media-tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
   @include media-desktop {
+    font-size: 16px;
+    line-height: 24px;
     padding-right: 13px;
 
     &::before {

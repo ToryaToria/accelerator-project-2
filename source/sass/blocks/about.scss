@@ -6,16 +6,6 @@
   display: flex;
   flex-direction: column;
 
-  // background-position: top 20px left 0;
-  // background-repeat: no-repeat;
-  // background-size: auto;
-
-  // background-image:
-  //   image-set(url("../../img/tourists/tourists-mob_1x.webp") 1x type("image/webp"),
-  //     url("../../img/tourists/tourists-mob_1x.jpg") 1x,
-  //     url("../../img/tourists/tourists-mob_2x.webp") 2x type("image/webp"),
-  //           url("../../img/tourists/tourists-mob_2x.jpg") 2x);
-
   @include media-tablet {
     padding-top: 40px;
     padding-bottom: 43px;
@@ -35,14 +25,10 @@
   width: 320px;
   height: 400px;
 
-  // object-fit: cover;
-
   @include media-tablet {
     width: 450px;
     height: 350px;
     padding-top: 134px;
-
-    // margin-left: -30px;
   }
 
   @include media-desktop {
@@ -62,9 +48,6 @@
     width: 542px;
     height: 350px;
     object-fit: contain;
-
-    // object-position: -16px -5px;
-    // margin-left: -30px;
   }
 
   @include media-desktop {
@@ -75,11 +58,8 @@
 }
 
 .about__wysiwyg {
-  // margin-top: 400px;
   padding-left: 15px;
   padding-right: 15px;
-
-  // margin-top: -28px;
 
   @include media-tablet {
     padding-left: 0;
@@ -115,7 +95,6 @@
   }
 
   h2::after {
-    // $color-text-shadow
     @include font ($size: 26px, $weight: 800, $color: $color-text-shadow);
 
     content: attr(data-tip);
@@ -179,48 +158,3 @@
     }
   }
 }
-
-// .about__title {
-//   margin-bottom: 28px;
-//   padding-top: 19px;
-//   padding-bottom: 14px;
-
-//   @include media-tablet {
-//     margin-bottom: 33px;
-//   }
-
-//   @include media-desktop {
-//     margin-bottom: 58px;
-//     padding-top: 41px;
-//     padding-bottom: 0;
-
-//     &::after {
-//       top: 1px;
-//     }
-//   }
-// }
-
-// .about__subtitle {
-//   margin-bottom: 15px;
-
-//   @include media-tablet {
-//     margin-bottom: 12px;
-//   }
-
-//   @include media-desktop {
-//     margin-bottom: 16px;
-//   }
-// }
-
-// .about__text {
-//   margin-bottom: 25px;
-
-//   @include media-tablet {
-//     margin-bottom: 28px;
-//   }
-
-//   @include media-desktop {
-//   margin-bottom: 30px;
-//   padding-right: 15px;
-//   }
-// }

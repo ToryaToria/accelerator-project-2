@@ -4,8 +4,6 @@
   overflow: hidden;
   flex-shrink: 0;
 
-  // background-color: aqua;
-
   @include media-tablet {
     width: 253px;
     height: 418px;
@@ -23,9 +21,6 @@
   height: 134px;
   overflow: hidden;
 
-  // background-color: rgb(180, 47, 221);
-
-
   @include media-tablet {
     width: 252px;
     height: 210px;
@@ -41,8 +36,6 @@
   width: 157px;
   height: 125px;
   overflow: hidden;
-
-  // background-color: rgb(74, 248, 58);
 
   @include media-tablet {
     width: 252px;
