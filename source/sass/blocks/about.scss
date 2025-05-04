@@ -25,7 +25,7 @@
   @include media-desktop {
     padding-top: 99px;
     padding-bottom: 101px;
-    width: 1440px;
+    width: $desktop-width;
     align-items: flex-start;
   }
 }

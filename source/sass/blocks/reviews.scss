@@ -11,7 +11,7 @@
   }
 
   @include media-desktop {
-    // max-width: $desktop-width;
+    max-width: $desktop-width;
     padding-top: 100px;
     padding-bottom: 89px;
 
@@ -108,7 +108,7 @@
 
 .reviews__item {
   box-sizing: border-box;
-  width: 290px;
+  min-width: 290px;
   padding: 20px;
 
   // flex-shrink: 0;
@@ -140,11 +140,15 @@
   object-fit: cover;
 
   margin-bottom: 19px;
+  margin-left: auto;
+  margin-right: auto;
 
   @include media-tablet {
     width: 186px;
     height: 237px;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   @include media-desktop {

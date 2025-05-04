@@ -8,6 +8,8 @@
 
   @include media-desktop {
     padding-top: 100px;
+    max-width: $desktop-width;
+    margin: 0 auto;
   }
 }
 
