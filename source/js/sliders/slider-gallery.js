@@ -1,17 +1,13 @@
 import Swiper from 'swiper';
 import { Navigation} from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
+import 'swiper/css';
 import 'swiper/css/pagination';
 
-// console.log('ky');
 const breakpointDesctop = 1440;
 
 const initSwiperGallery = () => {
-  // console.log('swiperGallery');
   const swiperGallery = new Swiper('.gallery__swrapper', {
     modules: [Navigation],
-
     loop: true, // зациклен
     allowTouchMove: true, // свайп и мышка
     slidesPerView: 2,
@@ -36,26 +32,19 @@ const initSwiperGallery = () => {
 
   });
 
-  // console.log(window.innerWidth);
-
   const gallerySlids = document.querySelectorAll('.gallery .swiper-slide');
 
   if (window.innerWidth < breakpointDesctop) {
-    console.log(swiperGallery);
-     swiperGallery.init;
-  } else {
-    // console.log('>=1440 - destroy gallery-swiper');
+    swiperGallery.init;
+  } else { // ошибка lint-js  39:5  error  Expected an assignment or function call and instead saw an expression  no-unused-expressions
 
     if (swiperGallery !== undefined) {
       swiperGallery.destroy(true, true);
-      // console.log(swiperGallery);
-    
-    // удалила стили swiper-slide - как их добавить на 320-768?
+
+      // удалила стили swiper-slide - как их добавить на 320-768?
       gallerySlids.forEach((item) => {
         item.classList.remove('swiper-slide');
-        // console.log(gallerySlids);
-
-      })
+      });
     }
   }
 };

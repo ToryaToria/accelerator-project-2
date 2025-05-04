@@ -1,10 +1,7 @@
-// console.log('трям!');
-
 const footerNav = document.querySelectorAll('.footer__item');
 const breakpointTabl = 768;
 
 const footerNavChenge = () => {
-  // console.log(window.innerWidth);
 
   if (window.innerWidth >= breakpointTabl) {
     // console.log('>=768');
@@ -24,7 +21,6 @@ const footerNavChenge = () => {
 
 footerNavChenge();
 
-window.addEventListener('resize', (e) => {
-  // console.log('отслеживание экрана', e);
+window.addEventListener('resize', () => {
   footerNavChenge();
 });

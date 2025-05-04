@@ -1,21 +1,17 @@
-console.log('ага!');
-
 const form = document.querySelector('.form__myform');
 const phone = document.getElementById('phone');
 const email = document.getElementById('email');
 
-const patternPhone = new RegExp(/^\+?\d{1}\s?[\(]?\d{3}[\)]?\s?\d{3}[\-]?\d{2}[\-]?\d{2}$/);
+const patternPhone = new RegExp(/^\+?\d{1}\s?[(]?\d{3}[)]?\s?\d{3}[-]?\d{2}[-]?\d{2}$/);
 
-const patternEmail = new RegExp(/^[a-zA-Zа-яА-ЯёЁ0-9][a-zA-Zа-яА-ЯёЁ0-9.!#$%&'*+\/=?^_`{|}~-]*@[a-zA-Zа-яА-ЯёЁ0-9][a-zA-Zа-яА-ЯёЁ0-9-]{0,61}\.[a-zA-Zа-яА-ЯёЁ0-9]{2,}$/);
+const patternEmail = new RegExp(/^[a-zA-Zа-яА-ЯёЁ0-9][a-zA-Zа-яА-ЯёЁ0-9.!#$%&'*+/=?^_`{|}~-]*@[a-zA-Zа-яА-ЯёЁ0-9][a-zA-Zа-яА-ЯёЁ0-9-]{0,61}\.[a-zA-Zа-яА-ЯёЁ0-9]{2,}$/);
 
 // new RegExp("/d")  - c кавычками не работает!!!
 
 form.noValidate = true;
 
 
-const isValid = (pattern, field) => {
-  return pattern.test(field.value);
-}
+const isValid = (pattern, field) => pattern.test(field.value);
 
 form.addEventListener('input', () => {
 
@@ -32,7 +28,6 @@ form.addEventListener('input', () => {
 
 const onSubmitForm = (evt) => {
   evt.preventDefault();
-  console.log('klik')
 
   if (phone.value === '') {
     phone.classList.add('form__error');
@@ -86,8 +81,8 @@ const onSubmitForm = (evt) => {
   }
 
   if (isValid(patternPhone, phone) && isValid(patternEmail, email)) {
-    // form.submit();
-    console.log('OK!')
+    form.submit();
+    // console.log('OK!');
   }
 };
 

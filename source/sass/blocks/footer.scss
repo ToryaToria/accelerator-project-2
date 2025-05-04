@@ -77,14 +77,12 @@
   justify-content: center;
 
   @include media-tablet {
-    flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 22px;
     flex-shrink: 0;
     flex-grow: 0;
     max-width: 500px;
     flex-wrap: wrap;
-
   }
 
 
@@ -192,10 +190,10 @@
 
   &--disabled {
     background-color: $color-disabled;
+  }
 
-    &::before {
-      background-color: $color-disabled;
-    }
+  &--disabled::before {
+    background-color: $color-disabled;
   }
 }
 

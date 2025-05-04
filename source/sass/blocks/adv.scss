@@ -75,14 +75,14 @@
     flex-wrap: nowrap;
     gap: 0;
     margin-left: -335px;
+
     // width: fit-content;
 
     justify-content: flex-start;
 
 
-      // outline: auto;
-      // overflow: hidden;
-
+    // outline: auto;
+    // overflow: hidden;
   }
 }
 
@@ -118,6 +118,7 @@
     @include media-desktop {
       width: 54px;
       height: 54px;
+
       // margin-bottom: 26px;
     }
   }
@@ -242,8 +243,9 @@
 // }
 
 .adv .swiper {
-overflow: unset;  
-// background-color: aqua;
+  overflow: unset;
+
+  // background-color: aqua;
 }
 
 .adv .swiper-slide {

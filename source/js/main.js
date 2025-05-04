@@ -3,7 +3,6 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
-
 import './mob-menu.js';
 import './footer-nav.js';
 
@@ -23,11 +22,3 @@ initswiperTraining();
 initswiperReviews();
 initSwiperAdv();
 initSwiperGallery();
-
-// import './sliders/slider-adv.js';
-
-// import './sliders/adv.js';
-
-
-
- 
