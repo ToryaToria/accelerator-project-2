@@ -1,31 +1,62 @@
 .page {
   /*  для стики-футера */
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 .page__body {
   position: relative;
-
   margin: 0 auto;
   background-color: $color-white;
-
   min-width: $mobile-width;
 
   /*  для стики-футера */
   display: flex;
   min-height: 100%;
   flex-direction: column;
+
+  &--noscroll {
+    overflow: hidden;
+  }
 }
 
 .page__main {
+  background-position: top 578px right 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  background-image:
+    image-set(url("../../img/background/clouds-mob_1x.webp") 1x type("image/webp"),
+    url("../../img/background/clouds-mob_1x.png") 1x,
+    url("../../img/background/clouds-mob_2x.webp") 2x type("image/webp"),
+    url("../../img/background/clouds-mob_2x.png") 2x);
+
+  @include media-tablet {
+    background-position: top 942px right 0, top 4162px right -235px;
+    background-image:
+      image-set(url("../../img/background/clouds1-tabl_1x.webp") 1x type("image/webp"),
+      url("../../img/background/clouds1-tabl_1x.png") 1x,
+      url("../../img/background/clouds1-tabl_2x.webp") 2x type("image/webp"),
+      url("../../img/background/clouds1-tabl_2x.png") 2x),
+      image-set(url("../../img/background/clouds2-tabl_1x.webp") 1x type("image/webp"),
+      url("../../img/background/clouds2-tabl_1x.jpg") 1x,
+      url("../../img/background/clouds2-tabl_2x.webp") 2x type("image/webp"),
+      url("../../img/background/clouds2-tabl_2x.jpg") 2x);
+  }
+
+  @include media-desktop {
+    background-position: top 674px right 0, top 3517px right -345px;
+    background-image:
+      image-set(url("../../img/background/clouds1-desct_1x.webp") 1x type("image/webp"),
+      url("../../img/background/clouds1-desct_1x.png") 1x,
+      url("../../img/background/clouds1-desct_2x.webp") 2x type("image/webp"),
+      url("../../img/background/clouds1-desct_2x.png") 2x),
+      image-set(url("../../img/background/clouds2-desct_1x.webp") 1x type("image/webp"),
+      url("../../img/background/clouds2-desct_1x.png") 1x,
+      url("../../img/background/clouds2-desct_2x.webp") 2x type("image/webp"),
+      url("../../img/background/clouds2-desct_2x.png") 2x),;
+  }
+
   /*  для стики-футера */
   flex-grow: 1;
 }
-
-// .page__section-wrapp {
-//   @include media-desktop {
-//     display: flex;
-//     max-width: 1366px;
-//     margin: 0 auto;
-//   }
-// }

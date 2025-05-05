@@ -1,0 +1,160 @@
+.about {
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet {
+    padding-top: 40px;
+    padding-bottom: 43px;
+    flex-direction: row;
+  }
+
+  @include media-desktop {
+    padding-top: 99px;
+    padding-bottom: 101px;
+    width: $desktop-width;
+    align-items: flex-start;
+  }
+}
+
+.about__img-wrapp {
+  display: block;
+  width: 320px;
+  height: 400px;
+
+  @include media-tablet {
+    width: 450px;
+    height: 350px;
+    padding-top: 134px;
+  }
+
+  @include media-desktop {
+    width: 660px;
+    height: 498px;
+    padding-top: 0;
+  }
+}
+
+.about__img {
+  display: block;
+  width: 434px;
+  height: 400px;
+  object-fit: cover;
+
+  @include media-tablet {
+    width: 542px;
+    height: 350px;
+    object-fit: contain;
+  }
+
+  @include media-desktop {
+    object-fit: cover;
+    width: 660px;
+    height: 498px;
+  }
+}
+
+.about__wysiwyg {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include media-tablet {
+    padding-left: 0;
+    padding-right: 48px;
+    margin-top: 3px;
+  }
+
+  @include media-desktop {
+    padding-right: 184px;
+    margin-top: 0;
+  }
+
+  h2 {
+    @include font ($size: 22px, $weight: 800);
+
+    position: relative;
+    margin-bottom: 25px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    z-index: 1;
+
+    @include media-tablet {
+      font-size: 25px;
+      margin-bottom: 31px;
+    }
+
+    @include media-desktop {
+      font-size: 35px;
+      margin-bottom: 60px;
+      padding-top: 45px;
+      padding-bottom: 0;
+    }
+  }
+
+  h2::after {
+    @include font ($size: 26px, $weight: 800, $color: $color-text-shadow);
+
+    content: attr(data-tip);
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: -1;
+    right: 0;
+
+    @include media-tablet {
+      font-size: 40px;
+    }
+
+    @include media-desktop {
+      font-size: 55px;
+      top: 1px;
+    }
+  }
+
+  h3 {
+    @include font ($size: 16px, $weight: 700);
+
+    margin-bottom: 13px;
+
+    @include media-tablet {
+      font-size: 18px;
+      margin-bottom: 11px;
+    }
+
+    @include media-desktop {
+      font-size: 21px;
+      margin-bottom: 16px;
+    }
+  }
+
+  p {
+    @include font ($size: 14px, $line-height: 20px);
+
+    margin-bottom: 27px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media-tablet {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 28px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include media-desktop {
+      font-size: 14px;
+      line-height: 22px;
+
+      margin-bottom: 30px;
+      padding-right: 15px;
+    }
+  }
+}

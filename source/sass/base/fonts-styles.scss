@@ -2,245 +2,82 @@
   @include font ($size: 14px, $line-height: 20px);
 
   @include media-tablet {
-    line-height: 22px;
-  }
-}
-
-.text-basic {
-  @include font ($size: 14px, $line-height: 22px, $weight: 300);
-
-  @include media-tablet {
     font-size: 16px;
     line-height: 24px;
   }
-}
-
-.text-games {
-  @include font ($size: 16px, $line-height: 20px);
-
-  letter-spacing: -0.01em;
-
-  @include media-tablet {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 300;
-  }
 
   @include media-desktop {
-    line-height: 150%;
-    letter-spacing: 0;
-  }
-}
-
-.text-games-term {
-  @include font ($size: 16px, $line-height: 20px, $weight: 300);
-
-  @include media-tablet {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  @include media-desktop {
-    line-height: 123%;
-    font-weight: 400;
-  }
-}
-
-.text-games-month {
-  @include font ($size: 12px, $line-height: 100%);
-
-  @include media-tablet {
     font-size: 14px;
     line-height: 22px;
   }
-
-  @include media-desktop {
-    font-size: 14px;
-    line-height: 28px;
-  }
 }
 
-.title-main {
-  /* h1 */
-
-  @include font ($family: $font-secondary, $size: 62px, $line-height: 62px, $weight: 800);
-
-  letter-spacing: 0.017em;
-
-  text-transform: uppercase;
-
-  @include media-tablet {
-    font-size: 72px;
-    line-height: 85px;
-    letter-spacing: 0.026em;
-  }
-
-  @include media-desktop {
-    font-size: 92px;
-    line-height: 110px;
-    letter-spacing: 0.04em;
-  }
+.text-medium {
+  @include font ($size: 12px, $weight: 500, $color: $color-white);
 }
 
-.title-super {
-  @include font ($family: $font-secondary, $size: 48px, $line-height: 54px, $weight: 600);
+.text-light {
+  @include font ($size: 12px, $weight: 300);
 
-  text-transform: uppercase;
-  letter-spacing: 0;
+  text-decoration: none;
+}
 
-  @include media-desktop {
-    font-size: 82px;
-    line-height: 96px;
-  }
+.text-bold {
+  @include font ($size: 13px, $weight: 700);
 }
 
 .title-section {
-  @include font ($family: $font-secondary, $size: 32px, $line-height: 32px, $weight: 600);
+  // h2
+  @include font ($size: 22px, $weight: 800);
 
-  @include media-tablet {
-    font-size: 42px;
-    line-height: 42px;
-    letter-spacing: 0;
+  position: relative;
 
-    &--big {
-      font-size: 54px;
-      line-height: 54px;
+  &::after {
+    content: attr(data-tip);
+    position: absolute;
+    top: 3px;
+    left: 0;
+    right: 0;
+
+    z-index: -1;
+
+    @include font ($size: 26px, $weight: 800, $color: $color-text-shadow);
+
+    @include media-tablet {
+      font-size: 40px;
+    }
+
+    @include media-desktop {
+      font-size: 55px;
     }
   }
 
-  @include media-desktop {
-    font-size: 54px;
-    line-height: 54px;
-  }
-}
-
-.subtitle {
-  @include font ($size: 18px, $line-height: 20px);
-
   @include media-tablet {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   @include media-desktop {
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 35px;
   }
 }
 
-.subtitle-rewiews {
-  @include font ($size: 18px, $line-height: 20px, $weight: 400);
-
-  @include media-tablet {
-    font-size: 22px;
-    line-height: 22px;
-  }
-}
-
-.title-contacts {
-  @include font ($size: 20px, $line-height: 20px);
-
-  @include media-tablet {
-    font-size: 24px;
-    line-height: 24px;
-  }
-}
-
-.text-juri {
-  @include font ($size: 22px, $line-height: 22px);
-
-  color: $color-white;
-}
-
-.text-nav {
-  @include font ($size: 22px, $line-height: 22px, $weight: 700);
-
-  text-decoration: none;
-
-  @include media-tablet {
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  @include media-desktop {
-    font-size: 26px;
-    line-height: 26px;
-  }
-}
-
-.title-price {
-  @include font ($size: 22px, $line-height: 24px, $weight: 700);
-
-  @include media-tablet {
-    font-size: 26px;
-  }
-}
-
-.text-detailed {
-  @include font ($size: 14px, $line-height: 14px, $weight: 700);
-
-  text-transform: uppercase;
-}
-
-.text-btn-faq {
-  @include font ($size: 16px, $line-height: 100%);
-
-  @include media-tablet {
-    font-size: 18px;
-  }
-}
-
-.text-month {
-  @include font ($size: 16px, $line-height: 100%);
-
-  @include media-tablet {
-    font-size: 18px;
-  }
-
-  @include media-desktop {
-    font-size: 20px;
-    line-height: 150%;
-  }
-}
-
-.text-price-number {
-  @include font ($size: 48px, $line-height: 150%, $weight: 600, $color: $color-price);
-
-  @include media-tablet {
-    font-size: 60px;
-    line-height: 150%;
-  }
-}
-
-.text-games-number {
-  @include font ($size: 24px, $line-height: 100%, $weight: 700);
-
-  @include media-tablet {
-    line-height: 24px;
-  }
-
-  @include media-desktop {
-    font-size: 40px;
-    line-height: 142%;
-  }
-}
-
-.text-name {
+.text-cont {
   @include font ($size: 14px, $line-height: 20px);
 
   text-decoration: none;
 
   @include media-tablet {
-    line-height: 22px;
+    $line-height: 22px;
+  }
+
+  @include media-desktop {
+    font-size: 16px;
+
+    $line-height: 24px;
   }
 }
 
-.text-form {
-  @include font ($size: 14px, $line-height: 22px);
-
-  color: $color-white;
-}
-
-// ==========================
+// ==============
 .text-invert {
   color: $color-white;
 }

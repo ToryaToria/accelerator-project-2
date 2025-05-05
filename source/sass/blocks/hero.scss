@@ -1,0 +1,325 @@
+.hero {
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+
+  @include media-desktop {
+    // max-width: $desktop-width;
+  }
+}
+
+.hero__wysiwyg {
+  text-align: center;
+
+  @include media-desktop {
+    text-align: left;
+    margin-bottom: 35px;
+  }
+
+  h3 {
+    @include font ($size: 26px, $weight: 800, $color: $color-white);
+
+    margin-bottom: 15px;
+
+    @include media-tablet {
+      font-size: 56px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    @include media-desktop {
+      font-size: 77px;
+      margin-bottom: 24px;
+      padding-right: 256px;
+    }
+  }
+
+  p {
+    @include font ($size: 15px, $line-height: 20px, $color: $color-white);
+
+    margin-bottom: 60px;
+
+    @include media-tablet {
+      font-size: 17px;
+      line-height: 24px;
+
+      margin-bottom: 35px;
+      padding-left: 89px;
+      padding-right: 89px;
+    }
+
+    @include media-desktop {
+      padding-left: 0;
+      padding-right: 730px;
+      margin-bottom: 37px;
+    }
+  }
+}
+
+.hero__list {
+  @include list-reset;
+
+  display: flex;
+}
+
+.hero__item-conteiner {
+  margin-bottom: auto;
+  flex-shrink: 0;
+
+  margin-top: auto;
+
+  @include media-tablet {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
+  }
+}
+
+.hero__item {
+  box-sizing: border-box;
+  min-width: 320px;
+  width: 100%;
+  min-height: 568px;
+  padding-top: 40px;
+  padding-bottom: 56px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $color-bg-img;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  &--1 {
+    background-image:
+      linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
+      image-set(url("../../img/kavkaz_1x.webp") 1x type("image/webp"),
+      url("../..img/kavkaz_1x.jpg") 1x,
+      url("../../img/kavkaz_2x.webp") 2x type("image/webp"),
+      url("../../img/kavkaz_2x.jpg") 2x);
+  }
+
+  &--2 {
+    background-image:
+      linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
+      image-set(url("../../img/kamchatka_1x.webp") 1x type("image/webp"),
+      url("../..img/kamchatka_1x.jpg") 1x,
+      url("../../img/kamchatka_2x.webp") 2x type("image/webp"),
+      url("../../img/kamchatka_2x.jpg") 2x);
+  }
+
+  &--3 {
+    background-image:
+      linear-gradient(133deg, rgba(15, 20, 41, 0.4), rgba(15, 20, 41, 0)),
+      image-set(url("../../img/altay_1x.webp") 1x type("image/webp"),
+      url("../..img/altay_1x.jpg") 1x,
+      url("../../img/altay_2x.webp") 2x type("image/webp"),
+      url("../../img/altay_2x.jpg") 2x);
+  }
+
+  @include media-tablet {
+    min-width: 768px;
+    min-height: 1034px;
+    padding-top: 342px;
+    padding-bottom: 0;
+
+    &--2 {
+      padding-top: 137px;
+      padding-bottom: 197px;
+    }
+  }
+
+  @include media-desktop {
+    position: relative;
+    min-width: 1440px;
+    min-height: 800px;
+    padding-top: 199px;
+    padding-bottom: 76px;
+    text-align: left;
+
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+.hero__text {
+  margin-bottom: 60px;
+
+  @include media-tablet {
+    margin-bottom: 35px;
+    padding-left: 89px;
+    padding-right: 89px;
+  }
+
+  @include media-desktop {
+    padding-left: 0;
+    padding-right: 680px;
+    margin-bottom: 37px;
+
+    .transfer {
+      display: block;
+    }
+  }
+}
+
+.hero__item-wrapp {
+  margin-bottom: auto;
+  flex-shrink: 0;
+
+  margin-top: auto;
+
+  @include media-tablet {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 134px;
+  }
+}
+
+.hero__btn {
+  min-width: 180px;
+  display: block;
+  margin: 0 auto;
+
+  @include media-desktop {
+    margin: 0;
+  }
+}
+
+.hero__bullit-wrapp {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 32px;
+
+  @include media-desktop {
+    margin-bottom: 0;
+  }
+}
+
+.hero__img {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    width: 442px;
+    height: 365px;
+  }
+
+  @include media-desktop {
+    position: absolute;
+    width: 410px;
+    height: 459px;
+    top: 187px;
+    right: 120px;
+  }
+}
+
+.hero__features-list {
+  display: none;
+
+  @include media-desktop {
+    @include list-reset;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 134px;
+  }
+}
+
+.hero__features-item {
+  box-sizing: border-box;
+  padding: 12px 21px 14px 20px;
+  border: 1px solid $color-white-50;
+
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    margin-right: 6px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+  }
+
+  &--day::before {
+    background-image: url("../__spritemap#sprite-night-view");
+  }
+
+  &--level::before {
+    background-image: url("../__spritemap#sprite-level1-view");
+  }
+}
+
+.hero__features-text {
+  @include font ($size: 12px, $line-height: 16px, $color: $color-white);
+}
+
+
+.hero__swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include media-desktop {
+    width: fit-content;
+    bottom: 92px;
+    left: calc(50% + 496px);
+    top: unset;
+  }
+}
+
+.hero__swiper .swiper-pagination-bullet {
+  box-sizing: border-box;
+  opacity: 1;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $color-white;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  margin: 0;
+
+  @include media-tablet {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.hero__swiper .swiper-pagination-bullet-active {
+  background-color: $color-white;
+
+  &:focus {
+    outline: 1px solid $color-white-50;
+    outline-offset: 2px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-white-50;
+  }
+
+  &:disabled {
+    background-color: $color-disabled-bullit;
+  }
+}
+
+.hero__swiper .swiper-slide {
+  display: flex;
+}

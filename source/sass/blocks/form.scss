@@ -1,0 +1,212 @@
+.form {
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 638px;
+
+  text-align: center;
+  color: $color-white;
+  background-color: $color-bg-img;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    image-set(url("../../img/background/form_bg-mob_1x.webp") 1x type("image/webp"),
+    url("../..img/background/form_bg-mob_1x.png") 1x,
+    url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
+    url("../../img/background/form_bg-mob_2x.png") 2x);
+
+  @include media-tablet {
+    min-height: 680px;
+  }
+
+  @include media-desktop {
+    min-height: 760px;
+
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      image-set(url("../../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
+      url("../..img/background/form_bg-desct_1x.png") 1x,
+      url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
+      url("../../img/background/form_bg-desct_2x.png") 2x);
+  }
+}
+
+.form__container {
+  width: 258px;
+  margin: auto;
+
+  @include media-tablet {
+    width: 360px;
+  }
+
+  @include media-desktop {
+    width: 960px;
+  }
+}
+
+.form__wysiwyg {
+  margin-bottom: 20px;
+
+  @include media-tablet {
+    margin-bottom: 25px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    @include font ($size: 22px, $weight: 800, $color: $color-white);
+
+    margin-top: 4px;
+    margin-bottom: 16px;
+
+    @include media-tablet {
+      font-size: 25px;
+      margin-bottom: 25px;
+      margin-top: 0;
+    }
+
+    @include media-desktop {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    @include font ($size: 12px, $line-height: 18px, $color: $color-white);
+
+    @include media-tablet {
+      font-size: 16px;
+      line-height: 24px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__label-text {
+  @include font ($size: 16px);
+
+  box-sizing: border-box;
+
+  // overflow: hidden; // как ограничить размер, чтобы при переполнении не выходило из формы?
+  // width: 243px;
+  // height: 22px;
+
+  color: $color-text-base-50;
+  text-align: left;
+  padding: 3px;
+  position: absolute;
+  display: none;
+  top: 14px;
+  left: 12px;
+  right: 3px;
+  z-index: 5;
+  background-color: $color-white;
+
+  @include media-tablet {
+    left: 28px;
+    top: 18px;
+  }
+}
+
+.form__myform {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include media-tablet {
+    gap: 11px;
+  }
+
+  @include media-desktop {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.form__field {
+  @include font ($size: 16px);
+
+  box-sizing: border-box;
+  display: block;
+  height: 50px;
+  width: 100%;
+  padding: 17px 15px;
+  border: 1px solid $color-additional-10;
+  border-radius: 2px;
+
+  @include media-tablet {
+    height: 56px;
+    padding: 18px 30px 20px;
+  }
+
+  @include media-desktop {
+    width: 360px;
+  }
+
+  &::placeholder {
+    opacity: 50%;
+
+    @include font ($size: 16px);
+  }
+
+  &:placeholder-shown + .form__label-text {
+    display: block;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid $color-text-base;
+    outline: none;
+  }
+
+  &:focus + .form__label-text {
+    display: none;
+  }
+
+  &:hover {
+    border: 1px solid $color-additional;
+  }
+
+  &:disabled {
+    border: 1px solid $color-disabled;
+    color: $color-disabled;
+    background-color: $color-white;
+  }
+
+  &:disabled + .form__label-text {
+    color: $color-text-base-50;
+  }
+
+  &:not(:placeholder-shown):invalid ~ .form__err {
+    display: block;
+  }
+}
+
+.form__button {
+  width: 100%;
+  min-height: 58px;
+
+  @include media-tablet {
+    min-height: 56px;
+    padding-top: 18px;
+  }
+}
+
+.form__error {
+  border: 1px solid $color-error;
+}

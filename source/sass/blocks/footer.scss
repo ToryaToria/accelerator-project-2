@@ -1,0 +1,267 @@
+.footer {
+  box-sizing: border-box;
+  padding-top: 22px;
+  padding-bottom: 17px;
+  border-top: 1px solid $color-line-footer;
+  text-align: center;
+
+  @include media-tablet {
+    padding-top: 32px;
+  }
+
+  @include media-desktop {
+    // max-width: $desktop-width;
+    margin: 0 auto;
+    padding-bottom: 27px;
+  }
+}
+
+.footer__logo-link {
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+
+  @include media-tablet {
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 42px;
+  }
+
+  @include media-desktop {
+    margin: 0;
+    padding: 9px 29px;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.footer__logo {
+  display: block;
+  width: 142px;
+  height: 42px;
+}
+
+.footer__wrapp {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include media-tablet {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 34px;
+  }
+
+  @include media-desktop {
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+}
+
+.footer__list-wrapp {
+  display: flex;
+  gap: 49px;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @include media-tablet {
+    gap: 22px;
+    margin: 0;
+  }
+
+  @include media-desktop {
+    gap: 18px;
+  }
+}
+
+.footer__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: center;
+
+  @include media-tablet {
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 22px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 300px;
+    flex-wrap: wrap;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
+    gap: 19px;
+    justify-content: flex-start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 370px;
+  }
+}
+
+.footer__item {
+  width: 120px;
+
+  @include media-tablet {
+    width: fit-content;
+  }
+
+  @include media-desktop {
+    flex-grow: 0;
+  }
+}
+
+.footer__social-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 18px;
+
+  @include media-tablet {
+    margin-bottom: 26px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.footer__social-item {
+  box-sizing: border-box;
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.footer__social-link {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color-line;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-text-base;
+  }
+
+  &--vk::before {
+    mask-size: 16px 9px;
+    mask-image: url("../__spritemap#sprite-vk-view");
+  }
+
+  &--ok::before {
+    mask-size: 9px 16px;
+    mask-image: url("../__spritemap#sprite-ok-view");
+  }
+
+  &--reddit::before {
+    mask-size: 14px 15px;
+    mask-image: url("../__spritemap#sprite-reddit-view");
+  }
+
+  &:focus {
+    border: 1px solid transparent;
+    outline: none;
+  }
+
+  &:hover {
+    border: 1px solid $color-text-base;
+  }
+
+  &:active {
+    border: 1px solid $color-active;
+    background-color: $color-active;
+
+    &::before {
+      background-color: $color-white;
+    }
+  }
+
+  &--disabled {
+    background-color: $color-disabled;
+  }
+
+  &--disabled::before {
+    background-color: $color-disabled;
+  }
+}
+
+.footer__tel {
+  display: none;
+  text-decoration: none;
+  cursor: pointer;
+  max-width: 200px;
+
+
+  @include media-desktop {
+    display: block;
+
+    @include font ($size: 18px, $weight: 600);
+
+    margin-left: 55px;
+  }
+
+  &:focus {
+    color: $color-additional;
+    outline: none;
+  }
+
+  &:hover {
+    color: $color-additional-10;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+
+  &:disabled {
+    color: $color-disabled;
+  }
+}
+
+.footer__conf {
+  cursor: pointer;
+
+  &:focus {
+    color: $color-additional;
+    outline: none;
+  }
+
+  &:hover {
+    color: $color-additional-50;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+
+  &--disabled {
+    color: $color-disabled;
+  }
+}

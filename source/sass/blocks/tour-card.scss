@@ -1,0 +1,194 @@
+.tour-card {
+  color: $color-white;
+
+  background-color: $color-bg-img;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+
+  &--1 {
+    background-image:
+      linear-gradient(transparent 45%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.6) 80%),
+      image-set(url("../../img/elbrus_1x.webp") 1x type("image/webp"),
+      url("../..img/elbrus_1x.jpg") 1x,
+      url("../../img/elbrus_2x.webp") 2x type("image/webp"),
+      url("../../img/elbrus_2x.jpg") 2x);
+  }
+
+  &--2 {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7)),
+      image-set(url("../../img/belyha_1x.webp") 1x type("image/webp"),
+      url("../..img/belyha_1x.jpg") 1x,
+      url("../../img/belyha_2x.webp") 2x type("image/webp"),
+      url("../../img/belyha_2x.jpg") 2x);
+  }
+
+  &--3 {
+    background-image:
+      linear-gradient(transparent, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7)),
+      image-set(url("../../img/fisht_1x.webp") 1x type("image/webp"),
+      url("../..img/fisht_1x.jpg") 1x,
+      url("../../img/fisht_2x.webp") 2x type("image/webp"),
+      url("../../img/fisht_2x.jpg") 2x);
+  }
+
+  &--4 {
+    background-image:
+      linear-gradient(transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+      image-set(url("../../img/manarag_1x.webp") 1x type("image/webp"),
+      url("../..img/manarag_1x.jpeg") 1x,
+      url("../../img/manarag_2x.webp") 2x type("image/webp"),
+      url("../../img/manarag_2x.jpeg") 2x);
+  }
+}
+
+.tour-card__features-list {
+  @include list-reset;
+
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tour-card__wrapp {
+  display: flex;
+  align-items: center;
+  gap: 12px 5px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  margin-bottom: 15px;
+
+  @include media-tablet {
+    justify-content: space-between;
+  }
+
+  @include media-desktop {
+    margin-bottom: 15px;
+  }
+}
+
+.tour-card__bullit {
+  padding: 6px 12px;
+  background-color: $color-bg-primary;
+
+  display: flex;
+  gap: 6px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-image: url("../__spritemap#sprite-bullit-view");
+  }
+}
+
+.tour-card__features {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+  }
+
+  &--day::before {
+    background-image: url("../__spritemap#sprite-day-view");
+  }
+
+  &--night::before {
+    background-image: url("../__spritemap#sprite-night-view");
+  }
+}
+
+.tour-card__title {
+  @include font ($size: 24px, $line-height: 28px, $weight: 700, $color: $color-white);
+
+  margin-bottom: 14px;
+
+  &::after {
+    margin-top: 15px;
+    box-sizing: border-box;
+    display: block;
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: $color-white;
+    opacity: 0.2;
+  }
+}
+
+.tour-card__setting-list {
+  @include list-reset;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  @include media-tablet {
+    gap: 27px;
+
+    &--1 {
+      gap: 28px;
+    }
+  }
+
+  @include media-desktop {
+    gap: 52px;
+
+    &--1 {
+      gap: 53px;
+    }
+  }
+}
+
+.tour-card__setting-img {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: start;
+}
+
+
+.tour-card__setting {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  align-items: start;
+}
+
+.tour-card__stars-wrapp {
+  display: flex;
+  gap: 1px;
+}
+
+.tour-card__star {
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  background-repeat: repeat;
+  background-image: url("../__spritemap#sprite-star1-view");
+
+  &--not {
+    background-image: url("../__spritemap#sprite-star2-view");
+  }
+}
