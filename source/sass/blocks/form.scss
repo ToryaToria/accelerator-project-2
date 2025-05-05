@@ -17,9 +17,9 @@
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     image-set(url("../../img/background/form_bg-mob_1x.webp") 1x type("image/webp"),
-      url("../..img/background/form_bg-mob_1x.png") 1x,
-      url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
-      url("../../img/background/form_bg-mob_2x.png") 2x);
+    url("../..img/background/form_bg-mob_1x.png") 1x,
+    url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
+    url("../../img/background/form_bg-mob_2x.png") 2x);
 
   @include media-tablet {
     min-height: 680px;
@@ -31,9 +31,9 @@
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       image-set(url("../../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
-        url("../..img/background/form_bg-desct_1x.png") 1x,
-        url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
-        url("../../img/background/form_bg-desct_2x.png") 2x);
+      url("../..img/background/form_bg-desct_1x.png") 1x,
+      url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
+      url("../../img/background/form_bg-desct_2x.png") 2x);
   }
 }
 
@@ -99,7 +99,9 @@
 
 .form__label-text {
   @include font ($size: 16px);
+
   box-sizing: border-box;
+
   // overflow: hidden; // как ограничить размер, чтобы при переполнении не выходило из формы?
   // width: 243px;
   // height: 22px;
@@ -162,7 +164,7 @@
     @include font ($size: 16px);
   }
 
-  &:placeholder-shown+.form__label-text {
+  &:placeholder-shown + .form__label-text {
     display: block;
   }
 
@@ -172,7 +174,7 @@
     outline: none;
   }
 
-  &:focus+.form__label-text {
+  &:focus + .form__label-text {
     display: none;
   }
 
@@ -186,11 +188,11 @@
     background-color: $color-white;
   }
 
-  &:disabled+.form__label-text {
+  &:disabled + .form__label-text {
     color: $color-text-base-50;
   }
 
-  &:not(:placeholder-shown):invalid~.form__err {
+  &:not(:placeholder-shown):invalid ~ .form__err {
     display: block;
   }
 }
@@ -207,19 +209,4 @@
 
 .form__error {
   border: 1px solid $color-error;
-
-  background-color: red;
 }
-
-// .form__field:invalid {
-//   background-color: aqua;
-// }
-
-// .form__field:user-invalid {
-//   background-color: rgb(226, 11, 226);
-// }
-
-// form input::-webkit-validation-bubble-message {
-//   display:none;
-//   background-color: antiquewhite;
-// }

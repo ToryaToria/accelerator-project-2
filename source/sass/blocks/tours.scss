@@ -136,6 +136,7 @@
     mask-size: auto;
     mask-image: url("../__spritemap#sprite-arrow2-view");
   }
+
   &:focus {
     color: $color-additional;
     outline: none;
@@ -145,7 +146,7 @@
     color: $color-additional-10;
   }
 
-    &:active {
+  &:active {
     color: $color-active;
   }
 

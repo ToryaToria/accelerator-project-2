@@ -191,30 +191,31 @@
       padding-right: 0;
     }
   }
+}
 
-  p {
-    @include font ($size: 12px, $line-height: 18px);
+.adv__wysiwyg p {
+  @include font ($size: 12px, $line-height: 18px);
+
+  br {
+    display: block;
+  }
+
+  @include media-tablet {
+    font-size: 14px;
+    line-height: 22px;
 
     br {
-      display: block;
+      display: none;
     }
+  }
 
-    @include media-tablet {
-      font-size: 14px;
-      line-height: 22px;
-
-      br {
-        display: none;
-      }
-    }
-
-    @include media-desktop {
-      br {
-        display: none;
-      }
+  @include media-desktop {
+    br {
+      display: none;
     }
   }
 }
+
 
 .adv__navigation {
   display: none;

@@ -6,9 +6,10 @@
     padding-top: 40px;
     padding-bottom: 42px;
   }
-    @include media-desktop {
-      padding-bottom: 36px; // я его уже меняла!!!
-          }
+
+  @include media-desktop {
+    padding-bottom: 36px; // я его уже меняла!!!
+  }
 }
 
 .training__wysiwyg {
@@ -61,7 +62,6 @@
   margin-bottom: 19px;
 
   @include media-tablet {
-
     &::after {
       top: 4px;
     }
@@ -93,7 +93,7 @@
 .training__swiper {
   overflow-x: hidden;
   margin-bottom: 26px;
-  
+
   @include media-desktop {
     margin-bottom: 58px;
   }

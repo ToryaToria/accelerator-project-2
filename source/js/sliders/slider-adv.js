@@ -50,7 +50,7 @@ const initSwiperAdv = () => {
       advItem[i].remove();
     }
   }
-}
+};
 
 window.addEventListener('resize', initSwiperAdv);
 

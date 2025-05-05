@@ -1,5 +1,6 @@
 .button {
   box-sizing: border-box;
+
   @include font ($size: 16px, $weight: 500, $color: $color-white);
 
   padding: 17px 20px;
@@ -22,7 +23,7 @@
     background-color: $color-white;
   }
 
-   &:active {
+  &:active {
     color: $color-white;
     border: 1px solid $color-active;
     background-color: $color-active;

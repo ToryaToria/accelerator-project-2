@@ -3,10 +3,10 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-let heroSwiper = null;
+// let heroSwiper = null;
 
 const initSwiperHero = () => {
-  heroSwiper = new Swiper('.hero__swiper', {
+  new Swiper('.hero__swiper', {
     modules: [Pagination],
     loop: true, // зациклен
     allowTouchMove: true, // свайп и мышка
@@ -32,7 +32,7 @@ const initSwiperHero = () => {
         this.slides.forEach((slide, index) => {
           const isActive = index === this.activeIndex;
           slide.querySelectorAll('a, button, input, textarea, select, [tabindex]')
-            .forEach(el => {
+            .forEach((el) => {
               el.tabIndex = isActive ? 0 : -1;
             });
         });
@@ -41,11 +41,12 @@ const initSwiperHero = () => {
   });
 
 
-  let heroBoolit = document.querySelectorAll('.swiper-pagination-bullet');
+  const heroBoolit = document.querySelectorAll('.swiper-pagination-bullet');
 
-  heroBoolit.forEach(e => e.tabIndex = 0);
+  heroBoolit.forEach((e) => {
+    e.tabIndex = 0;
+  });
 };
-
 
 
 export {

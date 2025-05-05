@@ -30,8 +30,8 @@
 
   @include media-tablet {
     width: $tablet-width;
-
   }
+
   @include media-desktop {
     width: $desktop-width;
     margin: 0 auto;
@@ -239,7 +239,5 @@
 }
 
 .gallery__swrapper .swiper-slide {
-  // @include media-desktop {
-  width:unset ;
-  // }
+  width: unset;
 }

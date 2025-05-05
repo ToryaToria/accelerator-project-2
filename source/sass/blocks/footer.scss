@@ -95,7 +95,6 @@
 
   @include media-tablet {
     justify-content: flex-start;
-max-width: 205px;
     flex-direction: row;
     gap: 22px;
     flex-shrink: 0;
@@ -257,7 +256,7 @@ max-width: 205px;
   &:hover {
     color: $color-additional-50;
   }
-  
+
   &:active {
     color: $color-active;
   }

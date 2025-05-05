@@ -47,7 +47,7 @@
     }
   }
 
-    &:not(:disabled):hover {
+  &:not(:disabled):hover {
     color: $color-active;
     border: 1px solid $color-active;
     background-color: $color-white;
@@ -58,7 +58,7 @@
     }
   }
 
-    &:not(:disabled):active {
+  &:not(:disabled):active {
     border: 1px solid $color-active;
     background-color: $color-active;
 

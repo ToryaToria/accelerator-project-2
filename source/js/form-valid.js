@@ -23,7 +23,7 @@ form.addEventListener('input', () => {
     email.classList.remove('form__error');
     email.setCustomValidity(''); // фокс = ок, хром - сообщение :(
     // email.setCustomValidity(' '); // с этим хром работает без лишнего сообщения, а фокс - выдаёт его
-     }
+  }
 });
 
 const onSubmitForm = (evt) => {

@@ -13,12 +13,12 @@
     border: 1px solid currentColor;
     outline: none;
   }
-  
+
   &:hover {
     border-bottom: 1px solid currentColor;
   }
 
-    &:active {
+  &:active {
     color: $color-active;
     border: 1px solid transparent;
   }
