@@ -26,35 +26,26 @@
   background-size: auto;
 
   background-image:
-    image-set(url("../../img/background/clouds-mob_1x.webp") 1x type("image/webp"),
-    url("../../img/background/clouds-mob_1x.png") 1x,
-    url("../../img/background/clouds-mob_2x.webp") 2x type("image/webp"),
-    url("../../img/background/clouds-mob_2x.png") 2x);
+    image-set(url("../../img/background/clouds-mob_1x.webp")  type("image/webp"),
+    url("../../img/background/clouds-mob_1x.png"));
 
   @include media-tablet {
     background-position: top 942px right 0, top 4162px right -235px;
     background-image:
-      image-set(url("../../img/background/clouds1-tabl_1x.webp") 1x type("image/webp"),
-      url("../../img/background/clouds1-tabl_1x.png") 1x,
-      url("../../img/background/clouds1-tabl_2x.webp") 2x type("image/webp"),
-      url("../../img/background/clouds1-tabl_2x.png") 2x),
+      image-set(url("../../img/background/clouds1-tabl_1x.webp") type("image/webp"),
+      url("../../img/background/clouds1-tabl_1x.png")),
+     
       image-set(url("../../img/background/clouds2-tabl_1x.webp") 1x type("image/webp"),
-      url("../../img/background/clouds2-tabl_1x.jpg") 1x,
-      url("../../img/background/clouds2-tabl_2x.webp") 2x type("image/webp"),
-      url("../../img/background/clouds2-tabl_2x.jpg") 2x);
+      url("../../img/background/clouds2-tabl_1x.jpg"));
   }
 
   @include media-desktop {
     background-position: top 674px right 0, top 3517px right -345px;
     background-image:
-      image-set(url("../../img/background/clouds1-desct_1x.webp") 1x type("image/webp"),
-      url("../../img/background/clouds1-desct_1x.png") 1x,
-      url("../../img/background/clouds1-desct_2x.webp") 2x type("image/webp"),
-      url("../../img/background/clouds1-desct_2x.png") 2x),
-      image-set(url("../../img/background/clouds2-desct_1x.webp") 1x type("image/webp"),
-      url("../../img/background/clouds2-desct_1x.png") 1x,
-      url("../../img/background/clouds2-desct_2x.webp") 2x type("image/webp"),
-      url("../../img/background/clouds2-desct_2x.png") 2x),;
+      image-set(url("../../img/background/clouds1-desct_1x.webp") type("image/webp"),
+      url("../../img/background/clouds1-desct_1x.png")),
+      image-set(url("../../img/background/clouds2-desct_1x.webp") type("image/webp"),
+      url("../../img/background/clouds2-desct_1x.png"));
   }
 
   /*  для стики-футера */
