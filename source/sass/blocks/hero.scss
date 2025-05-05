@@ -13,6 +13,7 @@
 
   @include media-desktop {
     text-align: left;
+      margin-bottom: 35px;
   }
 
   h3 {
@@ -73,7 +74,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 134px;
+    margin-bottom: 0;
   }
 }
 
@@ -234,6 +235,8 @@
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 134px;
+
   }
 }
 

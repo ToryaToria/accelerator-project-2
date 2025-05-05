@@ -15,7 +15,9 @@
   min-height: 100%;
   flex-direction: column;
 
-  // z-index: -3;
+  &--noscroll {
+    overflow: hidden;
+  }
 }
 
 .page__main {
@@ -23,12 +25,7 @@
   background-repeat: no-repeat;
   background-size: auto;
 
-  // scroll-behavior: smooth;
-  // z-index: -2;
-
-  // background-color: antiquewhite;
-
-  background-image:
+    background-image:
     image-set(url("../../img/background/clouds-mob_1x.webp") 1x type("image/webp"),
     url("../../img/background/clouds-mob_1x.png") 1x,
     url("../../img/background/clouds-mob_2x.webp") 2x type("image/webp"),
@@ -58,10 +55,6 @@
       url("../../img/background/clouds2-desct_1x.png") 1x,
       url("../../img/background/clouds2-desct_2x.webp") 2x type("image/webp"),
       url("../../img/background/clouds2-desct_2x.png") 2x),;
-  }
-
-  &--noscroll {
-    overflow: hidden;
   }
 }
 

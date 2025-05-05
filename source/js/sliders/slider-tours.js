@@ -11,7 +11,6 @@ const initswiperTours = () => {
     allowTouchMove: true, // свайп и мышка
     spaceBetween: 15,
     grabCursor: true,
-
     navigation: {
       nextEl: '.swiper-button-next-tours',
       prevEl: '.swiper-button-back-tours',

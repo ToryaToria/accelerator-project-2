@@ -22,3 +22,4 @@ initswiperTraining();
 initswiperReviews();
 initSwiperAdv();
 initSwiperGallery();
+

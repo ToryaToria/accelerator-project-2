@@ -119,7 +119,7 @@
 
 .header__tel {
   @include font ($size: 14px, $weight: 600, $color: $color-white);
-
+max-width: 200px;
   text-decoration: none;
   cursor: pointer;
 
@@ -136,7 +136,7 @@
     color: $color-text-base;
     outline: none;
   }
-  
+
   &:hover {
     color: $color-white-50;
   }

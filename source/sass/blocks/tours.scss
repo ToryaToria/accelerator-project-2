@@ -73,6 +73,7 @@
   margin-bottom: 25px;
   display: flex;
   justify-content: flex-start;
+  align-items: stretch;
 
   @include media-tablet {
     margin-bottom: 25px;
