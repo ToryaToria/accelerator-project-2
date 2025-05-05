@@ -35,13 +35,13 @@
     padding: 9px 29px;
   }
 
-  &:hover {
-    opacity: 0.7;
+  &:focus {
+    opacity: 0.5;
   }
 
-  &:focus,
+  &:hover,
   &:active {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }
 
@@ -75,12 +75,12 @@
   justify-content: flex-start;
 
   @include media-tablet {
-  gap: 22px;
-  margin: 0;
+    gap: 22px;
+    margin: 0;
   }
 
   @include media-desktop {
-  gap: 18px;
+    gap: 18px;
   }
 }
 
@@ -88,7 +88,7 @@
   @include list-reset;
 
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   gap: 9px;
   // justify-content: center;
   align-items: center;
@@ -187,13 +187,13 @@ flex-direction: column;
     mask-image: url("../__spritemap#sprite-reddit-view");
   }
 
-  &:hover {
-    border: 1px solid $color-text-base;
-  }
-
   &:focus {
     border: 1px solid transparent;
     outline: none;
+  }
+
+  &:hover {
+    border: 1px solid $color-text-base;
   }
 
   &:active {
@@ -227,13 +227,13 @@ flex-direction: column;
     margin-left: 55px;
   }
 
-  &:hover {
-    color: $color-additional-10;
-  }
-
   &:focus {
     color: $color-additional;
     outline: none;
+  }
+
+  &:hover {
+    color: $color-additional-10;
   }
 
   &:active {
@@ -248,15 +248,15 @@ flex-direction: column;
 .footer__conf {
   cursor: pointer;
 
-  &:hover {
-    color: $color-additional-50;
-  }
-
   &:focus {
     color: $color-additional;
     outline: none;
   }
 
+  &:hover {
+    color: $color-additional-50;
+  }
+  
   &:active {
     color: $color-active;
   }

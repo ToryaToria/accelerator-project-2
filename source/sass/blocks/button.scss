@@ -9,12 +9,6 @@
 
   cursor: pointer;
 
-  &:hover {
-    color: $color-active;
-    border: 1px solid $color-active;
-    background-color: $color-white;
-  }
-
   &:focus {
     color: $color-active;
     border: 1px solid transparent;
@@ -22,7 +16,13 @@
     outline: none;
   }
 
-  &:active {
+  &:hover {
+    color: $color-active;
+    border: 1px solid $color-active;
+    background-color: $color-white;
+  }
+
+   &:active {
     color: $color-white;
     border: 1px solid $color-active;
     background-color: $color-active;

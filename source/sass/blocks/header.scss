@@ -132,16 +132,16 @@
     font-size: 18px;
   }
 
-  &:hover {
-    color: $color-white-50;
-  }
-
   &:focus {
     color: $color-text-base;
     outline: none;
   }
+  
+  &:hover {
+    color: $color-white-50;
+  }
 
-  &:active {
+    &:active {
     color: $color-active;
   }
 

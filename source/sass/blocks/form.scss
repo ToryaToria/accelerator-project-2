@@ -166,10 +166,6 @@
     display: block;
   }
 
-  &:hover {
-    border: 1px solid $color-additional;
-  }
-
   &:focus,
   &:active {
     border: 1px solid $color-text-base;
@@ -178,6 +174,10 @@
 
   &:focus+.form__label-text {
     display: none;
+  }
+
+  &:hover {
+    border: 1px solid $color-additional;
   }
 
   &:disabled {

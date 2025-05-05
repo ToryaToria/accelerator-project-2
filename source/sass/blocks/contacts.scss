@@ -208,14 +208,13 @@
 
 .contacts__link {
   cursor: pointer;
-
-  &:hover {
-    color: $color-additional-50;
-  }
-
   &:focus {
     color: $color-additional;
     outline: none;
+  }
+  
+  &:hover {
+    color: $color-additional-50;
   }
 
   &:active {

@@ -303,14 +303,14 @@
 .hero__swiper .swiper-pagination-bullet-active {
   background-color: $color-white;
 
-  &:hover,
-  &:active {
-    background-color: $color-white-50;
-  }
-
   &:focus {
     outline: 1px solid $color-white-50;
     outline-offset: 2px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-white-50;
   }
 
   &:disabled {
