@@ -1,6 +1,6 @@
 .footer {
   box-sizing: border-box;
-  padding-top: 23px;
+  padding-top: 22px;
   padding-bottom: 17px;
   border-top: 1px solid $color-line-footer;
   text-align: center;
@@ -19,7 +19,7 @@
 .footer__logo-link {
   box-sizing: border-box;
   display: block;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   flex-shrink: 0;
@@ -68,23 +68,41 @@
   }
 }
 
+.footer__list-wrapp {
+  display: flex;
+  gap: 49px;
+  margin: 0 auto;
+  justify-content: flex-start;
+
+  @include media-tablet {
+  gap: 22px;
+  margin: 0;
+  }
+
+  @include media-desktop {
+  gap: 18px;
+  }
+}
+
 .footer__list {
   @include list-reset;
 
   display: flex;
-  flex-wrap: wrap;
-  gap: 9px 50px;
-  justify-content: center;
+flex-direction: column;
+  gap: 9px;
+  // justify-content: center;
+  align-items: center;
 
   @include media-tablet {
     justify-content: flex-start;
+
+    flex-direction: row;
     gap: 22px;
     flex-shrink: 0;
     flex-grow: 0;
     max-width: 500px;
     flex-wrap: wrap;
   }
-
 
   @include media-desktop {
     margin-bottom: 0;

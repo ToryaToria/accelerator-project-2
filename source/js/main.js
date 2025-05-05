@@ -4,7 +4,7 @@
 // import 'swiper/css';
 
 import './mob-menu.js';
-import './footer-nav.js';
+// import './footer-nav.js';
 
 import {validatesForm} from './form-valid.js';
 validatesForm();

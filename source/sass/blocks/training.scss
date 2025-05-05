@@ -5,8 +5,10 @@
   @include media-tablet {
     padding-top: 40px;
     padding-bottom: 42px;
-      // padding-bottom: 36px; // я его уже меняла!!!
   }
+    @include media-desktop {
+      padding-bottom: 36px; // я его уже меняла!!!
+          }
 }
 
 .training__wysiwyg {
