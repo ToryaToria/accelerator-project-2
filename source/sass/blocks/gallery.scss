@@ -24,12 +24,14 @@
 }
 
 .gallery__swrapper {
-  // width: $mobile-width;
+  margin: 0 auto;
+  width: $mobile-width;
+  overflow: hidden;
 
-  // @include media-tablet {
-  //   width: $tablet-width;
+  @include media-tablet {
+    width: $tablet-width;
 
-  // }
+  }
   @include media-desktop {
     width: $desktop-width;
     margin: 0 auto;
@@ -234,4 +236,10 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+
+.gallery__swrapper .swiper-slide {
+  // @include media-desktop {
+  width:unset ;
+  // }
 }
