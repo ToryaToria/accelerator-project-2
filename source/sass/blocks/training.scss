@@ -5,10 +5,7 @@
   @include media-tablet {
     padding-top: 40px;
     padding-bottom: 42px;
-  }
-
-  @include media-tablet {
-    padding-bottom: 36px; // я его уже меняла!!!
+      // padding-bottom: 36px; // я его уже меняла!!!
   }
 }
 
@@ -94,7 +91,7 @@
 .training__swiper {
   overflow-x: hidden;
   margin-bottom: 26px;
-
+  
   @include media-desktop {
     margin-bottom: 58px;
   }

@@ -61,6 +61,22 @@
   display: flex;
 }
 
+.hero__item-conteiner {
+  margin-bottom: auto;
+  flex-shrink: 0;
+
+  margin-top: auto;
+
+  @include media-tablet {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 134px;
+  }
+}
+
 .hero__item {
   box-sizing: border-box;
   min-width: 320px;
@@ -260,9 +276,8 @@
   @include media-desktop {
     width: fit-content;
     bottom: 92px;
-    right: 116px;
+    left:calc(50% + 496px) ;
     top: unset;
-    left: unset;
   }
 }
 
@@ -301,4 +316,8 @@
   &:disabled {
     background-color: $color-disabled-bullit;
   }
+}
+
+.hero__swiper .swiper-slide {
+  display: flex;
 }

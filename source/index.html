@@ -26,44 +26,46 @@
       <use href="/__spritemap#sprite-user"></use>
     </svg> -->
 
-  <header class="header container" data-test="header">
-    <button class="header__burger burger burger--close" type="button">
-      <span class="visually-hidden">burger-menu</span>
-    </button>
+  <header class="header" data-test="header">
+    <div class="header__container container">
+      <button class="header__burger burger burger--close" type="button">
+        <span class="visually-hidden">burger-menu</span>
+      </button>
 
-    <div class="header__wrapper">
-      <div>
-        <img class="header__logo logo" src="/__spritemap#sprite-logotype-view" alt="logo" width="142" height="42">
+      <div class="header__wrapper">
+        <div>
+          <img class="header__logo logo" src="./img/logo/logotype.svg" alt="logo" width="142" height="42">
+        </div>
+        <nav class="header__nav nav nav--open">
+          <ul class="header__list">
+            <li>
+              <a class="header__link nav__link" href="#tours">Туры</a>
+            </li>
+
+            <li>
+              <a class="header__link nav__link" href="#training">Обучение</a>
+            </li>
+
+            <li>
+              <a class="header__link nav__link" href="#about">О нас</a>
+            </li>
+
+            <li>
+              <a class="header__link nav__link" href="#reviews">Отзывы</a>
+            </li>
+
+            <li>
+              <a class="header__link nav__link" href="#gallery">Фотографии</a>
+            </li>
+
+            <li>
+              <a class="header__link nav__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="header__tel" href="tel:88000000000">8 800 000-00-00</a>
       </div>
-      <nav class="header__nav nav nav--open">
-        <ul class="header__list">
-          <li>
-            <a class="header__link nav__link" href="#tours">Туры</a>
-          </li>
-
-          <li>
-            <a class="header__link nav__link" href="#training">Обучение</a>
-          </li>
-
-          <li>
-            <a class="header__link nav__link" href="#about">О нас</a>
-          </li>
-
-          <li>
-            <a class="header__link nav__link" href="#reviews">Отзывы</a>
-          </li>
-
-          <li>
-            <a class="header__link nav__link" href="#gallery">Фотографии</a>
-          </li>
-
-          <li>
-            <a class="header__link nav__link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-
-      <a class="header__tel" href="tel:88000000000">8 800 000-00-00</a>
     </div>
   </header>
 
@@ -75,20 +77,19 @@
       <div class="hero__swiper swiper">
         <ul class="hero__list swiper-wrapper">
 
-          <li class="hero__slid swiper-slide">
+          <li class="hero__item hero__item--1 swiper-slide">
+            <div class="hero__item-conteiner container">
+              <!-- <div class="hero__item-wrapp"> -->
 
-            <div class="hero__item hero__item--1 container">
-              <div class="hero__item-wrapp">
-
-                <div class="hero__wysiwyg">
-                  <h3>Захватывающие вершины Кавказа</h3>
-                  <p>
-                    В сопровождении опытных гидов вы пройдёте через&nbsp;потрясающие ландшафты и совершите восход
-                    на&nbsp;вершину горы Чегет.
-                  </p>
-                </div>
-                <button class="button hero__btn" type="button">Смотреть тур</button>
+              <div class="hero__wysiwyg">
+                <h3>Захватывающие вершины Кавказа</h3>
+                <p>
+                  В сопровождении опытных гидов вы пройдёте через&nbsp;потрясающие ландшафты и совершите восход
+                  на&nbsp;вершину горы Чегет.
+                </p>
               </div>
+              <button class="button hero__btn" type="button">Смотреть тур</button>
+              <!-- </div> -->
 
               <ul class="hero__features-list">
                 <li class="hero__features-item hero__features-item--day">
@@ -102,20 +103,20 @@
             </div>
           </li>
 
-          <li class="swiper-slide">
-            <div class="hero__item hero__item--2 container">
-              <div class="hero__item-wrapp">
-                <div class="hero__wysiwyg">
-                  <h3>Невероятная природа Камчатки</h3>
-                  <p>
-                    Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
-                    нетронутых
-                    уголков дикой природы в мире.
-                  </p>
-                </div>
-
-                <button class="hero__btn button" type="button">Смотреть тур</button>
+          <li class="hero__item hero__item--2 swiper-slide">
+            <div class="hero__item-conteiner container">
+              <!-- <div class="hero__item-wrapp"> -->
+              <div class="hero__wysiwyg">
+                <h3>Невероятная природа Камчатки</h3>
+                <p>
+                  Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
+                  нетронутых
+                  уголков дикой природы в мире.
+                </p>
               </div>
+
+              <button class="hero__btn button" type="button">Смотреть тур</button>
+              <!-- </div> -->
 
               <ul class="hero__features-list">
                 <li class="hero__features-item hero__features-item--day">
@@ -143,8 +144,8 @@
             </div>
           </li>
 
-          <li class="swiper-slide">
-            <div class="hero__item hero__item--3 container">
+          <li class="hero__item hero__item--3 swiper-slide">
+            <div class="hero__item-conteiner container">
               <div class="hero__wysiwyg">
                 <h3>Магические пейзажи Алтайского Края</h3>
                 <p>
@@ -577,7 +578,8 @@
     </section>
 
     <section class="about" data-test="about" id="about">
-      <div class="about__img-wrapp">
+      <!-- <div class="container"> -->
+        <div class="about__img-wrapp">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="./img/tourists/tourists-desct_1x.webp 1x,
           ./img/tourists/tourists-desct_2x.webp 2x" width="660" height="498">
@@ -599,24 +601,26 @@
         </picture>
       </div>
 
-      <div class="about__wysiwyg">
-        <h2 data-tip="О нас">О нас</h2>
-        <h3>История компании</h3>
-        <p>
-          В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, <br>нам это настолько
-          понравилось, <br>что мы этим стали жить. Спустя&nbsp;5&nbsp;лет, в&nbsp;2005&nbsp;году мы основали компанию,
-          чтобы показывать людям
-          удивительные места нашей страны.
-        </p>
-        <h3>Наша цель</h3>
-        <p>
-          Подарить вам незабываемые впечатления от похода в горы. Мы&nbsp;берём на себя
-          все&nbsp;организационные&nbsp;вопросы.
-          При&nbsp;организации мы&nbsp;обязательно учтём все&nbsp;ваши пожелания. Вам&nbsp;останется только наслаждаться
-          незабываемым
-          приключением в&nbsp;приятной компании.
-        </p>
-      </div>
+        <div class="about__wysiwyg">
+          <h2 data-tip="О нас">О нас</h2>
+          <h3>История компании</h3>
+          <p>
+            В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, <br>нам это настолько
+            понравилось, <br>что мы этим стали жить. Спустя&nbsp;5&nbsp;лет, в&nbsp;2005&nbsp;году мы основали компанию,
+            чтобы показывать людям
+            удивительные места нашей страны.
+          </p>
+          <h3>Наша цель</h3>
+          <p>
+            Подарить вам незабываемые впечатления от похода в горы. Мы&nbsp;берём на себя
+            все&nbsp;организационные&nbsp;вопросы.
+            При&nbsp;организации мы&nbsp;обязательно учтём все&nbsp;ваши пожелания. Вам&nbsp;останется только
+            наслаждаться
+            незабываемым
+            приключением в&nbsp;приятной компании.
+          </p>
+        </div>
+      <!-- </div> -->
     </section>
 
     <section class="reviews container" data-test="reviews" id="reviews">
@@ -948,8 +952,9 @@
       </div>
     </section>
 
-    <section class="form container" data-test="form">
-      <div class="form__container">
+    <section class="form " data-test="form">
+    
+      <div class="form__container ">
         <div class="form__wysiwyg">
           <h2>Остались вопросы?</h2>
           <p>
@@ -1036,8 +1041,8 @@
       <div class="container">
         <h2 class="visually-hidden">Навигация и соц. сети</h2>
         <div class="footer__wrapp">
-          <a class="footer__logo-link" href="#"><img class="footer__logo" src="/__spritemap#sprite-logotype_footer-view"
-              alt="logo" width="142" height="42"></a>
+          <a class="footer__logo-link" href="#"><img class="footer__logo" src="./img/logo/logotype-black.svg" alt="logo"
+              width="142" height="42"></a>
           <ul class="footer__list nav">
             <li class="footer__item">
               <a class="nav__link nav__link--footer" href="#tours">Туры</a>

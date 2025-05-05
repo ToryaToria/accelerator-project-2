@@ -4,52 +4,32 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const breakpointDesctop = 1440;
+let swiperAdv = null;
 
-const initSwiperAdv = () => {
-  const swiperAdv = new Swiper('.adv__swiper', {
-    modules: [Navigation],
-    enabled: false,
-    breakpoints: {
-      1440: {
-        enabled: true,
-        loop: true, // зациклен
-        allowTouchMove: true, // свайп и мышка
-        grabCursor: true,
+export function initSwiperAdv() {
+  const width = window.innerWidth;
 
-        spaceBetween: 30,
-        slidesPerView: 'auto',
-        slidesPerGroup: 2,
-        // centeredSlides: true,
-        loopAddBlankSlides: false,
-        // loopFillGroupWithBlank: true,
+  if (width >= breakpointDesctop && !swiperAdv) {
+    swiperAdv = new Swiper('.adv__swiper', {
+modules: [Navigation],
 
-        navigation: {
-          nextEl: '.swiper-button-next-adv',
-          prevEl: '.swiper-button-back-adv',
-        },
-      }
-    }
-  });
-
-  if (window.innerWidth >= breakpointDesctop) {
-    swiperAdv.init();
-
-    // console.log(swiperAdv.slides.length);
-    const adv = document.querySelector('.adv__list');
-
-    for (let i = 0; i <= 4; i++) {
-      const virtualSlide = swiperAdv.slides[i].cloneNode(true);
-      // virtualSlide.style.backgroundColor = 'red';
-      adv.appendChild(virtualSlide);
-    }
-
-  } else {
-    // console.log('<1440 - без слайдера');
-    if (swiperAdv !== undefined) {
-      swiperAdv.destroy(true, true);
-      // console.log(swiperAdv);
-    }
+      // slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      loop: true,
+      allowTouchMove: true,
+      grabCursor: true,
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: '.swiper-button-next-adv',
+        prevEl: '.swiper-button-back-adv',
+      },
+    });
+  } else if (width < breakpointDesctop && swiperAdv) {
+    swiperAdv.destroy(true, true);
+    swiperAdv = null;
   }
-};
+}
 
-export { initSwiperAdv };
+window.addEventListener('resize', initSwiperAdv);
+

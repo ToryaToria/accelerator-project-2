@@ -24,8 +24,14 @@
 }
 
 .gallery__swrapper {
+  // width: $mobile-width;
+
+  // @include media-tablet {
+  //   width: $tablet-width;
+
+  // }
   @include media-desktop {
-    width: 1440px;
+    width: $desktop-width;
     margin: 0 auto;
   }
 }
