@@ -3,6 +3,9 @@
   height: 266px;
   overflow: hidden;
   flex-shrink: 0;
+  // outline: 1px solid red;
+
+  // border: 3px solid red ;
 
   @include media-tablet {
     width: 253px;
@@ -39,7 +42,7 @@
 
   @include media-tablet {
     width: 252px;
-    height: 201px;
+    height: 203px;
   }
 
   @include media-desktop {
