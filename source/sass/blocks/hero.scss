@@ -75,6 +75,7 @@
 
   @include media-desktop {
     margin-bottom: 0;
+      position: relative;
   }
 }
 
@@ -214,14 +215,15 @@
     display: block;
     width: 442px;
     height: 365px;
+    margin: 45px auto 0;
   }
 
   @include media-desktop {
     position: absolute;
     width: 410px;
     height: 459px;
-    top: 187px;
-    right: 120px;
+    top: -55px;
+    left: 912px;
   }
 }
 

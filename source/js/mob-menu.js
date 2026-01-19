@@ -20,3 +20,4 @@ link.forEach((el) => {
     body.classList.remove('page__body--noscroll');
   });
 });
+
