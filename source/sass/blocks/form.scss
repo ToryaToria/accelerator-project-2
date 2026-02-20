@@ -16,10 +16,10 @@
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    image-set(url("../../img/background/form_bg-mob_1x.webp") 1x type("image/webp"),
+    image-set(url("../img/background/form_bg-mob_1x.webp") 1x type("image/webp"),
     url("../..img/background/form_bg-mob_1x.png") 1x,
-    url("../../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
-    url("../../img/background/form_bg-mob_2x.png") 2x);
+    url("../img/background/form_bg-mob_2x.webp") 2x type("image/webp"),
+    url("../img/background/form_bg-mob_2x.png") 2x);
 
   @include media-tablet {
     min-height: 680px;
@@ -30,10 +30,10 @@
 
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      image-set(url("../../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
+      image-set(url("../img/background/form_bg-desct_1x.webp") 1x type("image/webp"),
       url("../..img/background/form_bg-desct_1x.png") 1x,
-      url("../../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
-      url("../../img/background/form_bg-desct_2x.png") 2x);
+      url("../img/background/form_bg-desct_2x.webp") 2x type("image/webp"),
+      url("../img/background/form_bg-desct_2x.png") 2x);
   }
 }
 
